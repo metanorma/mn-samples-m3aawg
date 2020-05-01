@@ -1,0 +1,12 @@
+---
+metanorma:
+  deploy:
+    email: "ci@metanorma.org"
+  source:
+    files:
+      - sources/best-practice/best-practice.adoc
+
+relaton:
+  collection:
+    organization: "Metanorma : Standards for standards"
+    name: "M3AAWG sample documents in Metanorma"
