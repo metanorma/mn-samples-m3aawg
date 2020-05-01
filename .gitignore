@@ -1,6 +1,7 @@
 .DS_Store
 .swp
 .tmp.xml
+*.err
 
 # Output files
 csand-*.html
