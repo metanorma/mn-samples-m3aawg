@@ -13,7 +13,7 @@
 :language: en
 :technical-committee: CalConnect TC CALSPAM
 :draft:
-:docfile: best-practice.adoc
+:docfile: document.adoc
 :mn-document-class: m3d
 :mn-output-extensions: xml,html,doc,rxl
 :local-cache-only:

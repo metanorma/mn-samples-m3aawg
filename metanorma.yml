@@ -4,7 +4,7 @@ metanorma:
     email: "ci@metanorma.org"
   source:
     files:
-      - sources/best-practice/best-practice.adoc
+      - sources/best-practice/document.adoc
 
 relaton:
   collection:
