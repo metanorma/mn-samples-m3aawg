@@ -1,4 +1,4 @@
-= ISO Rice document in Metanorma (Metanorma-m3aawg)
+= Metanorma sample documents for M3AAWG (Metanorma-M3D)
 
 image:https://github.com/metanorma/mn-samples-m3aawg/workflows/ubuntu/badge.svg["Ubuntu Build Status", link="https://github.com/metanorma/mn-samples-m3aawg/actions?query=workflow%3Aubuntu"]
 image:https://github.com/metanorma/mn-samples-m3aawg/workflows/macos/badge.svg["OSX Build Status", link="https://github.com/metanorma/mn-samples-m3aawg/actions?query=workflow%3Amacos"]
