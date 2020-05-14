@@ -5,9 +5,12 @@ SHELL := cmd
 # Ensure the xml2rfc cache directory exists locally
 IGNORE := $(shell md $(USERPROFILE)\.cache\xml2rfc)
 
-SRC := $(lastword $(shell yq r metanorma.yml metanorma.source.files))
+SRC := $(shell yq r metanorma.yml metanorma.source.files | cut -c 3-)
 
 ifeq ($(SRC),null)
+SRC :=
+endif
+ifeq ($(SRC),ll)
 SRC :=
 endif
 
@@ -15,6 +18,10 @@ ifeq ($(SRC),)
 BUILT := $(subst ${ },${\n},$(shell yq r metanorma.yml metanorma.source.built_targets | cut -d ":" -f 1))
 
 ifeq ($(BUILT),null)
+BUILT :=
+SRC :=
+endif
+ifeq ($(BUILT),ll)
 BUILT :=
 SRC :=
 endif
@@ -67,7 +74,7 @@ documents/%.html: documents/%.xml | documents
 	${PREFIX_CMD} metanorma $<
 
 documents/%.xml: sources/%.xml | documents
-	md "$(subst /,\,$(dir $@))"
+	if not exist "$(subst /,\,$(dir $@))" md "$(subst /,\,$(dir $@))"
 	move "$(subst /,\,$<)" "$(subst /,\,$@)"
 
 # Build canonical XML output
