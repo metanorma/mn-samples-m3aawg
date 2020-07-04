@@ -14,7 +14,7 @@
 :technical-committee: CalConnect TC CALSPAM
 :draft:
 :docfile: document.adoc
-:mn-document-class: m3d
+:mn-document-class: m3aawg
 :mn-output-extensions: xml,html,doc,rxl
 :local-cache-only:
 :data-uri-image:
