@@ -4,7 +4,6 @@
 :status: draft
 :doctype: best-practice
 :edition: 1
-:version: 1.0
 :copyright-year: 2018
 :revdate: 2018-10-31T00:00:00Z
 :published-date: 2018-10-31T00:00:00Z
