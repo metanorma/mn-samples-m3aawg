@@ -1,5 +1,10 @@
 ---
 metanorma:
+  source:
+    files:
+      - sources/best-practice/document.adoc
+      - sources/policy/document.adoc
+      - sources/report/document.adoc
   collection:
     organization: "Metanorma : Standards for standards"
     name: "M3AAWG sample documents in Metanorma"
