@@ -1,0 +1,25 @@
+/__w/mn-samples-m3aawg/mn-samples-m3aawg/site/documents/report/document.err errors
+
+
+== Metanorma XML Style Warning
+
+(XML Line 000083): Table should have title
+	<table id="_1ff1c60c-f1ee-4199-ae05-4593cbceced3" unnumbered="true">
+	<thead>
+	<tr>
+	<th valign="top" align="left">2012</th>
+	<th valign="top" align="left">Q1 2012</th>
+(XML Line 000131): Table should have title
+	<table id="_7e36e672-f9e2-4a12-b3c4-c203a7c4e117" unnumbered="true">
+	<thead>
+	<tr>
+	<th valign="top" align="left">2013</th>
+	<th valign="top" align="left">Q1 2013</th>
+
+
+== Metanorma XML Syntax
+
+(XML Line 000068:79): attribute "class" not allowed here; expected attribute "align", "id", "keep-lines-together" or "keep-with-next"
+(XML Line 000079:11): element "sections" not allowed yet; missing required element "preface"
+(XML Line 000098:75): element "sup" not allowed here; expected the element end-tag or text
+(XML Line 000241:16): element "m3d-standard" incomplete; missing required element "bibliography"

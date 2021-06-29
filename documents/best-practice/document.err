@@ -1,0 +1,73 @@
+/__w/mn-samples-m3aawg/mn-samples-m3aawg/site/documents/best-practice/document.err errors
+
+
+== Document Attributes
+
+(): best-practice is not a legal document type: reverting to 'report'
+(): draft is not a recognised status
+
+
+== Metanorma XML Style Warning
+
+(XML Line 000089): Hanging paragraph in clause
+	<introduction id="_introduction" obligation="informative"><title>Introduction</title><clause id="_rise_of_calendar_spam" obligation="informative"><title>Rise of calendar spam</title><p id="_e4d2a4e9-6e7d-42e2-b4e1-fdb68cc13d0b">“Calendar spam” — unsolicited, or otherwise unwanted, calendar events and meeting
+	invitations — is a recently exploited channel for abuse aimed at users of
+	calendaring &amp; scheduling systems.</p>
+	<p id="_797dedf9-9b3b-434c-a35d-0cb1962bc849">It is a new form of application-specific spam which takes advantage of the application
+	layer across multiple technologies that spans scheduling, calendaring and messaging
+(XML Line 000204): Hanging paragraph in clause
+	<clause id="_calendar_spam_and_its_delivery_path" obligation="normative"><title>Calendar spam and its delivery path</title><clause id="_general" obligation="normative"><title>General</title><p id="_22e20e26-04ed-4265-94a4-8bbdd8f06a98">Calendar spam and calendar abuse originates at the OSI application layer
+	but also travels across multiple application layer technologies
+	through networked hosts.</p>
+	<p id="_bcd8cd32-eb40-4a04-be50-676f64ef1498">Best practices used at the various checkpoints
+	that a calendar spam instance encounters within its delivery path
+(XML Line 000210): Hanging paragraph in clause
+	<clause id="_information_systems_involved_in_calendar_abuse" obligation="normative"><title>Information systems involved in calendar abuse</title><clause id="_calendar_system" obligation="normative"><title>Calendar system</title><p id="_685bae4f-e3af-4dcf-957a-abaa37b9a9e1">The calendar system plays a crucial role in calendar abuse, where
+	it allows creating, editing and deleting events as well as scheduling
+	events between different user accounts, including user accounts from
+	other calendaring systems.</p>
+	<p id="_0923a141-396e-44b1-9111-684b3707fef3">The calendar system should apply state-of-the-art methods to prevent
+(XML Line 000258): Hanging paragraph in clause
+	<clause id="_mitigating_calendar_abuse_at_source" obligation="normative"><title>Mitigating calendar abuse at source</title><clause id="_general_2" obligation="normative"><title>General</title><p id="_f6b68a42-1aab-4657-950c-e569b5600fe6">Calendar spam may be produced by innocent calendar systems when:</p>
+	<ul id="_582d2638-b750-49fe-827a-ad4f4d05ac92">
+	<li>
+	<p id="_bf65ea68-438a-4573-9df8-fe3985621439">its users were compromised;</p>
+	</li>
+(XML Line 000393): Hanging paragraph in clause
+	<clause id="_mitigating_calendar_abuse_at_destination" obligation="normative"><title>Mitigating calendar abuse at destination</title><clause id="_general_3" obligation="normative"><title>General</title><p id="_1de8fbc3-8686-4075-a851-302669846277">Calendar spam events are typically received by recipients in two ways:</p>
+	<ol id="_9a381265-d5b9-47dd-98c1-452d2c39e936" type="arabic">
+	<li>
+	<p id="_82f3a8ca-6264-4a0b-8b22-af5c9c03212a">via email from an external email system; or</p>
+	</li>
+(XML Line 000489): Hanging paragraph in clause
+	<clause id="_interactions_between_the_calendar_system_and_the_mail_system" obligation="normative"><title>Interactions between the calendar system and the mail system</title><p id="_b9aae883-ffd4-4a66-87d1-56b2eadee55d">Interaction between the electronic mail and calendar systems
+	should follow these principles:</p>
+	<ol id="_d28b512c-f6de-4e91-8155-1278a1e85311" type="arabic">
+	<li>
+	<p id="_f71660bf-00e7-43a1-9188-434bea040b19">interaction between these systems should only be triggered for emails
+(XML Line 000558): Hanging paragraph in clause
+	<clause id="_other_ways_calendar_spam_occur" obligation="normative">
+	<title>Other ways calendar spam occur</title>
+	<clause id="_subscription_to_shared_calendars" obligation="normative"><title>Subscription to shared calendars</title><p id="_2aa9b486-a84a-49f1-b948-caac3006694c">Malicious events can end up in user calendars through shared calendars.</p>
+	<p id="_f00f1331-efd0-4a6e-b162-36ba59bd5540">Shared calendars are have a single origin and users are subscribed to its events,
+	and therefore manipulation of the calendar source will impact all its subscribers.</p>
+(XML Line 000560): Hanging paragraph in clause
+	<clause id="_subscription_to_shared_calendars" obligation="normative"><title>Subscription to shared calendars</title><p id="_2aa9b486-a84a-49f1-b948-caac3006694c">Malicious events can end up in user calendars through shared calendars.</p>
+	<p id="_f00f1331-efd0-4a6e-b162-36ba59bd5540">Shared calendars are have a single origin and users are subscribed to its events,
+	and therefore manipulation of the calendar source will impact all its subscribers.</p>
+	<p id="_9171281a-1e7f-47c0-9dc7-1e4825d12034">Popular calendars, such as official calendars (e.g. public and bank holidays),
+	schedules of shows and sports teams, are valuable targets for malicious actors.</p>
+(XML Line 000596): Hanging paragraph in clause
+	<annex id="AnnexA" obligation="informative">
+	<title>Technical information</title>
+	<clause id="_structure_of_a_best_practice_imip_message_containing_an_event" obligation="informative"><title>Structure of a best practice iMIP message containing an event</title><p id="_f884fc9d-effb-47cd-8b90-8458e6ed5dad">An email message should only contain a single iCalendar attachment (an iMIP file).<note id="_3638a021-f8b0-4fd3-90e3-2127de830c9b">
+	<p id="_5b88ac4f-034e-416d-8ebd-25deed9e000d">Current practice allows attaching multiple iCalendar attachments
+	to a single email.</p>
+
+
+== Metanorma XML Syntax
+
+(XML Line 000008:30): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
+(XML Line 000042:52): character content of element "revision-date" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
+(XML Line 000062:12): element "committee" missing required attribute "type"
+(XML Line 000099:79): attribute "class" not allowed here; expected attribute "align", "id", "keep-lines-together" or "keep-with-next"

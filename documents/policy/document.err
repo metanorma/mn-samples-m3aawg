@@ -1,0 +1,7 @@
+/__w/mn-samples-m3aawg/mn-samples-m3aawg/site/documents/policy/document.err errors
+
+
+== Metanorma XML Syntax
+
+(XML Line 000067:79): attribute "class" not allowed here; expected attribute "align", "id", "keep-lines-together" or "keep-with-next"
+(XML Line 000165:16): element "m3d-standard" incomplete; missing required element "bibliography"

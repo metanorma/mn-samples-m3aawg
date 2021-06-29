@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<m3d-standard xmlns="https://www.metanorma.org/ns/m3d" type="semantic" version="1.7.5">
+<bibdata type="standard">
+<title language="en" format="text/plain">M3AAWG Comments on the Initial Report of the Temporary Specification for gTLD Registration Data Phase 2 Expedited Policy Development Process</title>
+<docidentifier type="M3AAWG">:2020</docidentifier>
+
+<date type="published">
+<on>2020-03-23</on>
+</date>
+<contributor>
+<role type="author"/>
+<organization>
+<name>Messaging Malware and Mobile Anti-Abuse Working Group</name>
+<abbreviation>M3AAWG</abbreviation>
+</organization>
+</contributor>
+<contributor>
+<role type="publisher"/>
+<organization>
+<name>Messaging Malware and Mobile Anti-Abuse Working Group</name>
+<abbreviation>M3AAWG</abbreviation>
+</organization>
+</contributor>
+<version>
+<revision-date>2020-03-23</revision-date>
+</version>
+<language>en</language>
+<script>Latn</script>
+<status>
+<stage>published</stage>
+</status>
+<copyright>
+<from>2020</from>
+<owner>
+<organization>
+<name>Messaging Malware and Mobile Anti-Abuse Working Group</name>
+<abbreviation>M3AAWG</abbreviation>
+</organization>
+</owner>
+</copyright>
+<ext>
+<doctype>policy</doctype>
+</ext>
+</bibdata>
+<boilerplate>
+  <copyright-statement>
+    <clause>
+      <p id="_9d72aea4-a156-4663-9722-e110f5c2b8b2">&#169; 2020 Messaging, Malware and Mobile Anti-Abuse Working Group</p>
+    </clause>
+  </copyright-statement>
+
+  
+
+  <legal-statement>
+    <clause>
+      <p id="_5b36da53-3792-496c-8901-9014327cad59">All rights reserved. Unless otherwise specified, no part of this
+        publication may be reproduced or utilized otherwise in any form or by any
+        means, electronic or mechanical, including photocopying, or posting on the
+        internet or an intranet, without prior written permission. Permission can
+        be requested from the address below.</p>
+    </clause>
+  </legal-statement>
+
+  <feedback-statement>
+
+    <p id="boilerplate-name">Messaging, Malware and Mobile Anti-Abuse Working Group</p>
+    <p class="boilerplate-address" id="_3eaf1d09-b288-47fa-acf3-079a4c4b28db">
+      781 Beach Street, Suite 302<br/>
+      San Francisco<br/>
+      California 94109<br/>
+      United States of America<br/>
+      <br/>
+      <link target="https://www.m3aawg.org">www.m3aawg.org</link>
+    </p>
+  </feedback-statement>
+</boilerplate>
+
+<preface><foreword id="_110555b6-34c2-4bc0-9e1d-fbc2e5792fc4" obligation="informative"><title>Foreword</title><p id="_7b0195f2-1d5a-4156-b9ac-60961493eb85">M3AAWG, the Messaging, Malware and Mobile Anti-Abuse Working Group, appreciates
+this opportunity to comment on the Initial Report of the Temporary Specification
+for gTLD Registration Data Phase 2 Expedited Policy Development Process
+(<link target="https://gnso.icann.org/en/issues/epdp-phase-2-initial-07feb20-en.pdf"/>). We make these
+comments in our capacities as cybersecurity professionals and researchers committed
+to ensuring the security and stability of the internet, including the domain name
+ecosystem.</p>
+<p id="_203f387a-9d07-45bf-957f-36ade90e734a">This issue is very important to M3AAWG members.
+<strong>Our 2018 Joint Survey published jointly with the Anti-Phishing Working Group</strong>
+found that changes to WHOIS access
+following ICANN&#8217;s implementation of the Temporary Specification is significantly
+impeding cyber applications and forensic investigations and allowing more harm to
+victims. M3AAWG appreciates the hard work of the EPDP Phase 2 team and the
+progress they have made to date. The successful completion of this policy and the
+ultimate implementation of a workable System for Standardized Access/Disclosure
+(SSAD) of Registration Data is key to organizations and individuals, including many of
+our members, that require access to registration data in order to detect threats,
+investigate new attack vectors and to understand trends aimed at protecting users and
+the Internet as a whole. This includes law enforcement authorities, both civil and
+criminal, who rely on the analysis and coloration of Registration Data obtained by
+private sector researchers and security. Failure to allow these professionals to access
+this data will threaten the security, stability and resiliency of the Internet as a whole and
+result in higher abuse rates, more harm inflicted on users and result in more criminal
+impunity on a global scale.</p>
+<p id="_4c4e6434-248b-4d16-8a93-ab79824b019f">Given that context, M3AAWG has identified the following preliminary recommendations
+that represent the greatest concern to our members.</p></foreword></preface><sections>
+<clause id="_preliminary_recommendation_12_query_policy" obligation="normative"><title>Preliminary Recommendation #12. Query Policy</title><p id="_2e00f2de-e5e3-48e0-94b6-9c45b881aadb">In the course of investigations, especially those of a global nature, it is often necessary
+to request many thousands of requests for Registration data from the SSAD system.
+While we appreciate the need for any system to protect itself from abuse of all kinds, we
+are concerned that the definition of &#8220;abusive use&#8221; of the SSAD, specifically point #4,
+may inadvertently interfere with some investigations. E.g</p>
+<quote id="_ac510829-3fd6-4cc4-97fb-9a484fb40f42">
+<p id="_819d4bef-d2b5-4d09-a2ed-72cd0ee1f99c">&#8204;4. Storing/delaying and sending high-volume requests causing the SSAD or
+other parties to fail SLA performance. When investigating abuse based on
+this specific behavior, the concept of proportionality should be considered.</p>
+</quote>
+<p id="_e31721c2-d2cb-4de4-a8ed-319a5353261f">Query policy limits enforced by the SSAD must not impede the access required by
+accredited investigators to detect, attribute and mitigate abuse on a global scale. The
+receipt of requests at this scale must not result in throttling or result in a situation where
+legitimate requests are rejected.</p></clause>
+<clause id="_preliminary_recommendation_9_determining_variable_slas_for_response_times_for_ssad" obligation="normative"><title>Preliminary Recommendation #9. Determining Variable SLAs for response times for SSAD</title><p id="_56bdaab9-74a4-4eec-b2a8-7d1d902a8bd2">The definition and enforcement of SLA associated with response times is of high
+importance to ensuring a workable and effective SSAD system. We note that the ability
+of accredited cyber-security investigators to tag their requests as &#8220;Urgent Requests&#8221; is
+currently not possible given the current definition. At best it is unclear:</p>
+<quote id="_03328eda-6d48-4514-a5a6-5909fb0dbbf7">
+<p id="_336c5879-c3e5-4ded-a5f0-e15250f297c0">&#8220;The criteria to determine whether it concerns an urgent request are limited to circumstances that pose an imminent threat to life, serious bodily injury, critical infrastructure (online and offline) or child exploitation.&#8221;</p>
+</quote>
+<p id="_206af483-03b1-4491-9170-63f10eccdbbc">Given most campaigns to attack internet users [consumers] are short lived by design, a
+maximum response time of 5 business days is neither acceptable nor sufficient. By
+then the damage will have been done. As such the definition of &#8220;Urgent Requests&#8221;
+must be updated to include the important work of cybersecurity investigators.</p>
+<p id="_10470ec2-28dc-47c6-972a-0fe175d0c1f7">We suggest adding the following language to make it clear that accredited cybersecurity
+researchers can submit requests that have been tagged as Urgent.</p>
+<quote id="_5bb42113-15d5-4ea8-a930-1c52e155c1ba">
+<p id="_43e5510d-4256-4e39-9783-13d8ebcf6020">&#8220;For the avoidance of doubt, this includes issues related to malware, Botnets [and their command and control systems], phishing, pharming and abuse related to consumer fraud.&#8221;</p>
+</quote>
+<p id="_e2e4cd70-8a91-49d6-9ba6-28ce74e60f51">Finally, we note that the SLAs defined in Recommendation #9 focus on response times
+only. In order to ensure transparency of the system in addition to allowing
+accountability to the community there must exist a mechanism to measure the rate of
+disclosure of RDS data across all disclosers. As such an SLA that measures and tracks
+disclosure rates must be added to this recommendation. The data associated with this
+SLA must be routinely audited and reported publicly.</p></clause>
+<clause id="_preliminary_recommendation_7_authorization_for_automated_disclosure_requests" obligation="normative"><title>Preliminary Recommendation #7. Authorization for automated disclosure requests</title><p id="_e3fae156-2d21-4b35-9991-95fd0fa37a41">In order to be effective, the SSAD system (as defined in the initial report) must support
+additional use cases that can be fully automated above and beyond the two currently
+specified (in Jurisdiction LEA and URS/UDRP due process). These must include use
+cases related to the needs of properly Accredited cybersecurity and anti-abuse
+investigators.</p>
+<p id="_97a6c176-5798-41e2-95ba-0d3bd4d52d0b">We note that additional use case review will be the subject of further discussion by the
+EPDP Phase 2 working group. In our review of the &#8220;Working Draft Use Case Candidates for Possible Automation&#8221;<fn reference="1"><p id="_c1a3d307-3efc-417d-bf96-43e39efaafb4"><link target="https://community.icann.org/display/EOTSFGRD/Working+Draft+Use+Case+Candidates+for+Possible+Automation"/></p></fn>, we are encouraged that Use Case #7 &#8220;Identify infrastructure involved in botnets, malware, phishing, and consumer fraud&#8221; will be
+considered and believe strongly that an SSAD system that did not include this (or a
+similar) use cases would not address the needs of accredited cybersecurity and antiabuse investigators.</p></clause>
+<clause id="_preliminary_recommendation_19_mechanism_for_the_continuous_evolution_of_the_ssad" obligation="normative">
+<title>Preliminary Recommendation #19. Mechanism for the continuous evolution of the SSAD</title>
+<p id="_0b2c0d00-a0e7-48a5-a524-13b64a50c002">The need for a mechanism that ensures the SSAD system can evolve at Internet speed
+is a very important concept and policy must exist to support it. It is equally important
+that transparency, accountability and full participation by all stakeholders be assured
+and as such we insist that any mechanism involved in defining how the SSAD will
+evolve include stakeholders outside of the GNSO, including the SSAC, GAC and ALAC.
+In addition, decisions that result from this mechanism must not be subject to a vote from
+the GNSO Council that does not include the Advisory Committees.</p>
+</clause>
+<clause id="_preliminary_recommendation_15_financial_sustainability" obligation="normative"><title>Preliminary Recommendation #15. Financial Sustainability</title><p id="_7719c478-d438-45f8-a5a5-54987b57383c">M3AAWG is very concerned that the use of the SSAD may involve per
+transaction/requests charges. While we do not object to reasonable fees to ensure
+proper accreditation of members of the cybersecurity community, we would object to
+any financial sustainability model that may impose any per-transaction fees related to
+requests required during the course of a legitimate investigations.</p>
+<p id="_3609fae4-7690-4ec8-b30a-8e60e67580ce">Thank you in advance for your consideration of these comments.</p></clause></sections>
+</m3d-standard>
