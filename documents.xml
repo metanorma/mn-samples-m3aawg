@@ -1,4 +1,4 @@
-<relaton-collection xmlns="https://open.ribose.com/relaton-xml"><title>M3AAWG sample documents in Metanorma</title><contributor><role type='author'/><organization><name>Metanorma : Standards for standards</name></organization></contributor><relation type='partOf'><bibdata type="standard">
+<relaton-collection xmlns="https://open.ribose.com/relaton-xml"><title>M3AAWG sample documents in Metanorma</title><contributor><role type='author'/><organization><name>Metanorma : Standards for standards</name></organization></contributor><relation type='partOf'><bibdata type="standard" schema-version="v1.2.1">
   <title format="text/plain" language="en">Calendar operator practices — Guidelines to protect against calendar abuse</title>
   <uri type="xml">documents/best-practice/document.xml</uri>
   <uri type="doc">documents/best-practice/document.doc</uri>
@@ -20,7 +20,7 @@
     <role type="author"/>
     <person>
       <name>
-        <completename>Thomas Schäfer, 1&amp;amp;1 Mail&amp;amp;Media Development and Technology GmbH</completename>
+        <completename>Thomas Schäfer, 1&amp;1 Mail&amp;Media Development and Technology GmbH</completename>
       </name>
     </person>
   </contributor>
@@ -61,7 +61,7 @@
     <doctype>report</doctype>
   </ext>
 </bibdata></relation>
-<relation type='partOf'><bibdata type="standard">
+<relation type='partOf'><bibdata type="standard" schema-version="v1.2.1">
   <title format="text/plain" language="en">M3AAWG Comments on the Initial Report of the Temporary Specification for gTLD Registration Data Phase 2 Expedited Policy Development Process</title>
   <uri type="xml">documents/policy/document.xml</uri>
   <uri type="doc">documents/policy/document.doc</uri>
@@ -106,7 +106,7 @@
     <doctype>policy</doctype>
   </ext>
 </bibdata></relation>
-<relation type='partOf'><bibdata type="standard">
+<relation type='partOf'><bibdata type="standard" schema-version="v1.2.1">
   <title format="text/plain" language="en">M3AAWG Bot Metrics Report — Report #1 — 2012 and 2013</title>
   <uri type="xml">documents/report/document.xml</uri>
   <uri type="doc">documents/report/document.doc</uri>

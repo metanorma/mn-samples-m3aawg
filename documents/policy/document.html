@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en" xml:lang="en">
-  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
+<html lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
   <!--
 /*
     0 CSS RESET
@@ -136,12 +135,45 @@ a.FootnoteRef + a.FootnoteRef:before {
   content: ", ";
   vertical-align: super; }
 
+a.TableFootnoteRef + a.TableFootnoteRef:before {
+  content: ", ";
+  vertical-align: super; }
+
 .addition {
   color: blue; }
 
 .deletion {
   color: red;
   text-decoration: line-through; }
+
+/* code highlighting with line numbers */
+table.rouge-line-table td.rouge-gutter {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding-right: 1em; }
+
+table.rouge-line-table td.rouge-code {
+  -moz-user-select: all;
+  -ms-user-select: all;
+  -webkit-user-select: all;
+  user-select: all; }
+
+table.rouge-line-table,
+table.rouge-line-table th,
+table.rouge-line-table td {
+  width: auto;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%; }
+
+table.rouge-line-table pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: visible;
+  font-size: 100%; }
 
 #standard-band {
   background-color: #0AC442; }
@@ -286,6 +318,12 @@ div.colophon {
     padding-left: 30px; }
   #toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
     padding-left: 50px; }
+  #toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
+    padding-left: 70px; }
+  #toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
+    padding-left: 90px; }
+  #toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
+    padding-left: 110px; }
   #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
     background: #69C5DC;
     box-shadow: inset -5px 0px 10px -5px #69C5DC !important; }
@@ -413,12 +451,16 @@ div.figure {
     font-weight: 700;
     font-size: 1em;
     text-align: center; }
-  div.figure > img {
+  div.figure > img, div.figure > svg {
     margin-left: auto;
     margin-right: auto;
     display: block;
     max-width: 100%;
     height: auto; }
+
+table div.figure {
+  padding: 0;
+  margin: 0; }
 
 /*
     Document types + stages
@@ -654,8 +696,11 @@ a:hover {
   background: #69C5DC;
   box-shadow: 3px 0 0 #69C5DC, -3px 0 0 #69C5DC; }
 
-::selection,
-::-moz-selection {
+*::selection {
+  background: #69C5DC;
+  color: white; }
+
+*::-moz-selection {
   background: #69C5DC;
   color: white; }
 
@@ -796,7 +841,7 @@ table {
   table th, table td {
     padding: 1em; }
   table td.header {
-    font-weigth: 400; }
+    font-weight: 400; }
   table th,
   table td {
     border: none !important;
@@ -1071,7 +1116,46 @@ a.anchorjs-link:hover {
     padding-left: 0; } }
 
 -->
-</style><title>M3AAWG Comments on the Initial Report of the Temporary Specification for gTLD Registration Data Phase 2 Expedited Policy Development Process</title>
+</style><style><!--pre.sourcecode table td { padding: 5px; }
+pre.sourcecode table pre { margin: 0; }
+pre.sourcecode, pre.sourcecode .w {
+  color: #444444;
+}
+pre.sourcecode .cp {
+  color: #CC00A3;
+}
+pre.sourcecode .cs {
+  color: #CC00A3;
+}
+pre.sourcecode .c, pre.sourcecode .ch, pre.sourcecode .cd, pre.sourcecode .cm, pre.sourcecode .cpf, pre.sourcecode .c1 {
+  color: #FF0000;
+}
+pre.sourcecode .kc {
+  color: #C34E00;
+}
+pre.sourcecode .kd {
+  color: #0000FF;
+}
+pre.sourcecode .kr {
+  color: #007575;
+}
+pre.sourcecode .k, pre.sourcecode .kn, pre.sourcecode .kp, pre.sourcecode .kt, pre.sourcecode .kv {
+  color: #0000FF;
+}
+pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .ld, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
+  color: #009C00;
+}
+pre.sourcecode .sa {
+  color: #0000FF;
+}
+pre.sourcecode .nb, pre.sourcecode .bp {
+  color: #C34E00;
+}
+pre.sourcecode .nt {
+  color: #0000FF;
+}
+
+--></style><title>M3AAWG Comments on the Initial Report of the Temporary Specification for gTLD Registration Data Phase 2 Expedited Policy Development Process</title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!--TOC script import-->
@@ -1080,16 +1164,14 @@ a.anchorjs-link:hover {
 </script>
 
 <!--Google fonts-->
-<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" />
 <link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
 <!--Font awesome import for the link icon-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
 <style class="anchorjs"></style>
-</link></link></link></head>
-  <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
-    <div class="title-section"><div class="document-stage-band" id="working-draft-band">
+</head><body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container"><div class="title-section"><div class="document-stage-band" id="working-draft-band">
   <p class="document-stage">Published</p>
 </div>
 
@@ -1099,7 +1181,7 @@ a.anchorjs-link:hover {
 
 
 
-<div id="toggle"> <span>&#x2022;</span> </div>
+<div id="toggle"> <span>•</span> </div>
 
 <header>
 
@@ -1146,7 +1228,7 @@ a.anchorjs-link:hover {
           <div class="year">
             <div class="boilerplate-copyright">
     <div>
-      <p id="_2ed28f83-1b90-747a-02bf-36555ae292f9">&#xA9; 2020 Messaging, Malware and Mobile Anti-Abuse Working Group</p>
+      <p id="_2ed28f83-1b90-747a-02bf-36555ae292f9">© 2020 Messaging, Malware and Mobile Anti-Abuse Working Group</p>
     </div>
   </div>
           </div>
@@ -1184,11 +1266,7 @@ a.anchorjs-link:hover {
   </div>
 
 </header>
-
-      
-    </div>
-    <br />
-    <div class="prefatory-section"><div class="coverpage">
+</div><br /><div class="prefatory-section"><div class="coverpage">
   <p class="coverpage-title">Messaging, Malware and Mobile Anti-Abuse Working Group</p>
   <p class="coverpage-doc-identity">M3AAWG Comments on the Initial Report of the Temporary Specification for gTLD Registration Data Phase 2 Expedited Policy Development Process</p>
   
@@ -1197,18 +1275,18 @@ a.anchorjs-link:hover {
 
 <nav>
   <h1 id="content">Contents</h1>
-  <div id="toc"><ul><li class="h1"><a href="#toc0">      Foreword</a></li><li class="h1"><a href="#toc1">      1.&#xA0; Preliminary Recommendation #12. Query Policy</a></li><li class="h1"><a href="#toc2">      2.&#xA0; Preliminary Recommendation #9. Determining Variable SLAs for response times for SSAD</a></li><li class="h1"><a href="#toc3">      3.&#xA0; Preliminary Recommendation #7. Authorization for automated disclosure requests</a></li><li class="h1"><a href="#toc4">      4.&#xA0; Preliminary Recommendation #19. Mechanism for the continuous evolution of the SSAD</a></li><li class="h1"><a href="#toc5">      5.&#xA0; Preliminary Recommendation #15. Financial Sustainability</a></li></ul></div>
+  <div id="toc"><ul><li class="h1"><a href="#_7c4a9aea-1565-4698-95a7-f9a96bd7c52e">      Foreword</a></li>
+<li class="h1"><a href="#_f62b7a66-675b-446c-af41-989d3a2a7f9a">      1.  Preliminary Recommendation #12. Query Policy</a></li>
+<li class="h1"><a href="#_6ef9ae5d-ff3e-4af3-b5b7-fc83b18f95a0">      2.  Preliminary Recommendation #9. Determining Variable SLAs for response times for SSAD</a></li>
+<li class="h1"><a href="#_01b485b8-6699-457a-8686-0dea7ade0892">      3.  Preliminary Recommendation #7. Authorization for automated disclosure requests</a></li>
+<li class="h1"><a href="#_8242cba3-91a4-495e-925f-d37bf7090e15">      4.  Preliminary Recommendation #19. Mechanism for the continuous evolution of the SSAD</a></li>
+<li class="h1"><a href="#_2ad55de9-1fc2-4b9c-80cc-c660b33d458f">      5.  Preliminary Recommendation #15. Financial Sustainability</a></li></ul></div>
 
 </nav>
 
 
 <div class="rule toc"></div>
-
-      
-    </div>
-    <br />
-    <main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-      <div class="authority">
+</div><br /><main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button><div class="authority">
   
 
 
@@ -1216,21 +1294,16 @@ a.anchorjs-link:hover {
   
 
   
-</div>
-      <br />
-      <div id="_95a18373-eeb6-4105-e7af-6bfce5f5be0b">
-        <h1 class="ForewordTitle" id="toc0">Foreword</h1>
-        <p id="_014a8b6b-2e2b-7f87-2788-7329d131dfb4">M3AAWG, the Messaging, Malware and Mobile Anti-Abuse Working Group, appreciates
+</div><br /><div id="_95a18373-eeb6-4105-e7af-6bfce5f5be0b"><h1 class="ForewordTitle" id="_7c4a9aea-1565-4698-95a7-f9a96bd7c52e">Foreword</h1><p id="_014a8b6b-2e2b-7f87-2788-7329d131dfb4">M3AAWG, the Messaging, Malware and Mobile Anti-Abuse Working Group, appreciates
 this opportunity to comment on the Initial Report of the Temporary Specification
 for gTLD Registration Data Phase 2 Expedited Policy Development Process
 (<a href="https://gnso.icann.org/en/issues/epdp-phase-2-initial-07feb20-en.pdf">https://gnso.icann.org/en/issues/epdp-phase-2-initial-07feb20-en.pdf</a>). We make these
 comments in our capacities as cybersecurity professionals and researchers committed
 to ensuring the security and stability of the internet, including the domain name
-ecosystem.</p>
-        <p id="_6a01d67f-f1a1-1f0a-f3fa-1c4938a5cb51">This issue is very important to M3AAWG members.
+ecosystem.</p><p id="_6a01d67f-f1a1-1f0a-f3fa-1c4938a5cb51">This issue is very important to M3AAWG members.
 <b>Our 2018 Joint Survey published jointly with the Anti-Phishing Working Group</b>
 found that changes to WHOIS access
-following ICANN&#x2019;s implementation of the Temporary Specification is significantly
+following ICANN’s implementation of the Temporary Specification is significantly
 impeding cyber applications and forensic investigations and allowing more harm to
 victims. M3AAWG appreciates the hard work of the EPDP Phase 2 team and the
 progress they have made to date. The successful completion of this policy and the
@@ -1243,99 +1316,63 @@ criminal, who rely on the analysis and coloration of Registration Data obtained 
 private sector researchers and security. Failure to allow these professionals to access
 this data will threaten the security, stability and resiliency of the Internet as a whole and
 result in higher abuse rates, more harm inflicted on users and result in more criminal
-impunity on a global scale.</p>
-        <p id="_4a505fb4-db33-0e4a-a010-d71b68eb09c5">Given that context, M3AAWG has identified the following preliminary recommendations
-that represent the greatest concern to our members.</p>
-      </div>
-      <p class="zzSTDTitle1">M3AAWG Comments on the Initial Report of the Temporary Specification for gTLD Registration Data Phase 2 Expedited Policy Development Process</p>
-      <div id="_preliminary_recommendation_12_query_policy">
-        <h1 id="toc1">1.&#xA0; Preliminary Recommendation #12. Query Policy</h1>
-        <p id="_1d7dea3d-29fd-614f-254f-88b93a700369">In the course of investigations, especially those of a global nature, it is often necessary
+impunity on a global scale.</p><p id="_4a505fb4-db33-0e4a-a010-d71b68eb09c5">Given that context, M3AAWG has identified the following preliminary recommendations
+that represent the greatest concern to our members.</p></div><p class="zzSTDTitle1">M3AAWG Comments on the Initial Report of the Temporary Specification for gTLD Registration Data Phase 2 Expedited Policy Development Process</p><div id="_preliminary_recommendation_12_query_policy"><h1 id="_f62b7a66-675b-446c-af41-989d3a2a7f9a">1.  Preliminary Recommendation #12. Query Policy</h1><p id="_1d7dea3d-29fd-614f-254f-88b93a700369">In the course of investigations, especially those of a global nature, it is often necessary
 to request many thousands of requests for Registration data from the SSAD system.
 While we appreciate the need for any system to protect itself from abuse of all kinds, we
-are concerned that the definition of &#x201C;abusive use&#x201D; of the SSAD, specifically point #4,
-may inadvertently interfere with some investigations. E.g</p>
-        <div class="Quote" id="_d246f23e-05fe-c95b-74e5-688398813c24"><p id="_0147f57a-b51a-14be-513a-ec3d14886e83">&#x200C;4. Storing/delaying and sending high-volume requests causing the SSAD or
+are concerned that the definition of “abusive use” of the SSAD, specifically point #4,
+may inadvertently interfere with some investigations. E.g</p><div class="Quote" id="_d246f23e-05fe-c95b-74e5-688398813c24"><p id="_0147f57a-b51a-14be-513a-ec3d14886e83">‌4. Storing/delaying and sending high-volume requests causing the SSAD or
 other parties to fail SLA performance. When investigating abuse based on
 this specific behavior, the concept of proportionality should be considered.</p>
-</div>
-        <p id="_7d960a16-c16e-66c5-72f8-3468bef2a7d4">Query policy limits enforced by the SSAD must not impede the access required by
+</div><p id="_7d960a16-c16e-66c5-72f8-3468bef2a7d4">Query policy limits enforced by the SSAD must not impede the access required by
 accredited investigators to detect, attribute and mitigate abuse on a global scale. The
 receipt of requests at this scale must not result in throttling or result in a situation where
-legitimate requests are rejected.</p>
-      </div>
-      <div id="_preliminary_recommendation_9_determining_variable_slas_for_response_times_for_ssad">
-        <h1 id="toc2">2.&#xA0; Preliminary Recommendation #9. Determining Variable SLAs for response times for SSAD</h1>
-        <p id="_ade0afc1-db41-fb6e-faca-2164572f8415">The definition and enforcement of SLA associated with response times is of high
+legitimate requests are rejected.</p></div><div id="_preliminary_recommendation_9_determining_variable_slas_for_response_times_for_ssad"><h1 id="_6ef9ae5d-ff3e-4af3-b5b7-fc83b18f95a0">2.  Preliminary Recommendation #9. Determining Variable SLAs for response times for SSAD</h1><p id="_ade0afc1-db41-fb6e-faca-2164572f8415">The definition and enforcement of SLA associated with response times is of high
 importance to ensuring a workable and effective SSAD system. We note that the ability
-of accredited cyber-security investigators to tag their requests as &#x201C;Urgent Requests&#x201D; is
-currently not possible given the current definition. At best it is unclear:</p>
-        <div class="Quote" id="_1c4a0689-c66b-c9c6-0984-74fb05eff368"><p id="_e5a2a557-98c9-e2a6-3265-94fdb9743662">&#x201C;The criteria to determine whether it concerns an urgent request are limited to circumstances that pose an imminent threat to life, serious bodily injury, critical infrastructure (online and offline) or child exploitation.&#x201D;</p>
-</div>
-        <p id="_55d2f5a2-4367-d185-252a-6c16e6669baf">Given most campaigns to attack internet users [consumers] are short lived by design, a
+of accredited cyber-security investigators to tag their requests as “Urgent Requests” is
+currently not possible given the current definition. At best it is unclear:</p><div class="Quote" id="_1c4a0689-c66b-c9c6-0984-74fb05eff368"><p id="_e5a2a557-98c9-e2a6-3265-94fdb9743662">“The criteria to determine whether it concerns an urgent request are limited to circumstances that pose an imminent threat to life, serious bodily injury, critical infrastructure (online and offline) or child exploitation.”</p>
+</div><p id="_55d2f5a2-4367-d185-252a-6c16e6669baf">Given most campaigns to attack internet users [consumers] are short lived by design, a
 maximum response time of 5 business days is neither acceptable nor sufficient. By
-then the damage will have been done. As such the definition of &#x201C;Urgent Requests&#x201D;
-must be updated to include the important work of cybersecurity investigators.</p>
-        <p id="_3ad3ebff-0f91-f7a2-fbad-458e6a0a65ea">We suggest adding the following language to make it clear that accredited cybersecurity
-researchers can submit requests that have been tagged as Urgent.</p>
-        <div class="Quote" id="_4f0a893f-c562-16eb-5190-51c9be452d09"><p id="_24d8a347-1f7c-69e8-795c-113784612b4c">&#x201C;For the avoidance of doubt, this includes issues related to malware, Botnets [and their command and control systems], phishing, pharming and abuse related to consumer fraud.&#x201D;</p>
-</div>
-        <p id="_6375894a-8a5a-1342-23ba-9f94548d4086">Finally, we note that the SLAs defined in Recommendation #9 focus on response times
+then the damage will have been done. As such the definition of “Urgent Requests”
+must be updated to include the important work of cybersecurity investigators.</p><p id="_3ad3ebff-0f91-f7a2-fbad-458e6a0a65ea">We suggest adding the following language to make it clear that accredited cybersecurity
+researchers can submit requests that have been tagged as Urgent.</p><div class="Quote" id="_4f0a893f-c562-16eb-5190-51c9be452d09"><p id="_24d8a347-1f7c-69e8-795c-113784612b4c">“For the avoidance of doubt, this includes issues related to malware, Botnets [and their command and control systems], phishing, pharming and abuse related to consumer fraud.”</p>
+</div><p id="_6375894a-8a5a-1342-23ba-9f94548d4086">Finally, we note that the SLAs defined in Recommendation #9 focus on response times
 only. In order to ensure transparency of the system in addition to allowing
 accountability to the community there must exist a mechanism to measure the rate of
 disclosure of RDS data across all disclosers. As such an SLA that measures and tracks
 disclosure rates must be added to this recommendation. The data associated with this
-SLA must be routinely audited and reported publicly.</p>
-      </div>
-      <div id="_preliminary_recommendation_7_authorization_for_automated_disclosure_requests">
-        <h1 id="toc3">3.&#xA0; Preliminary Recommendation #7. Authorization for automated disclosure requests</h1>
-        <p id="_542acf84-0dfc-0dc8-461f-62f496d9f3a9">In order to be effective, the SSAD system (as defined in the initial report) must support
+SLA must be routinely audited and reported publicly.</p></div><div id="_preliminary_recommendation_7_authorization_for_automated_disclosure_requests"><h1 id="_01b485b8-6699-457a-8686-0dea7ade0892">3.  Preliminary Recommendation #7. Authorization for automated disclosure requests</h1><p id="_542acf84-0dfc-0dc8-461f-62f496d9f3a9">In order to be effective, the SSAD system (as defined in the initial report) must support
 additional use cases that can be fully automated above and beyond the two currently
 specified (in Jurisdiction LEA and URS/UDRP due process). These must include use
 cases related to the needs of properly Accredited cybersecurity and anti-abuse
-investigators.</p>
-        <p id="_3c3d7620-3f18-3ba5-a18f-66ad6f5f1c1f">We note that additional use case review will be the subject of further discussion by the
-EPDP Phase 2 working group. In our review of the &#x201C;Working Draft Use Case Candidates for Possible Automation&#x201D;<a class="FootnoteRef" href="#fn:1" id="fnref:1"><sup>1</sup></a>, we are encouraged that Use Case #7 &#x201C;Identify infrastructure involved in botnets, malware, phishing, and consumer fraud&#x201D; will be
+investigators.</p><p id="_3c3d7620-3f18-3ba5-a18f-66ad6f5f1c1f">We note that additional use case review will be the subject of further discussion by the
+EPDP Phase 2 working group. In our review of the “Working Draft Use Case Candidates for Possible Automation”<a class="FootnoteRef" href="#fn:1" id="fnref:1"><sup>1</sup></a>, we are encouraged that Use Case #7 “Identify infrastructure involved in botnets, malware, phishing, and consumer fraud” will be
 considered and believe strongly that an SSAD system that did not include this (or a
-similar) use cases would not address the needs of accredited cybersecurity and antiabuse investigators.</p>
-      </div>
-      <div id="_preliminary_recommendation_19_mechanism_for_the_continuous_evolution_of_the_ssad">
-        <h1 id="toc4">4.&#xA0; Preliminary Recommendation #19. Mechanism for the continuous evolution of the SSAD</h1>
-        <p id="_e2faab32-ba66-1a14-229f-2f2f168536ee">The need for a mechanism that ensures the SSAD system can evolve at Internet speed
+similar) use cases would not address the needs of accredited cybersecurity and antiabuse investigators.</p></div><div id="_preliminary_recommendation_19_mechanism_for_the_continuous_evolution_of_the_ssad"><h1 id="_8242cba3-91a4-495e-925f-d37bf7090e15">4.  Preliminary Recommendation #19. Mechanism for the continuous evolution of the SSAD</h1><p id="_e2faab32-ba66-1a14-229f-2f2f168536ee">The need for a mechanism that ensures the SSAD system can evolve at Internet speed
 is a very important concept and policy must exist to support it. It is equally important
 that transparency, accountability and full participation by all stakeholders be assured
 and as such we insist that any mechanism involved in defining how the SSAD will
 evolve include stakeholders outside of the GNSO, including the SSAC, GAC and ALAC.
 In addition, decisions that result from this mechanism must not be subject to a vote from
-the GNSO Council that does not include the Advisory Committees.</p>
-      </div>
-      <div id="_preliminary_recommendation_15_financial_sustainability">
-        <h1 id="toc5">5.&#xA0; Preliminary Recommendation #15. Financial Sustainability</h1>
-        <p id="_581a8283-48e6-84b9-d1f1-91e1cf8c26f9">M3AAWG is very concerned that the use of the SSAD may involve per
+the GNSO Council that does not include the Advisory Committees.</p></div><div id="_preliminary_recommendation_15_financial_sustainability"><h1 id="_2ad55de9-1fc2-4b9c-80cc-c660b33d458f">5.  Preliminary Recommendation #15. Financial Sustainability</h1><p id="_581a8283-48e6-84b9-d1f1-91e1cf8c26f9">M3AAWG is very concerned that the use of the SSAD may involve per
 transaction/requests charges. While we do not object to reasonable fees to ensure
 proper accreditation of members of the cybersecurity community, we would object to
 any financial sustainability model that may impose any per-transaction fees related to
-requests required during the course of a legitimate investigations.</p>
-        <p id="_d62c65de-05a3-8a9a-0674-aba04fabeb4f">Thank you in advance for your consideration of these comments.</p>
-      </div>
-      <aside id="fn:1" class="footnote"><p id="_f849e771-4eec-dad1-ac9d-c7dc88423296"><a class="FootnoteRef" href="#fn:1"><sup>1</sup></a><a href="https://community.icann.org/display/EOTSFGRD/Working+Draft+Use+Case+Candidates+for+Possible+Automation">https://community.icann.org/display/EOTSFGRD/Working+Draft+Use+Case+Candidates+for+Possible+Automation</a></p>
-<a href="#fnref:1">&#x21A9;</a></aside>
-    </main>
-    <div class="colophon"><p>As with all M<sup>3</sup>AAWG documents that we publish,
+requests required during the course of a legitimate investigations.</p><p id="_d62c65de-05a3-8a9a-0674-aba04fabeb4f">Thank you in advance for your consideration of these comments.</p></div><div class="colophon"><p>As with all M<sup>3</sup>AAWG documents that we publish,
 please check the M<sup>3</sup>AAWG website
 (<a href="http://www.m3aawg.org">www.m3aawg.org</a>) for updates to
 this paper.</p>
-<p>&#xA9; 2020 copyright by the Messaging, Malware
+<p>© 2020 copyright by the Messaging, Malware
 and Mobile Anti-Abuse Working Group (M<sup>3</sup>AAWG)</p>
-</div>
-  <script type="text/x-mathjax-config">
+</div><aside id="fn:1" class="footnote"><p id="_f849e771-4eec-dad1-ac9d-c7dc88423296"><a class="FootnoteRef" href="#fn:1"><sup>1</sup></a><a href="https://community.icann.org/display/EOTSFGRD/Working+Draft+Use+Case+Candidates+for+Possible+Automation">https://community.icann.org/display/EOTSFGRD/Working+Draft+Use+Case+Candidates+for+Possible+Automation</a></p>
+<a href="#fnref:1">↩</a></aside></main><script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     "HTML-CSS": { preferredFont: "STIX" },
     asciimath2jax: { delimiters: [['(#(', ')#)']] }
  });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>  <script>
+  <script>
     $("#toc").on('click', 'li', function(e) {
     $(this).parent().find('li.toc-active').removeClass('toc-active');
     $(this).addClass('toc-active');
@@ -1405,5 +1442,4 @@ $('#toggle').on('click', function(){
 anchors.add('h1, h2, h3, h4');
 </script>
 
-</body>
-</html>
+</body></html>

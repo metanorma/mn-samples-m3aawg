@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<m3d-standard xmlns="https://www.metanorma.org/ns/m3d" type="semantic" version="2.1.7">
+<m3d-standard xmlns="https://www.metanorma.org/ns/m3d" type="semantic" version="2.2.5">
 <bibdata type="standard">
 <title language="en" format="text/plain">M<sup>3</sup>AAWG Bot Metrics Report — Report #1 — 2012 and 2013</title>
 <docidentifier type="M3AAWG">:2014</docidentifier><date type="published"><on>2014-09-01</on></date><contributor><role type="author"/><organization>
@@ -8,7 +8,7 @@
 <name>Messaging Malware and Mobile Anti-Abuse Working Group</name>
 <abbreviation>M3AAWG</abbreviation></organization></contributor><edition>1</edition><version><revision-date>2014-09-01</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2014</from><owner><organization>
 <name>Messaging Malware and Mobile Anti-Abuse Working Group</name>
-<abbreviation>M3AAWG</abbreviation></organization></owner></copyright><ext><doctype>report</doctype></ext></bibdata>
+<abbreviation>M3AAWG</abbreviation></organization></owner></copyright><ext><doctype>report</doctype></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
 <boilerplate>
   <copyright-statement>
     <clause>

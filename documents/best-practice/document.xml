@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<m3d-standard xmlns="https://www.metanorma.org/ns/m3d" type="semantic" version="2.1.7">
+<m3d-standard xmlns="https://www.metanorma.org/ns/m3d" type="semantic" version="2.2.5">
 <bibdata type="standard">
 <title language="en" format="text/plain">Calendar operator practices — Guidelines to protect against calendar abuse</title>
 <docidentifier type="M3AAWG">333:2018</docidentifier><docnumber>333</docnumber><date type="published"><on>2018-10-31T00:00:00Z</on></date><contributor><role type="author"/><organization>
@@ -12,7 +12,7 @@
 <name>Messaging Malware and Mobile Anti-Abuse Working Group</name>
 <abbreviation>M3AAWG</abbreviation></organization></contributor><edition>1</edition><version><revision-date>2018-10-31T00:00:00Z</revision-date></version><language>en</language><script>Latn</script><status><stage>draft</stage></status><copyright><from>2018</from><owner><organization>
 <name>Messaging Malware and Mobile Anti-Abuse Working Group</name>
-<abbreviation>M3AAWG</abbreviation></organization></owner></copyright><ext><doctype>report</doctype><editorialgroup><committee>CalConnect TC CALSPAM</committee></editorialgroup></ext></bibdata>
+<abbreviation>M3AAWG</abbreviation></organization></owner></copyright><ext><doctype>report</doctype><editorialgroup><committee>CalConnect TC CALSPAM</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
 <boilerplate>
   <copyright-statement>
     <clause>
@@ -165,16 +165,16 @@ calendar multiple times with multiple notifications/alarms being triggered over 
 <name>calendar spam</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_aa6aa7d6-fb6f-9f0f-d7e3-a9dcc8a77753">calendar events and meeting invitations containing <em>spam</em> (<xref target="term-spam"/>) delivered
-through <em>calendar systems</em> (<xref target="term-calendar-system"/>)</p></verbal-definition></definition>
+<definition><verbal-definition><p id="_aa6aa7d6-fb6f-9f0f-d7e3-a9dcc8a77753">calendar events and meeting invitations containing <em>spam</em> (<xref target="term-spam" style="short"/>) delivered
+through <em>calendar systems</em> (<xref target="term-calendar-system" style="short"/>)</p></verbal-definition></definition>
  </term>
 
 <term id="term-calendar-abuse"><preferred><expression>
 <name>calendar abuse</name>
 </expression>
 </preferred>
-<definition><verbal-definition><p id="_f894fbd5-3bae-5b14-4811-95c067791ecd">malicious usage of a <em>calendar system</em> (<xref target="term-calendar-system"/>),
-possibly leading to an <em>attack</em> (<eref type="inline" bibitemid="ISO27000" citeas="ISO/IEC 27000:2018"><localityStack><locality type="clause"><referenceFrom>3.2</referenceFrom></locality></localityStack></eref>)
+<definition><verbal-definition><p id="_f894fbd5-3bae-5b14-4811-95c067791ecd">malicious usage of a <em>calendar system</em> (<xref target="term-calendar-system" style="short"/>),
+possibly leading to an <em>attack</em> (<eref type="inline" bibitemid="ISO27000" citeas="ISO/IEC 27000:2018"><localityStack><locality type="clause"><referenceFrom>3.2</referenceFrom></locality></localityStack></eref>)
 on the receiving user</p></verbal-definition></definition>
  </term>
 
@@ -193,7 +193,7 @@ on the receiving user</p></verbal-definition></definition>
 access to or make unauthorized use of an asset</p></verbal-definition></definition>
 
 
- <termsource status="identical" type="authoritative"><origin bibitemid="ISO27000" type="inline" citeas="ISO/IEC 27000:2018"/></termsource></term>
+ <termsource status="identical" type="authoritative"><origin bibitemid="ISO27000" type="inline" citeas="ISO/IEC&amp;#xa0;27000:2018"/></termsource></term>
 
 <term id="term-calendar-system"><preferred><expression>
 <name>calendar system</name>
@@ -224,11 +224,11 @@ accounts</p></verbal-definition></definition>
 </dd>
 <dt id="symbol-DNSBL">DNSBL</dt><dd><p id="_63af147a-8876-ad0f-9772-0a750226fb9f">Domain Name System-based Blackhole List</p>
 </dd>
-<dt id="symbol-iMIP">iMIP</dt><dd><p id="_8232401d-daff-93e0-cbea-760b62d8623c">iCalendar Message-Based Interoperability Protocol (see <eref type="inline" bibitemid="iMIP" citeas="IETF RFC 6047"/>)</p>
+<dt id="symbol-iMIP">iMIP</dt><dd><p id="_8232401d-daff-93e0-cbea-760b62d8623c">iCalendar Message-Based Interoperability Protocol (see <eref type="inline" bibitemid="iMIP" citeas="IETF RFC 6047"/>)</p>
 </dd>
-<dt id="symbol-iTIP">iTIP</dt><dd><p id="_1d577ac4-41e1-3242-44eb-2b400cc9f66a">iCalendar Transport-Independent Interoperability Protocol (see <eref type="inline" bibitemid="iTIP" citeas="IETF RFC 5546"/>)</p>
+<dt id="symbol-iTIP">iTIP</dt><dd><p id="_1d577ac4-41e1-3242-44eb-2b400cc9f66a">iCalendar Transport-Independent Interoperability Protocol (see <eref type="inline" bibitemid="iTIP" citeas="IETF RFC 5546"/>)</p>
 </dd>
-<dt id="symbol-SMTP">SMTP</dt><dd><p id="_9a8bdfde-e0f9-6944-fb72-4554707af32e">Simple Mail Transfer Protocol (see <eref type="inline" bibitemid="SMTP" citeas="IETF RFC 2821"/>)</p>
+<dt id="symbol-SMTP">SMTP</dt><dd><p id="_9a8bdfde-e0f9-6944-fb72-4554707af32e">Simple Mail Transfer Protocol (see <eref type="inline" bibitemid="SMTP" citeas="IETF RFC 2821"/>)</p>
 </dd>
 <dt id="symbol-URIBL">URIBL</dt><dd><p id="_d1113426-b8a2-0959-8de8-ab230a775b5d">Realtime URI Blacklist</p>
 </dd></dl>
@@ -256,14 +256,14 @@ it allows creating, editing and deleting events as well as scheduling
 events between different user accounts, including user accounts from
 other calendaring systems.</p>
 
-<p id="_f457cf0b-6e00-9205-f827-98938fc2b477">The calendar system should apply state-of-the-art methods to prevent
+<p id="_40f628e0-43f1-1467-601f-732d486ce751">The calendar system should apply state-of-the-art methods to prevent
 calendar spam being sent from and received by user accounts on their
-system.</p>
-
-<note id="_e358aa21-86a8-8958-adaf-759a67896a6b"><p id="_a30e6d6a-c6ec-ddde-7c97-8016f42e37c2">The term “calendar system” in this document specifically refers
+system.<note id="_53790387-ffd6-5c3b-6e5e-28225a107af5"><p id="_ede5e770-53d9-c6f0-45a7-72170df9dc6f">The term “calendar system” in this document specifically refers
 to calendaring systems that fulfill the requirements of
 calendaring standards.</p>
-</note>
+</note></p>
+
+
 </clause>
 
 <clause id="_email_system" obligation="normative">
@@ -272,7 +272,7 @@ calendaring standards.</p>
 delivery mechanism.</p>
 
 <p id="_0e432c6a-6d73-ce13-6052-1604ad2c770e">In calendar systems, the most common method to send calendar invitations
-to user recipients is iMIP (<eref type="inline" bibitemid="iMIP" citeas="IETF RFC 6047"/>), a way of exchanging iTIP (<eref type="inline" bibitemid="iTIP" citeas="IETF RFC 5546"/>)
+to user recipients is iMIP (<eref type="inline" bibitemid="iMIP" citeas="IETF RFC 6047"/>), a way of exchanging iTIP (<eref type="inline" bibitemid="iTIP" citeas="IETF RFC 5546"/>)
 messages through email.</p>
 
 <p id="_91768524-d94a-2a39-108b-114d13b51148">iTIP (and iTIP) are mechanisms that allow users of different
@@ -446,12 +446,12 @@ is detected, such as:</p>
 <title>General</title>
 <p id="_ac578e27-93c2-6157-b37a-905a183ff216">Calendar spam events are typically received by recipients in two ways:</p>
 
-<ol id="_5bfc0d0b-d54f-e531-1f9e-0a094752c3ab" type="arabic"><li><p id="_f47147a1-f3c1-20f1-2485-9f570752747f">via email from an external email system; or</p>
+<ol id="_e71fc7b1-105b-8c3d-a8e3-b151af238fa7" type="arabic"><li><p id="_f47147a1-f3c1-20f1-2485-9f570752747f">via email from an external email system; or</p>
 </li>
-<li><p id="_541c02c2-0788-ed45-7673-48ce2c5a15b9">directly from another account within the same calendar system the recipient resides on.<br/></p>
-<note id="_bff700e2-12fe-5953-1637-286659e2baea"><p id="_7a0bf028-37e6-bf2e-4f61-d8301b8e5744">The case of a same-system account abuse can apply when the calendar system
+<li><p id="_5412f553-91fb-6e14-cb41-3495532a110a">directly from another account within the same calendar system the recipient resides on.<br/><note id="_7616583b-a531-7d17-d6b0-b12e21eb109a"><p id="_920bb1f2-ca75-6a57-d1c1-345fb50ebaee">The case of a same-system account abuse can apply when the calendar system
 contains compromised accounts.</p>
-</note>
+</note></p>
+
 </li>
 </ol>
 
@@ -722,49 +722,64 @@ inserting malicious content outside of the attached files — all parts of t
 </clause>
 </annex><bibliography><references id="_normative_references" normative="true" obligation="informative">
 <title>Normative references</title><p id="_4aa53cae-828c-1df3-1dfd-b7fa18599427">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
- <bibitem id="iMIP" type="standard">  <fetched>2022-09-04</fetched>  
+ <bibitem id="iMIP" type="standard" schema-version="v1.2.1">  <fetched>2024-02-12</fetched>  
 <title type="main" format="text/plain">iCalendar Message-Based Interoperability Protocol (iMIP)</title>
   <uri type="src">https://www.rfc-editor.org/info/rfc6047</uri>  <docidentifier type="IETF" primary="true">RFC 6047</docidentifier>  <docidentifier type="DOI">10.17487/RFC6047</docidentifier>  <docnumber>RFC6047</docnumber>  <date type="published">    <on>2010-12</on>  </date>  <contributor>    <role type="editor"/>    <person>      
 <name>        <completename language="en" script="Latn">A. Melnikov</completename>      </name>
-    </person>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/html" language="en" script="Latn">    <p id="_ebc0ff98-b998-ae40-6e9f-81d6e860e550">This document, “iCalendar Message-Based Interoperability Protocol (iMIP)”, specifies a binding from the iCalendar Transport-independent Interoperability Protocol (iTIP) to Internet email-based transports.  Calendaring entries defined by the iCalendar Object Model (iCalendar) are wrapped using constructs from RFC 5322 and MIME (RFC 2045, RFC 2046, RFC 2047, and RFC 2049), and then transported over SMTP. [STANDARDS-TRACK]</p>
+    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      
+<name>RFC Publisher</name>
+    </organization>  </contributor>  <contributor>    <role type="authorizer"/>    <organization>      
+<name>RFC Series</name>
+    </organization>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/html" language="en" script="Latn">    <p id="_9bba699b-a418-1a27-41f5-9794570835a7">This document, “iCalendar Message-Based Interoperability Protocol (iMIP)”, specifies a binding from the iCalendar Transport-independent Interoperability Protocol (iTIP) to Internet email-based transports. Calendaring entries defined by the iCalendar Object Model (iCalendar) are wrapped using constructs from RFC 5322 and MIME (RFC 2045, RFC 2046, RFC 2047, and RFC 2049), and then transported over SMTP. [STANDARDS-TRACK]</p>
   </abstract>  <series>    
 <title format="text/plain">RFC</title>
-    <number>6047</number>  </series>  <keyword>IMIP]</keyword>  <keyword>electronic mail</keyword>  <keyword>transport</keyword>  <keyword>itip</keyword>  <keyword>iCalendar Transport-independent Interoperability Protocol</keyword>  <keyword>iCalendar Object Model</keyword></bibitem>
- <bibitem id="iTIP" type="standard">  <fetched>2022-09-04</fetched>  
+    <number>6047</number>  </series>  <series type="stream">    
+<title format="text/plain">IETF</title>
+  </series>  <keyword>IMIP]</keyword>  <keyword>electronic mail</keyword>  <keyword>transport</keyword>  <keyword>itip</keyword>  <keyword>iCalendar Transport-independent Interoperability Protocol</keyword>  <keyword>iCalendar Object Model</keyword></bibitem>
+ <bibitem id="iTIP" type="standard" schema-version="v1.2.1">  <fetched>2024-02-12</fetched>  
 <title type="main" format="text/plain">iCalendar Transport-Independent Interoperability Protocol (iTIP)</title>
   <uri type="src">https://www.rfc-editor.org/info/rfc5546</uri>  <docidentifier type="IETF" primary="true">RFC 5546</docidentifier>  <docidentifier type="DOI">10.17487/RFC5546</docidentifier>  <docnumber>RFC5546</docnumber>  <date type="published">    <on>2009-12</on>  </date>  <contributor>    <role type="editor"/>    <person>      
 <name>        <completename language="en" script="Latn">C. Daboo</completename>      </name>
-    </person>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/html" language="en" script="Latn">    <p id="_8bed38db-5727-2d77-a5cb-c48831486af6">This document specifies a protocol that uses the iCalendar object specification to provide scheduling interoperability between different calendaring systems. This is done without reference to a specific transport protocol so as to allow multiple methods of communication between systems. Subsequent documents will define profiles of this protocol that use specific, interoperable methods of communication between systems.</p>
+    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      
+<name>RFC Publisher</name>
+    </organization>  </contributor>  <contributor>    <role type="authorizer"/>    <organization>      
+<name>RFC Series</name>
+    </organization>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/html" language="en" script="Latn">    <p id="_8bed38db-5727-2d77-a5cb-c48831486af6">This document specifies a protocol that uses the iCalendar object specification to provide scheduling interoperability between different calendaring systems. This is done without reference to a specific transport protocol so as to allow multiple methods of communication between systems. Subsequent documents will define profiles of this protocol that use specific, interoperable methods of communication between systems.</p>
     <p id="_e131a6d5-701f-b2af-9507-1837446e56c8">The iCalendar Transport-Independent Interoperability Protocol (iTIP) complements the iCalendar object specification by adding semantics for group scheduling methods commonly available in current calendaring systems. These scheduling methods permit two or more calendaring systems to perform transactions such as publishing, scheduling, rescheduling, responding to scheduling requests, negotiating changes, or canceling. [STANDARDS-TRACK]</p>
   </abstract>  <relation type="updates">    <bibitem>      <formattedref format="text/plain">RFC5545</formattedref>      <docidentifier type="IETF" primary="true">RFC5545</docidentifier>    </bibitem>
   </relation>  <series>    
 <title format="text/plain">RFC</title>
-    <number>5546</number>  </series>  <keyword>calendar</keyword>  <keyword>scheduling</keyword></bibitem>
+    <number>5546</number>  </series>  <series type="stream">    
+<title format="text/plain">IETF</title>
+  </series>  <keyword>calendar</keyword>  <keyword>scheduling</keyword></bibitem>
 </references><references id="_bibliography" normative="false" obligation="informative">
-<title>Bibliography</title><bibitem id="ISO27000" type="standard">  <fetched>2022-09-05</fetched>  
-<title type="title-intro" format="text/plain" language="en" script="Latn">Information technology</title>
+<title>Bibliography</title><bibitem id="ISO27000" type="standard" schema-version="v1.2.1">  <fetched>2024-02-12</fetched>  
+<title type="title-main" format="text/plain" language="en" script="Latn">Information technology</title>
   
-<title type="title-main" format="text/plain" language="en" script="Latn">Security techniques</title>
-  
-<title type="title-part" format="text/plain" language="en" script="Latn">Information security management systems — Overview and vocabulary</title>
-  
-<title type="main" format="text/plain" language="en" script="Latn">Information technology — Security techniques — Information security management systems — Overview and vocabulary</title>
-  <uri type="src">https://www.iso.org/standard/73906.html</uri>  <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:73906:en</uri>  <uri type="rss">https://www.iso.org/contents/data/standard/07/39/73906.detail.rss</uri>  <docidentifier type="ISO" primary="true">ISO/IEC 27000:2018</docidentifier>  <docidentifier type="URN">urn:iso:std:iso-iec:27000:stage-60.60:ed-5</docidentifier>  <docnumber>27000</docnumber>  <date type="published">    <on>2018-02</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
+<title type="main" format="text/plain" language="en" script="Latn">Information technology</title>
+  <uri type="src">https://www.iso.org/standard/73906.html</uri>  <uri type="rss">https://www.iso.org/contents/data/standard/07/39/73906.detail.rss</uri>  <docidentifier type="ISO" primary="true">ISO/IEC 27000:2018</docidentifier>  <docidentifier type="URN">urn:iso:std:iso-iec:27000:stage-90.92:ed-5</docidentifier>  <docnumber>27000</docnumber>  <date type="published">    <on>2018-02</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
 <name>International Organization for Standardization</name>
       <abbreviation>ISO</abbreviation>      <uri>www.iso.org</uri>    </organization>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      
 <name>International Electrotechnical Commission</name>
-      <abbreviation>IEC</abbreviation>      <uri>www.iec.ch</uri>    </organization>  </contributor>  <edition>5</edition>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">ISO/IEC 27000:2018 provides the overview of information security management systems (ISMS). It also provides terms and definitions commonly used in the ISMS family of standards. This document is applicable to all types and sizes of organization (e.g. commercial enterprises, government agencies, not-for-profit organizations). The terms and definitions provided in this document —      cover commonly used terms and definitions in the ISMS family of standards; —      do not cover all terms and definitions applied within the ISMS family of standards; and —      do not limit the ISMS family of standards in defining new terms for use.</abstract>  <status>    <stage>60</stage>    <substage>60</substage>  </status>  <copyright>    <from>2018</from>    <owner>      <organization>        
+      <abbreviation>IEC</abbreviation>      <uri>www.iec.ch</uri>    </organization>  </contributor>  <edition>5</edition>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">ISO/IEC 27000:2018 provides the overview of information security management systems (ISMS). It also provides terms and definitions commonly used in the ISMS family of standards. This document is applicable to all types and sizes of organization (e.g. commercial enterprises, government agencies, not-for-profit organizations). The terms and definitions provided in this document —      cover commonly used terms and definitions in the ISMS family of standards; —      do not cover all terms and definitions applied within the ISMS family of standards; and —      do not limit the ISMS family of standards in defining new terms for use.</abstract>  <status>    <stage>90</stage>    <substage>92</substage>  </status>  <copyright>    <from>2018</from>    <owner>      <organization>        
 <name>ISO/IEC</name>
       </organization>    </owner>  </copyright>  <relation type="obsoletes">    <bibitem type="standard">      <formattedref format="text/plain">ISO/IEC 27000:2016</formattedref>      <docidentifier type="ISO" primary="true">ISO/IEC 27000:2016</docidentifier>    </bibitem>
-  </relation>  <place>Geneva</place></bibitem><bibitem id="SMTP" type="standard">  <fetched>2022-09-04</fetched>  
+  </relation>  <relation type="obsoletes">    <bibitem type="standard">      <formattedref format="text/plain">ISO/IEC WD 27000</formattedref>      <docidentifier type="ISO" primary="true">ISO/IEC WD 27000</docidentifier>    </bibitem>
+  </relation>  <place>Geneva</place></bibitem><bibitem id="SMTP" type="standard" schema-version="v1.2.1">  <fetched>2024-02-12</fetched>  
 <title type="main" format="text/plain">Simple Mail Transfer Protocol</title>
   <uri type="src">https://www.rfc-editor.org/info/rfc2821</uri>  <docidentifier type="IETF" primary="true">RFC 2821</docidentifier>  <docidentifier type="DOI">10.17487/RFC2821</docidentifier>  <docnumber>RFC2821</docnumber>  <date type="published">    <on>2001-04</on>  </date>  <contributor>    <role type="editor"/>    <person>      
 <name>        <completename language="en" script="Latn">J. Klensin</completename>      </name>
-    </person>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/html" language="en" script="Latn">    <p id="_78b62cf1-15d0-85c0-38c2-ea9460852d28">This document is a self-contained specification of the basic protocol for the Internet electronic mail transport. [STANDARDS-TRACK]</p>
+    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      
+<name>RFC Publisher</name>
+    </organization>  </contributor>  <contributor>    <role type="authorizer"/>    <organization>      
+<name>RFC Series</name>
+    </organization>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/html" language="en" script="Latn">    <p id="_78b62cf1-15d0-85c0-38c2-ea9460852d28">This document is a self-contained specification of the basic protocol for the Internet electronic mail transport. [STANDARDS-TRACK]</p>
   </abstract>  <relation type="obsoletedBy">    <bibitem>      <formattedref format="text/plain">RFC5321</formattedref>      <docidentifier type="IETF" primary="true">RFC5321</docidentifier>    </bibitem>
   </relation>  <series>    
 <title format="text/plain">RFC</title>
-    <number>2821</number>  </series>  <keyword>SMTP</keyword>  <keyword>Simple Mail Transfer Protocol</keyword></bibitem>
+    <number>2821</number>  </series>  <series type="stream">    
+<title format="text/plain">IETF</title>
+  </series>  <keyword>SMTP</keyword>  <keyword>Simple Mail Transfer Protocol</keyword></bibitem>
  
  
 </references></bibliography>

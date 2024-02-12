@@ -1,4 +1,4 @@
-/__w/mn-samples-m3aawg/mn-samples-m3aawg/site/documents/report/document.err errors
+/__w/mn-samples-m3aawg/mn-samples-m3aawg/_site/documents/report/document.err errors
 
 
 == Metanorma XML Style Warning
@@ -19,6 +19,6 @@
 
 == Metanorma XML Syntax
 
-(XML Line 000034:79): attribute "class" not allowed here; expected attribute "align", "id", "keep-lines-together", "keep-with-next", "multilingual-rendering", "tag" or "type"
+(XML Line 000034:79): attribute "class" not allowed here; expected attribute "align", "columns", "id", "keep-lines-together", "keep-with-next", "multilingual-rendering", "tag" or "type"
 (XML Line 000045:11): element "sections" not allowed yet; missing required element "preface"
 (XML Line 000194:16): element "m3d-standard" incomplete; missing required element "bibliography"

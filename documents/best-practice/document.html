@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en" xml:lang="en">
-  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
+<html lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
   <!--
 /*
     0 CSS RESET
@@ -136,12 +135,45 @@ a.FootnoteRef + a.FootnoteRef:before {
   content: ", ";
   vertical-align: super; }
 
+a.TableFootnoteRef + a.TableFootnoteRef:before {
+  content: ", ";
+  vertical-align: super; }
+
 .addition {
   color: blue; }
 
 .deletion {
   color: red;
   text-decoration: line-through; }
+
+/* code highlighting with line numbers */
+table.rouge-line-table td.rouge-gutter {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding-right: 1em; }
+
+table.rouge-line-table td.rouge-code {
+  -moz-user-select: all;
+  -ms-user-select: all;
+  -webkit-user-select: all;
+  user-select: all; }
+
+table.rouge-line-table,
+table.rouge-line-table th,
+table.rouge-line-table td {
+  width: auto;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%; }
+
+table.rouge-line-table pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: visible;
+  font-size: 100%; }
 
 #standard-band {
   background-color: #0AC442; }
@@ -286,6 +318,12 @@ div.colophon {
     padding-left: 30px; }
   #toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
     padding-left: 50px; }
+  #toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
+    padding-left: 70px; }
+  #toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
+    padding-left: 90px; }
+  #toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
+    padding-left: 110px; }
   #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
     background: #69C5DC;
     box-shadow: inset -5px 0px 10px -5px #69C5DC !important; }
@@ -413,12 +451,16 @@ div.figure {
     font-weight: 700;
     font-size: 1em;
     text-align: center; }
-  div.figure > img {
+  div.figure > img, div.figure > svg {
     margin-left: auto;
     margin-right: auto;
     display: block;
     max-width: 100%;
     height: auto; }
+
+table div.figure {
+  padding: 0;
+  margin: 0; }
 
 /*
     Document types + stages
@@ -654,8 +696,11 @@ a:hover {
   background: #69C5DC;
   box-shadow: 3px 0 0 #69C5DC, -3px 0 0 #69C5DC; }
 
-::selection,
-::-moz-selection {
+*::selection {
+  background: #69C5DC;
+  color: white; }
+
+*::-moz-selection {
   background: #69C5DC;
   color: white; }
 
@@ -796,7 +841,7 @@ table {
   table th, table td {
     padding: 1em; }
   table td.header {
-    font-weigth: 400; }
+    font-weight: 400; }
   table th,
   table td {
     border: none !important;
@@ -1071,7 +1116,46 @@ a.anchorjs-link:hover {
     padding-left: 0; } }
 
 -->
-</style><title>Calendar operator practices&#x2009;&#x2014;&#x2009;Guidelines to protect against calendar abuse</title>
+</style><style><!--pre.sourcecode table td { padding: 5px; }
+pre.sourcecode table pre { margin: 0; }
+pre.sourcecode, pre.sourcecode .w {
+  color: #444444;
+}
+pre.sourcecode .cp {
+  color: #CC00A3;
+}
+pre.sourcecode .cs {
+  color: #CC00A3;
+}
+pre.sourcecode .c, pre.sourcecode .ch, pre.sourcecode .cd, pre.sourcecode .cm, pre.sourcecode .cpf, pre.sourcecode .c1 {
+  color: #FF0000;
+}
+pre.sourcecode .kc {
+  color: #C34E00;
+}
+pre.sourcecode .kd {
+  color: #0000FF;
+}
+pre.sourcecode .kr {
+  color: #007575;
+}
+pre.sourcecode .k, pre.sourcecode .kn, pre.sourcecode .kp, pre.sourcecode .kt, pre.sourcecode .kv {
+  color: #0000FF;
+}
+pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .ld, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
+  color: #009C00;
+}
+pre.sourcecode .sa {
+  color: #0000FF;
+}
+pre.sourcecode .nb, pre.sourcecode .bp {
+  color: #C34E00;
+}
+pre.sourcecode .nt {
+  color: #0000FF;
+}
+
+--></style><title>Calendar operator practices — Guidelines to protect against calendar abuse</title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!--TOC script import-->
@@ -1080,16 +1164,14 @@ a.anchorjs-link:hover {
 </script>
 
 <!--Google fonts-->
-<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" />
 <link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
 <!--Font awesome import for the link icon-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
 <style class="anchorjs"></style>
-</link></link></link></head>
-  <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
-    <div class="title-section"><div class="document-stage-band" id="working-draft-band">
+</head><body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container"><div class="title-section"><div class="document-stage-band" id="working-draft-band">
   <p class="document-stage">Draft</p>
 </div>
 
@@ -1099,7 +1181,7 @@ a.anchorjs-link:hover {
 
 
 
-<div id="toggle"> <span>&#x2022;</span> </div>
+<div id="toggle"> <span>•</span> </div>
 
 <header>
 
@@ -1116,7 +1198,7 @@ a.anchorjs-link:hover {
         <div class="coverpage-title">
           <div class="titles">
             <div class="title-second"></div>
-            <div class="title-first">Calendar operator practices&#x2009;&#x2014;&#x2009;Guidelines to protect against calendar abuse</div>
+            <div class="title-first">Calendar operator practices — Guidelines to protect against calendar abuse</div>
           </div>
         </div>
       </div>
@@ -1163,7 +1245,7 @@ a.anchorjs-link:hover {
           <div class="year">
             <div class="boilerplate-copyright">
     <div>
-      <p id="_faec3d32-3025-62c6-903b-b423e43a816b">&#xA9; 2018 Messaging, Malware and Mobile Anti-Abuse Working Group</p>
+      <p id="_faec3d32-3025-62c6-903b-b423e43a816b">© 2018 Messaging, Malware and Mobile Anti-Abuse Working Group</p>
     </div>
   </div>
           </div>
@@ -1201,31 +1283,49 @@ a.anchorjs-link:hover {
   </div>
 
 </header>
-
-      
-    </div>
-    <br />
-    <div class="prefatory-section"><div class="coverpage">
+</div><br /><div class="prefatory-section"><div class="coverpage">
   <p class="coverpage-title">Messaging, Malware and Mobile Anti-Abuse Working Group</p>
-  <p class="coverpage-doc-identity">Calendar operator practices&#x2009;&#x2014;&#x2009;Guidelines to protect against calendar abuse</p>
+  <p class="coverpage-doc-identity">Calendar operator practices — Guidelines to protect against calendar abuse</p>
   <p class="coverpage-date">1</p>
   <p class="coverpage-date">October 2018</p>
 </div>
 
 <nav>
   <h1 id="content">Contents</h1>
-  <div id="toc"><ul><li class="h1"><a href="#toc0">      Foreword</a></li><li class="h1"><a href="#toc1">      Introduction</a></li><li class="h2"><a href="#toc2">      Rise of calendar spam</a></li><li class="h2"><a href="#toc3">      Impact of calendar spam</a></li><li class="h1"><a href="#toc4">      1.&#xA0; Scope</a></li><li class="h1"><a href="#toc5">      2.&#xA0; Normative references</a></li><li class="h1"><a href="#toc6">      3.&#xA0; Terms, definitions and abbreviated terms</a></li><li class="h2"><a href="#toc7">      3.1.&#xA0; Terms and definitions</a></li><li class="h2"><a href="#toc8">      3.2.&#xA0; Abbreviated terms</a></li><li class="h1"><a href="#toc9">      4.&#xA0; Calendar spam and its delivery path</a></li><li class="h2"><a href="#toc10">      4.1.&#xA0; General</a></li><li class="h2"><a href="#toc11">      4.2.&#xA0; Information systems involved in calendar abuse</a></li><li class="h1"><a href="#toc12">      5.&#xA0; Mitigating calendar abuse at source</a></li><li class="h2"><a href="#toc13">      5.1.&#xA0; General</a></li><li class="h2"><a href="#toc14">      5.2.&#xA0; Source calendar system</a></li><li class="h2"><a href="#toc15">      5.3.&#xA0; Electronic mail system (SMTP)</a></li><li class="h1"><a href="#toc16">      6.&#xA0; Mitigating calendar abuse at destination</a></li><li class="h2"><a href="#toc17">      6.1.&#xA0; General</a></li><li class="h2"><a href="#toc18">      6.2.&#xA0; Electronic mail system</a></li><li class="h1"><a href="#toc19">      7.&#xA0; Interactions between the calendar system and the mail system</a></li><li class="h2"><a href="#toc20">      7.1.&#xA0; Calendar user application</a></li><li class="h1"><a href="#toc21">      8.&#xA0; Other ways calendar spam occur</a></li><li class="h2"><a href="#toc22">      8.1.&#xA0; Subscription to shared calendars</a></li><li class="h1"><a href="#toc23">      9.&#xA0; Conclusion</a></li><li class="h1"><a href="#toc24">      10.&#xA0; Acknowledgements</a></li><li class="h1"><a href="#toc25">      Appendix A (informative) Technical information</a></li><li class="h2"><a href="#toc26">      A.1.&#xA0; Structure of a best practice iMIP message containing an event</a></li><li class="h1"><a href="#toc27">      Bibliography</a></li></ul></div>
+  <div id="toc"><ul><li class="h1"><a href="#_5bfe9d2f-355b-4c38-8998-d981dd8b5499">      Foreword</a></li>
+<li class="h1"><a href="#_381c85a9-f590-4889-ae82-4f97e07da5fc">      Introduction</a></li>
+<li class="h2"><a href="#_e9f65766-f34b-446c-89dd-6e6cba12375f">      Rise of calendar spam</a></li>
+<li class="h2"><a href="#_edefa025-dd9c-4b4b-a8d5-9e1e2ca3330e">      Impact of calendar spam</a></li>
+<li class="h1"><a href="#_38a9c687-b9ac-449b-a952-653f2e12e016">      1.  Scope</a></li>
+<li class="h1"><a href="#_0d42c4f0-315e-4cbf-9c0b-76d6e3f6e223">      2.  Normative references</a></li>
+<li class="h1"><a href="#_81723ec4-0577-46b2-9e23-f23fdea6198f">      3.  Terms, definitions and abbreviated terms</a></li>
+<li class="h2"><a href="#_939046cf-69f7-44b0-82e0-c540c5a3118d">      3.1.  Terms and definitions</a></li>
+<li class="h2"><a href="#_7b2380aa-13ce-490c-b16d-ada9ea2a824b">      3.2.  Abbreviated terms</a></li>
+<li class="h1"><a href="#_296c2068-3b8e-44f4-b1ca-9b3de1026a52">      4.  Calendar spam and its delivery path</a></li>
+<li class="h2"><a href="#_3e11f9bb-85c7-4e52-891e-8fe1876d7482">      4.1.  General</a></li>
+<li class="h2"><a href="#_6ff84b44-abcd-4a58-9cf5-fa80ff475414">      4.2.  Information systems involved in calendar abuse</a></li>
+<li class="h1"><a href="#_9460fa31-71a1-4f02-8883-f94c2eb0d003">      5.  Mitigating calendar abuse at source</a></li>
+<li class="h2"><a href="#_6dd96608-de77-4fa2-b32a-3be4ab70e150">      5.1.  General</a></li>
+<li class="h2"><a href="#_1363b9ed-70dc-4d30-ad77-0050cecf0995">      5.2.  Source calendar system</a></li>
+<li class="h2"><a href="#_2effa482-6850-4427-9757-590507889be4">      5.3.  Electronic mail system (SMTP)</a></li>
+<li class="h1"><a href="#_591f9bc3-8c18-4614-b795-9759d5c51d88">      6.  Mitigating calendar abuse at destination</a></li>
+<li class="h2"><a href="#_83d6bd0f-aff6-4e1f-adfe-846fc828fdce">      6.1.  General</a></li>
+<li class="h2"><a href="#_09ccaa65-f928-4dbf-a96c-d3a8a6f02918">      6.2.  Electronic mail system</a></li>
+<li class="h1"><a href="#_ecb2ea61-a6cd-490a-8573-db34a02412f7">      7.  Interactions between the calendar system and the mail system</a></li>
+<li class="h2"><a href="#_a16170f3-797b-4edc-9605-b2c208efad02">      7.1.  Calendar user application</a></li>
+<li class="h1"><a href="#_35c9ea3a-af92-4a53-81e1-21dbe0acf4d2">      8.  Other ways calendar spam occur</a></li>
+<li class="h2"><a href="#_c07fbaa5-db06-4d70-ab5d-b930e19ce18d">      8.1.  Subscription to shared calendars</a></li>
+<li class="h1"><a href="#_ff10797f-3a98-4704-9d3a-9a408b489f1e">      9.  Conclusion</a></li>
+<li class="h1"><a href="#_aa62d637-dee9-48a6-ab46-49c9439ceb6a">      10.  Acknowledgements</a></li>
+<li class="h1"><a href="#_c914fb65-30b9-40f9-aad3-804f0308d159">      Appendix A (informative) Technical information</a></li>
+<li class="h2"><a href="#_0b62d3a8-b944-44a7-bebe-7a9d81b0291f">      A.1.  Structure of a best practice iMIP message containing an event</a></li>
+<li class="h1"><a href="#_bc35728c-bb37-455a-b3be-f080b97c33e8">      Bibliography</a></li></ul></div>
 
 </nav>
 
 
 <div class="rule toc"></div>
-
-      
-    </div>
-    <br />
-    <main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-      <div class="authority">
+</div><br /><main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button><div class="authority">
   
 
 
@@ -1235,41 +1335,23 @@ a.anchorjs-link:hover {
   
 
   
-</div>
-      <br />
-      <div id="_8e73fd29-9bac-3e1e-8de5-aa5924f632fd">
-        <h1 class="ForewordTitle" id="toc0">Foreword</h1>
-        <p id="_fe919369-e0f5-b19b-3ef8-b7ac54945971">The Calendaring and Scheduling Consortium (&#x201C;CalConnect&#x201D;) is global non-profit
+</div><br /><div id="_8e73fd29-9bac-3e1e-8de5-aa5924f632fd"><h1 class="ForewordTitle" id="_5bfe9d2f-355b-4c38-8998-d981dd8b5499">Foreword</h1><p id="_fe919369-e0f5-b19b-3ef8-b7ac54945971">The Calendaring and Scheduling Consortium (“CalConnect”) is global non-profit
 organization with the aim of facilitating interoperability of technologies across
-user-centric systems and applications.</p>
-        <p id="_f26732a2-2799-e3c3-2747-af6af3623027">CalConnect works closely with liaison partners including international
-organizations such as ISO, OASIS and M3AAWG.</p>
-        <p id="_225a4321-a8da-1e7c-06d8-1b0a8e05a4c2">The procedures used to develop this document and those intended for its further
+user-centric systems and applications.</p><p id="_f26732a2-2799-e3c3-2747-af6af3623027">CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.</p><p id="_225a4321-a8da-1e7c-06d8-1b0a8e05a4c2">The procedures used to develop this document and those intended for its further
 maintenance are described in the CalConnect Directives, and in this case, also aligned
-with the procedures used at M3AAWG.</p>
-        <p id="_c2561956-54b3-2b4e-21eb-3d2ba3038804">In particular the different approval criteria needed for the different types of
+with the procedures used at M3AAWG.</p><p id="_c2561956-54b3-2b4e-21eb-3d2ba3038804">In particular the different approval criteria needed for the different types of
 CalConnect documents should be noted. This document was drafted in accordance with the
-editorial rules of the CalConnect Directives.</p>
-        <p id="_926c2a78-0096-86e8-d084-55b8de7b63a7">Attention is drawn to the possibility that some of the elements of this
+editorial rules of the CalConnect Directives.</p><p id="_926c2a78-0096-86e8-d084-55b8de7b63a7">Attention is drawn to the possibility that some of the elements of this
 document may be the subject of patent rights. CalConnect shall not be held responsible
 for identifying any or all such patent rights. Details of any patent rights
 identified during the development of the document will be in the Introduction
 and/or on the CalConnect list of patent declarations received (see
-www.calconnect.com/patents).</p>
-        <p id="_8fdd45e9-9850-dd2f-748c-6e4ca26a1d52">Any trade name used in this document is information given for the convenience
-of users and does not constitute an endorsement.</p>
-        <p id="_12fe33ea-8350-ebf1-97e1-f8891d0654e5">This document was prepared by Technical Committee <i>CalConnect TC CALSPAM</i>.</p>
-        <p id="_bec5901f-501c-a98f-497e-be3024f68d1c">Authors:</p>
-        <p id="_e5d277c3-af96-fabc-b67a-cd9eab9bf698">Thomas Sch&#xE4;fer, 1&#x26;1 Mail&#x26;Media Development and Technology GmbH</p>
-        <p id="_d29588b8-f4de-d18c-383a-0f452ca5ff2b">Jesse Thompson, University of Wisconsin-Madison</p>
-      </div>
-      <br />
-      <div class="Section3" id="_introduction">
-        <h1 class="IntroTitle" id="toc1">Introduction</h1>
-        <div id="_rise_of_calendar_spam"><h2 id="toc2">Rise of calendar spam</h2>
+www.calconnect.com/patents).</p><p id="_8fdd45e9-9850-dd2f-748c-6e4ca26a1d52">Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.</p><p id="_12fe33ea-8350-ebf1-97e1-f8891d0654e5">This document was prepared by Technical Committee <i>CalConnect TC CALSPAM</i>.</p><p id="_bec5901f-501c-a98f-497e-be3024f68d1c">Authors:</p><p id="_e5d277c3-af96-fabc-b67a-cd9eab9bf698">Thomas Schäfer, 1&#x26;1 Mail&#x26;Media Development and Technology GmbH</p><p id="_d29588b8-f4de-d18c-383a-0f452ca5ff2b">Jesse Thompson, University of Wisconsin-Madison</p></div><br /><div class="Section3" id="_introduction"><h1 class="IntroTitle" id="_381c85a9-f590-4889-ae82-4f97e07da5fc">Introduction</h1><div id="_rise_of_calendar_spam"><h2 id="_e9f65766-f34b-446c-89dd-6e6cba12375f">Rise of calendar spam</h2>
 
-<p id="_c0ed74e8-ab90-c5f1-c0b0-c5bd6bb82508">&#x201C;Calendar spam&#x201D;&#x2009;&#x2014;&#x2009;unsolicited, or otherwise unwanted, calendar events and meeting
-invitations&#x2009;&#x2014;&#x2009;is a recently exploited channel for abuse aimed at users of
+<p id="_c0ed74e8-ab90-c5f1-c0b0-c5bd6bb82508">“Calendar spam” — unsolicited, or otherwise unwanted, calendar events and meeting
+invitations — is a recently exploited channel for abuse aimed at users of
 calendaring &#x26; scheduling systems.</p>
 
 <p id="_939f3995-9305-91d6-389e-76bcc43cfa6b">It is a new form of application-specific spam which takes advantage of the application
@@ -1283,8 +1365,7 @@ and delivering dangerous payloads.</p>
 <p id="_ee81edca-817f-0d22-565b-e77ff67e8ee9">Because calendar events and meeting invitations are often (but not exclusively)
 transported and delivered via email, combatting calendar spam requires awareness,
 intervention and integration with email systems and services.</p>
-</div>
-        <div id="_impact_of_calendar_spam"><h2 id="toc3">Impact of calendar spam</h2>
+</div><div id="_impact_of_calendar_spam"><h2 id="_edefa025-dd9c-4b4b-a8d5-9e1e2ca3330e">Impact of calendar spam</h2>
 
 <p id="_fc0386c9-cc26-6afc-2714-9c1c1fec2df8">Calendar spam is unique in a number of ways:</p>
 
@@ -1302,87 +1383,70 @@ accompanies email (detailed header information), making it difficult to ascertai
 where and when events originated and were delivered.</p>
 </li>
 <li><p id="_3c3fc126-8987-f25e-fca0-f911a663d500">Calendar events often contain notifications/alarms which are propagated across
-a user&#x2019;s desktop and mobile calendaring clients. It is common for users to have multiple
+a user’s desktop and mobile calendaring clients. It is common for users to have multiple
 calendaring clients which exacerbates the abuse.</p>
 </li>
-<li><p id="_5dd923f9-c794-fda4-5da4-5ecfee140502">Calendar events can include recurrence meaning that one event can show up in the user&#x2019;s
+<li><p id="_5dd923f9-c794-fda4-5da4-5ecfee140502">Calendar events can include recurrence meaning that one event can show up in the user’s
 calendar multiple times with multiple notifications/alarms being triggered over time.</p>
 </li>
 </ol>
-</div>
-      </div>
-      <p class="zzSTDTitle1">Calendar operator practices&#x2009;&#x2014;&#x2009;Guidelines to protect against calendar abuse</p>
-      <div id="_scope">
-        <h1 id="toc4">1.&#xA0; Scope</h1>
-        <p id="_0173a2ce-754e-05ff-ff15-3e04f5c5b221">This document specifies guidelines for calendar and mail system operators to:</p>
-        <ul id="_65f0194d-a6bb-340f-ae69-a06ebdcf2540"><li><p id="_f7603466-8008-28f9-acba-20060c6acc22">detect the occurrence of calendar abuse;</p>
+</div></div><p class="zzSTDTitle1">Calendar operator practices — Guidelines to protect against calendar abuse</p><div id="_scope"><h1 id="_38a9c687-b9ac-449b-a952-653f2e12e016">1.  Scope</h1><p id="_0173a2ce-754e-05ff-ff15-3e04f5c5b221">This document specifies guidelines for calendar and mail system operators to:</p><ul id="_65f0194d-a6bb-340f-ae69-a06ebdcf2540"><li><p id="_f7603466-8008-28f9-acba-20060c6acc22">detect the occurrence of calendar abuse;</p>
 </li>
 <li><p id="_9fae74f9-d15e-3b05-0641-77ff32be8b57">consider processes and procedures to mitigate calendar abuse; and</p>
 </li>
 <li><p id="_7f9bb4cb-5e6f-d78b-e50c-b86b26658061">suggest acceptable (non-abusive) practices with calendar usage.</p>
 </li>
-</ul>
-      </div>
-      <div><h1 id="toc5">2.&#xA0; Normative references</h1>
+</ul></div><div><h1 id="_0d42c4f0-315e-4cbf-9c0b-76d6e3f6e223">2.  Normative references</h1>
 <p id="_4aa53cae-828c-1df3-1dfd-b7fa18599427">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
- <p id="iMIP" class="NormRef">IETF RFC 6047, A. MELNIKOV (ed.). <i>iCalendar Message-Based Interoperability Protocol (iMIP)</i>. In: RFC. December 2010. <a href="https://www.rfc-editor.org/info/rfc6047">https://www.rfc-editor.org/info/rfc6047</a>.</p>
- <p id="iTIP" class="NormRef">IETF RFC 5546, C. DABOO (ed.). <i>iCalendar Transport-Independent Interoperability Protocol (iTIP)</i>. In: RFC. December 2009. <a href="https://www.rfc-editor.org/info/rfc5546">https://www.rfc-editor.org/info/rfc5546</a>.</p>
-</div>
-      <div id="terms">
-        <h1 id="toc6">3.&#xA0; Terms, definitions and abbreviated terms</h1>
-        <p id="_7c3d8017-787e-a398-a16e-a03a668125c1">For the purposes of this document,
-    the following terms and definitions apply.</p>
-        <div id="_terms_and_definitions"><h2 id="toc7">3.1.&#xA0; Terms and definitions</h2>
+ <p id="iMIP" class="NormRef">IETF RFC 6047, A. MELNIKOV (ed.). <i>iCalendar Message-Based Interoperability Protocol (iMIP)</i>. In: RFC. 2010. RFC Publisher. <a href="https://www.rfc-editor.org/info/rfc6047">https://www.rfc-editor.org/info/rfc6047</a>.</p>
+ <p id="iTIP" class="NormRef">IETF RFC 5546, C. DABOO (ed.). <i>iCalendar Transport-Independent Interoperability Protocol (iTIP)</i>. In: RFC. 2009. RFC Publisher. <a href="https://www.rfc-editor.org/info/rfc5546">https://www.rfc-editor.org/info/rfc5546</a>.</p>
+</div><div id="terms"><h1 id="_81723ec4-0577-46b2-9e23-f23fdea6198f">3.  Terms, definitions and abbreviated terms</h1><p id="_7c3d8017-787e-a398-a16e-a03a668125c1">For the purposes of this document,
+    the following terms and definitions apply.</p><div id="_terms_and_definitions"><h2 id="_939046cf-69f7-44b0-82e0-c540c5a3118d">3.1.  Terms and definitions</h2>
 
-<p class="Terms" style="text-align:left;" id="calendar-spam"><strong>3.1.1.</strong>&#xA0;<b>calendar spam</b></p>
+<p class="Terms" style="text-align:left;" id="calendar-spam"><strong>3.1.1.</strong> <b>calendar spam</b></p>
 <p id="_aa6aa7d6-fb6f-9f0f-d7e3-a9dcc8a77753">calendar events and meeting invitations containing <i>spam</i> (<a href="#term-spam">Clause 3.1.3</a>) delivered
 through <i>calendar systems</i> (<a href="#term-calendar-system">Clause 3.1.5</a>)</p>
 
 
-<p class="Terms" style="text-align:left;" id="term-calendar-abuse"><strong>3.1.2.</strong>&#xA0;<b>calendar abuse</b></p>
+<p class="Terms" style="text-align:left;" id="term-calendar-abuse"><strong>3.1.2.</strong> <b>calendar abuse</b></p>
 <p id="_f894fbd5-3bae-5b14-4811-95c067791ecd">malicious usage of a <i>calendar system</i> (<a href="#term-calendar-system">Clause 3.1.5</a>),
-possibly leading to an <i>attack</i> (<a href="#ISO27000">ISO/IEC 27000:2018,  Clause 3.2</a>)
+possibly leading to an <i>attack</i> (<a href="#ISO27000">ISO/IEC 27000:2018, Clause 3.2</a>)
 on the receiving user</p>
 
 
-<p class="Terms" style="text-align:left;" id="term-spam"><strong>3.1.3.</strong>&#xA0;<b>spam</b></p>
+<p class="Terms" style="text-align:left;" id="term-spam"><strong>3.1.3.</strong> <b>spam</b></p>
 <p id="_d74a8cee-dad4-9fd5-4b46-de21a441ea0e">unsolicited or unwanted information</p>
 
 
-<p class="Terms" style="text-align:left;" id="attack"><strong>3.1.4.</strong>&#xA0;<b>attack</b></p>
+<p class="Terms" style="text-align:left;" id="attack"><strong>3.1.4.</strong> <b>attack</b></p>
 <p id="_a311b3e0-da1b-7838-4f6d-314163e15026">attempt to destroy, expose, alter, disable, steal or gain unauthorized
 access to or make unauthorized use of an asset</p>
 
 
- <p>[SOURCE: <a href="#ISO27000">ISO/IEC 27000:2018</a>]</p>
+ <p>[SOURCE: <a href="#ISO27000">ISO/IEC 27000:2018</a>]</p>
 
-<p class="Terms" style="text-align:left;" id="term-calendar-system"><strong>3.1.5.</strong>&#xA0;<b>calendar system</b></p>
+<p class="Terms" style="text-align:left;" id="term-calendar-system"><strong>3.1.5.</strong> <b>calendar system</b></p>
 <p id="_3dae074e-c9f2-ed7b-cf4b-c51115aaaa75">information system that provides calendar and scheduling functionality for user
 accounts</p>
 
 
-<p class="Terms" style="text-align:left;" id="mail-system"><strong>3.1.6.</strong>&#xA0;<b>mail system</b></p>
+<p class="Terms" style="text-align:left;" id="mail-system"><strong>3.1.6.</strong> <b>mail system</b></p>
 <p id="_c3bb99ca-19ab-8f0b-dc7a-99a5305e7561">information system that provides electronic mail functionality</p>
 
 
-<p class="Terms" style="text-align:left;" id="user-system"><strong>3.1.7.</strong>&#xA0;<b>user system</b></p>
+<p class="Terms" style="text-align:left;" id="user-system"><strong>3.1.7.</strong> <b>user system</b></p>
 <p id="_70b30867-c718-8faa-e0bd-4cc4997abf2f">information system that provides authentication and authorization functionality</p>
 
-</div>
-        <div id="abbrev"><h2 id="toc8">3.2.&#xA0; Abbreviated terms</h2>
+</div><div id="abbrev"><h2 id="_7b2380aa-13ce-490c-b16d-ada9ea2a824b">3.2.  Abbreviated terms</h2>
 
 <dl id="_2870d443-d31f-ccf2-0906-aaece4edf559"><dt id="symbol-ARF"><p>ARF</p></dt><dd><p id="_0627a7e0-4ae0-870a-a6bf-17d9af77c72d">Abuse Reporting Format</p>
 </dd><dt id="symbol-DNSBL"><p>DNSBL</p></dt><dd><p id="_63af147a-8876-ad0f-9772-0a750226fb9f">Domain Name System-based Blackhole List</p>
-</dd><dt id="symbol-iMIP"><p>iMIP</p></dt><dd><p id="_8232401d-daff-93e0-cbea-760b62d8623c">iCalendar Message-Based Interoperability Protocol (see <a href="#iMIP">IETF RFC 6047</a>)</p>
-</dd><dt id="symbol-iTIP"><p>iTIP</p></dt><dd><p id="_1d577ac4-41e1-3242-44eb-2b400cc9f66a">iCalendar Transport-Independent Interoperability Protocol (see <a href="#iTIP">IETF RFC 5546</a>)</p>
-</dd><dt id="symbol-SMTP"><p>SMTP</p></dt><dd><p id="_9a8bdfde-e0f9-6944-fb72-4554707af32e">Simple Mail Transfer Protocol (see <a href="#SMTP">IETF RFC 2821</a>)</p>
+</dd><dt id="symbol-iMIP"><p>iMIP</p></dt><dd><p id="_8232401d-daff-93e0-cbea-760b62d8623c">iCalendar Message-Based Interoperability Protocol (see <a href="#iMIP">IETF RFC 6047</a>)</p>
+</dd><dt id="symbol-iTIP"><p>iTIP</p></dt><dd><p id="_1d577ac4-41e1-3242-44eb-2b400cc9f66a">iCalendar Transport-Independent Interoperability Protocol (see <a href="#iTIP">IETF RFC 5546</a>)</p>
+</dd><dt id="symbol-SMTP"><p>SMTP</p></dt><dd><p id="_9a8bdfde-e0f9-6944-fb72-4554707af32e">Simple Mail Transfer Protocol (see <a href="#SMTP">IETF RFC 2821</a>)</p>
 </dd><dt id="symbol-URIBL"><p>URIBL</p></dt><dd><p id="_d1113426-b8a2-0959-8de8-ab230a775b5d">Realtime URI Blacklist</p>
 </dd></dl>
-</div>
-      </div>
-      <div id="_calendar_spam_and_its_delivery_path">
-        <h1 id="toc9">4.&#xA0; Calendar spam and its delivery path</h1>
-        <div id="_general"><h2 id="toc10">4.1.&#xA0; General</h2>
+</div></div><div id="_calendar_spam_and_its_delivery_path"><h1 id="_296c2068-3b8e-44f4-b1ca-9b3de1026a52">4.  Calendar spam and its delivery path</h1><div id="_general"><h2 id="_3e11f9bb-85c7-4e52-891e-8fe1876d7482">4.1.  General</h2>
 
 <p id="_5551e804-5988-b373-29ba-78cffc8b0660">Calendar spam and calendar abuse originates at the OSI application layer
 but also travels across multiple application layer technologies
@@ -1391,32 +1455,31 @@ through networked hosts.</p>
 <p id="_6b233e5b-796b-0b78-99e3-1573decee34c">Best practices used at the various checkpoints
 that a calendar spam instance encounters within its delivery path
 are described in clauses that follow.</p>
-</div>
-        <div id="_information_systems_involved_in_calendar_abuse"><h2 id="toc11">4.2.&#xA0; Information systems involved in calendar abuse</h2>
+</div><div id="_information_systems_involved_in_calendar_abuse"><h2 id="_6ff84b44-abcd-4a58-9cf5-fa80ff475414">4.2.  Information systems involved in calendar abuse</h2>
 
-<div id="_calendar_system"><h3>4.2.1.&#xA0; Calendar system</h3>
+<div id="_calendar_system"><h3>4.2.1.  Calendar system</h3>
 
 <p id="_37fa8322-a7aa-8b6e-2f8f-275f71e5de08">The calendar system plays a crucial role in calendar abuse, where
 it allows creating, editing and deleting events as well as scheduling
 events between different user accounts, including user accounts from
 other calendaring systems.</p>
 
-<p id="_f457cf0b-6e00-9205-f827-98938fc2b477">The calendar system should apply state-of-the-art methods to prevent
+<p id="_40f628e0-43f1-1467-601f-732d486ce751">The calendar system should apply state-of-the-art methods to prevent
 calendar spam being sent from and received by user accounts on their
-system.</p>
-
-<div id="_e358aa21-86a8-8958-adaf-759a67896a6b" class="Note"><p><span class="note_label">NOTE</span>&#xA0; The term &#x201C;calendar system&#x201D; in this document specifically refers
+system.<div id="_53790387-ffd6-5c3b-6e5e-28225a107af5" class="Note"><p><span class="note_label">NOTE</span>  The term “calendar system” in this document specifically refers
 to calendaring systems that fulfill the requirements of
-calendaring standards.</p></div>
+calendaring standards.</p></div></p>
+
+
 </div>
 
-<div id="_email_system"><h3>4.2.2.&#xA0; Email system</h3>
+<div id="_email_system"><h3>4.2.2.  Email system</h3>
 
 <p id="_3498e84d-4143-4627-17ce-dd9444bee68e">The email system is an important factor in calendar abuse as a
 delivery mechanism.</p>
 
 <p id="_0e432c6a-6d73-ce13-6052-1604ad2c770e">In calendar systems, the most common method to send calendar invitations
-to user recipients is iMIP (<a href="#iMIP">IETF RFC 6047</a>), a way of exchanging iTIP (<a href="#iTIP">IETF RFC 5546</a>)
+to user recipients is iMIP (<a href="#iMIP">IETF RFC 6047</a>), a way of exchanging iTIP (<a href="#iTIP">IETF RFC 5546</a>)
 messages through email.</p>
 
 <p id="_91768524-d94a-2a39-108b-114d13b51148">iTIP (and iTIP) are mechanisms that allow users of different
@@ -1426,7 +1489,7 @@ calendar event information through email.</p>
 <div id="_fadda7e0-d7bb-c120-1f00-2155909b1ae7" class="example"><p class="example-title">EXAMPLE</p><p id="_97ee80d8-f39c-59d5-02b9-e73fb1ef6ee2">User A on a calendar system can invite another user B that does not
 belong to the same calendar system, to a calendar event, where the
 invitation information is sent through email to user B, either
-by user A or user A&#x2019;s calendar system.</p>
+by user A or user A’s calendar system.</p>
 </div>
 
 <p id="_3be124a6-b0ba-54b0-9e23-f99e88c107e7">Email systems are also used to transport information relevant to
@@ -1437,7 +1500,7 @@ calendar spam being sent by and received from user accounts on
 their system.</p>
 </div>
 
-<div id="_related_systems"><h3>4.2.3.&#xA0; Related systems</h3>
+<div id="_related_systems"><h3>4.2.3.  Related systems</h3>
 
 <p id="_bcfb49e0-5b53-5f31-8a82-15d781042634">Calendar and email systems are often connected with, and rely on,
 other information systems, such as identity management systems
@@ -1459,11 +1522,7 @@ spam user accounts; and adopt strong authentication methods
 such as two-factor authentication.</p>
 </div>
 </div>
-</div>
-      </div>
-      <div id="_mitigating_calendar_abuse_at_source">
-        <h1 id="toc12">5.&#xA0; Mitigating calendar abuse at source</h1>
-        <div id="_general_2"><h2 id="toc13">5.1.&#xA0; General</h2>
+</div></div><div id="_mitigating_calendar_abuse_at_source"><h1 id="_9460fa31-71a1-4f02-8883-f94c2eb0d003">5.  Mitigating calendar abuse at source</h1><div id="_general_2"><h2 id="_6dd96608-de77-4fa2-b32a-3be4ab70e150">5.1.  General</h2>
 
 <p id="_4afd4cea-7a2a-5fa4-7ed7-63b57aaa6a32">Calendar spam may be produced by innocent calendar systems when:</p>
 
@@ -1473,7 +1532,7 @@ such as two-factor authentication.</p>
 </li>
 </ul>
 
-<p id="_4ca61228-3e8a-3a8c-aed3-c26df2c27bf1">In the latter case, approaches such as automation (&#x201C;bots&#x201D;) can exacerbate
+<p id="_4ca61228-3e8a-3a8c-aed3-c26df2c27bf1">In the latter case, approaches such as automation (“bots”) can exacerbate
 the issue with the automated creation of free accounts.</p>
 
 <p id="_15fe3ad7-98a5-761f-21f3-3d8b63b16f13">Such user accounts can be readily used to create calendar spam events:</p>
@@ -1487,12 +1546,11 @@ attached;</p>
 </li>
 </ol>
 
-<p id="_74f1a5b0-6ea6-f7f5-a595-1dfe620a17e1">The &#x201C;source&#x201D; calendar system provider should take steps to detect and
+<p id="_74f1a5b0-6ea6-f7f5-a595-1dfe620a17e1">The “source” calendar system provider should take steps to detect and
 mitigate such internal abuse, by placing detection mechanisms and
 automated responses at its calendar system and its email system associated
 with calendar event delivery.</p>
-</div>
-        <div id="_source_calendar_system"><h2 id="toc14">5.2.&#xA0; Source calendar system</h2>
+</div><div id="_source_calendar_system"><h2 id="_1363b9ed-70dc-4d30-ad77-0050cecf0995">5.2.  Source calendar system</h2>
 
 <p id="_1127729c-371e-72ac-3cca-aab8a046a31b">The source calendar system is where an calendar abuse instance originates from.</p>
 
@@ -1541,8 +1599,7 @@ invitation; and</p>
 <li><p id="_225838dc-647a-15a3-0b9a-006ff3c7507c">blocking the user account altogether.</p>
 </li>
 </ol>
-</div>
-        <div id="_electronic_mail_system_smtp"><h2 id="toc15">5.3.&#xA0; Electronic mail system (SMTP)</h2>
+</div><div id="_electronic_mail_system_smtp"><h2 id="_2effa482-6850-4427-9757-590507889be4">5.3.  Electronic mail system (SMTP)</h2>
 
 <p id="_059f0aa9-4e62-394d-aab5-4903bb355543">The source electronic mail system is where the calendar system delivers
 an event invitation to for its forwarding.</p>
@@ -1578,19 +1635,15 @@ is detected, such as:</p>
 <li><p id="_1abb5b86-beb2-4cc2-9725-b23bae2c617d">communicate with downstream email providers who will be receive the potential spam.</p>
 </li>
 </ol>
-</div>
-      </div>
-      <div id="_mitigating_calendar_abuse_at_destination">
-        <h1 id="toc16">6.&#xA0; Mitigating calendar abuse at destination</h1>
-        <div id="_general_3"><h2 id="toc17">6.1.&#xA0; General</h2>
+</div></div><div id="_mitigating_calendar_abuse_at_destination"><h1 id="_591f9bc3-8c18-4614-b795-9759d5c51d88">6.  Mitigating calendar abuse at destination</h1><div id="_general_3"><h2 id="_83d6bd0f-aff6-4e1f-adfe-846fc828fdce">6.1.  General</h2>
 
 <p id="_ac578e27-93c2-6157-b37a-905a183ff216">Calendar spam events are typically received by recipients in two ways:</p>
 
-<ol type="1" id="_5bfc0d0b-d54f-e531-1f9e-0a094752c3ab"><li><p id="_f47147a1-f3c1-20f1-2485-9f570752747f">via email from an external email system; or</p>
+<ol type="1" id="_e71fc7b1-105b-8c3d-a8e3-b151af238fa7"><li><p id="_f47147a1-f3c1-20f1-2485-9f570752747f">via email from an external email system; or</p>
 </li>
-<li><p id="_541c02c2-0788-ed45-7673-48ce2c5a15b9">directly from another account within the same calendar system the recipient resides on.<br /></p>
-<div id="_bff700e2-12fe-5953-1637-286659e2baea" class="Note"><p><span class="note_label">NOTE</span>&#xA0; The case of a same-system account abuse can apply when the calendar system
-contains compromised accounts.</p></div>
+<li><p id="_5412f553-91fb-6e14-cb41-3495532a110a">directly from another account within the same calendar system the recipient resides on.<br /><div id="_7616583b-a531-7d17-d6b0-b12e21eb109a" class="Note"><p><span class="note_label">NOTE</span>  The case of a same-system account abuse can apply when the calendar system
+contains compromised accounts.</p></div></p>
+
 </li>
 </ol>
 
@@ -1608,8 +1661,7 @@ to an internal email system, and re-routed back to the originating calendar syst
 <p id="_cd53a01c-7c87-3b30-3c1c-37a1820d3380">System providers at the receiving end
 should therefore take steps to detect and mitigate abuse originating
 from both external and internal calendar and mail systems.</p>
-</div>
-        <div id="_electronic_mail_system"><h2 id="toc18">6.2.&#xA0; Electronic mail system</h2>
+</div><div id="_electronic_mail_system"><h2 id="_09ccaa65-f928-4dbf-a96c-d3a8a6f02918">6.2.  Electronic mail system</h2>
 
 <p id="_fc1b010a-03f7-d3f8-b943-e4cbcfa4890c">The following best practices apply:</p>
 
@@ -1651,7 +1703,7 @@ applications, such as through:</p>
 </li>
 </ol>
 
-<p id="_e87861e6-b63d-007f-8bd4-a762586eaf9d">When potential spam is detected, &#x201C;interaction&#x201D; (e.g. adding the event to the end-user&#x2019;s
+<p id="_e87861e6-b63d-007f-8bd4-a762586eaf9d">When potential spam is detected, “interaction” (e.g. adding the event to the end-user’s
 calendar) between the recipient and the sender at the calendar system shall not proceed.</p>
 
 <p id="_a3b1713e-970e-fa99-6c5d-b374fc74f1d5">Certain mitigation actions, such as the silent discard of an email,
@@ -1666,14 +1718,9 @@ being an abuse instance or spam.</p>
 <p id="_1bdfd9b9-563e-db30-d4c2-a7ecd3a105f4">For some of the milder actions (e.g. putting in spam folder),
 the calendar system should provide options to the recipient user. For example, the
 recipient user can mark such emails as false positives, and are able to manually insert
-them into the user&#x2019;s calendar.</p>
-</div>
-      </div>
-      <div id="_interactions_between_the_calendar_system_and_the_mail_system">
-        <h1 id="toc19">7.&#xA0; Interactions between the calendar system and the mail system</h1>
-        <p id="_1c8e90a8-5cf9-b98d-7007-2e412fb42ae7">Interaction between the electronic mail and calendar systems
-should follow these principles:</p>
-        <ol type="1" id="_1025a287-9c1e-5972-cd8d-a659d8613077"><li><p id="_03500aae-bc9e-ca65-d4b0-0cc46094be9e">interaction between these systems should only be triggered for emails
+them into the user’s calendar.</p>
+</div></div><div id="_interactions_between_the_calendar_system_and_the_mail_system"><h1 id="_ecb2ea61-a6cd-490a-8573-db34a02412f7">7.  Interactions between the calendar system and the mail system</h1><p id="_1c8e90a8-5cf9-b98d-7007-2e412fb42ae7">Interaction between the electronic mail and calendar systems
+should follow these principles:</p><ol type="1" id="_1025a287-9c1e-5972-cd8d-a659d8613077"><li><p id="_03500aae-bc9e-ca65-d4b0-0cc46094be9e">interaction between these systems should only be triggered for emails
 not already identified as spam, i.e. anti-abuse measures have already
 been applied on both systems independently;</p>
 </li>
@@ -1695,20 +1742,17 @@ conditional or blocked).</p>
 </li>
 </ul>
 </li>
-</ol>
-        <p id="_627617c5-185f-0dad-e3f5-cc5e8aa3a270">When spam is detected during the interaction stage, a number of mitigation
-actions can be taken, such as:</p>
-        <ol type="1" id="_511901ed-617d-961a-69ad-e77de8e22556"><li><p id="_5f4699c8-7150-4a2e-6b5c-573090c1f53c">do not automatically insert the calendar event into the user&#x2019;s calendar; or</p>
+</ol><p id="_627617c5-185f-0dad-e3f5-cc5e8aa3a270">When spam is detected during the interaction stage, a number of mitigation
+actions can be taken, such as:</p><ol type="1" id="_511901ed-617d-961a-69ad-e77de8e22556"><li><p id="_5f4699c8-7150-4a2e-6b5c-573090c1f53c">do not automatically insert the calendar event into the user’s calendar; or</p>
 </li>
 <li><p id="_d1dc3259-ce5e-cab7-2e9e-e97148471c3b">deactivate calendar event notifications for this calendar event.</p>
 </li>
-</ol>
-        <div id="_calendar_user_application"><h2 id="toc20">7.1.&#xA0; Calendar user application</h2>
+</ol><div id="_calendar_user_application"><h2 id="_a16170f3-797b-4edc-9605-b2c208efad02">7.1.  Calendar user application</h2>
 
-<p id="_9aaa9bc9-caa8-f545-2280-df3f1fe82f17">The calendar user application, as part of the &#x201C;calendar system&#x201D;,
+<p id="_9aaa9bc9-caa8-f545-2280-df3f1fe82f17">The calendar user application, as part of the “calendar system”,
 should offer the following functionality relating to calendar abuse:</p>
 
-<ol type="1" id="_dad82a91-20ec-814b-d1a0-9c241e96d24c"><li><p id="_174252c2-793f-9c01-9990-68fae33e13f8">allow the user to delete unwanted events (e.g. &#x201C;Mark as spam&#x201D;),
+<ol type="1" id="_dad82a91-20ec-814b-d1a0-9c241e96d24c"><li><p id="_174252c2-793f-9c01-9990-68fae33e13f8">allow the user to delete unwanted events (e.g. “Mark as spam”),
 without notifying the organizer as normally performed with calendar
 events;</p>
 </li>
@@ -1728,11 +1772,7 @@ calendar user application, such as:</p>
 the calendar invitation and its <tt>MailID</tt> is still available.</p>
 </li>
 </ol>
-</div>
-      </div>
-      <div id="_other_ways_calendar_spam_occur">
-        <h1 id="toc21">8.&#xA0; Other ways calendar spam occur</h1>
-        <div id="_subscription_to_shared_calendars"><h2 id="toc22">8.1.&#xA0; Subscription to shared calendars</h2>
+</div></div><div id="_other_ways_calendar_spam_occur"><h1 id="_35c9ea3a-af92-4a53-81e1-21dbe0acf4d2">8.  Other ways calendar spam occur</h1><div id="_subscription_to_shared_calendars"><h2 id="_c07fbaa5-db06-4d70-ab5d-b930e19ce18d">8.1.  Subscription to shared calendars</h2>
 
 <p id="_30539bdb-2abd-65b6-63e4-ee1506a9eb51">Malicious events can end up in user calendars through shared calendars.</p>
 
@@ -1743,51 +1783,35 @@ and therefore manipulation of the calendar source will impact all its subscriber
 schedules of shows and sports teams, are valuable targets for malicious actors.</p>
 
 <p id="_a153cdc9-5895-edea-6944-8ac8a0378fc9">Disturbingly, very often calendar applications do not allow deletion
-of such shared events if the subscription is set to &#x201C;read-only&#x201D;. This means
+of such shared events if the subscription is set to “read-only”. This means
 that malicious events propagated through such calendars may not even be
 eligible for recipient removal, which adds salt to injury.</p>
 
 <p id="_7ab1ef98-0025-be61-fc69-3a9a8d238f79">The only approach for users of these calendar applications are to unsubscribe
 the entire calendar, even though all previous events will be deleted from
-the user&#x2019;s calendar when unsubscribed.
+the user’s calendar when unsubscribed.
 More robust controls are certainly needed for calendar subscribers.</p>
 
-<div id="_itip"><h3>8.1.1.&#xA0; iTIP</h3>
+<div id="_itip"><h3>8.1.1.  iTIP</h3>
 
 <p id="_86a8fa89-ad14-4beb-7d66-240798cc0d4f">Calendar systems using iTIP for direct communication between each other, e.g. within
 the same calendar system, should consider and implement anti-abuse best practices as
 described above.</p>
 </div>
-</div>
-      </div>
-      <div id="_conclusion">
-        <h1 id="toc23">9.&#xA0; Conclusion</h1>
-        <p id="_fc8a81de-50dc-698e-4dc2-c1c3a4f83bbb">Spam is a long-standing and well-known email problem. Because email is a commonly used
-transport for calendar (&#x201C;meeting&#x201D;) invitations and events, spammers are now using these
+</div></div><div id="_conclusion"><h1 id="_ff10797f-3a98-4704-9d3a-9a408b489f1e">9.  Conclusion</h1><p id="_fc8a81de-50dc-698e-4dc2-c1c3a4f83bbb">Spam is a long-standing and well-known email problem. Because email is a commonly used
+transport for calendar (“meeting”) invitations and events, spammers are now using these
 calendar events and invitations as a spam vector. Consequently, knowledge of both domains
-is required to develop defenses against these attacks.</p>
-        <p id="_e1fd8868-c905-2e77-8c22-23e2fa205de8">This document provides email and calendar system operators with an introduction to
+is required to develop defenses against these attacks.</p><p id="_e1fd8868-c905-2e77-8c22-23e2fa205de8">This document provides email and calendar system operators with an introduction to
 calendar spam, and highlights best practices for identifying and mitigating calendar spam.
-Implementation details will largely be system-specific.</p>
-        <p id="_4c7bb8e4-4d92-9ae9-7ed9-c65593c3f94b">The &#x201C;war&#x201D; against malware, including spam, is dynamic and ever-changing. As a result,
+Implementation details will largely be system-specific.</p><p id="_4c7bb8e4-4d92-9ae9-7ed9-c65593c3f94b">The “war” against malware, including spam, is dynamic and ever-changing. As a result,
 email and calendar system experts will need to share their expertise and experiences with
-each other on an ongoing basis. CalConnect&#x2019;s collaboration with M3AAWG represents the first
-formal collaboration in this area.</p>
-      </div>
-      <div id="_acknowledgements">
-        <h1 id="toc24">10.&#xA0; Acknowledgements</h1>
-        <p id="_65a384fe-659a-ea86-425a-249cfed1923f">The editor of this document wishes to thank the experts of CalConnect&#x2009;&#x2014;&#x2009;the Calendaring and Scheduling Consortium and attendees of the M3AAWG conference sessions
+each other on an ongoing basis. CalConnect’s collaboration with M3AAWG represents the first
+formal collaboration in this area.</p></div><div id="_acknowledgements"><h1 id="_aa62d637-dee9-48a6-ab46-49c9439ceb6a">10.  Acknowledgements</h1><p id="_65a384fe-659a-ea86-425a-249cfed1923f">The editor of this document wishes to thank the experts of CalConnect — the Calendaring and Scheduling Consortium and attendees of the M3AAWG conference sessions
 about the topic, as well as the following individuals who have participated in the
-drafting, review, and discussion of this document:</p>
-        <p id="_cd2f1726-e4a8-898f-abde-c58f549f4eee">Arne Allisat, Bron Gondwana, Andrew Laurence, Andrey Maevsky, Gary Schwartz,
-Dave Thewlis and Ronald Tse</p>
-      </div>
-      <br />
-      <div id="AnnexA" class="Section3">
-        <h1 class="Annex" id="toc25"><b>Appendix A</b><br />(informative)<br /><b>Technical information</b></h1>
-        <div id="_structure_of_a_best_practice_imip_message_containing_an_event"><h2 id="toc26">A.1.&#xA0; Structure of a best practice iMIP message containing an event</h2>
+drafting, review, and discussion of this document:</p><p id="_cd2f1726-e4a8-898f-abde-c58f549f4eee">Arne Allisat, Bron Gondwana, Andrew Laurence, Andrey Maevsky, Gary Schwartz,
+Dave Thewlis and Ronald Tse</p></div><br /><div id="AnnexA" class="Section3"><h1 class="Annex" id="_c914fb65-30b9-40f9-aad3-804f0308d159"><b>Appendix A</b><br />(informative)<br /><b>Technical information</b></h1><div id="_structure_of_a_best_practice_imip_message_containing_an_event"><h2 id="_0b62d3a8-b944-44a7-bebe-7a9d81b0291f">A.1.  Structure of a best practice iMIP message containing an event</h2>
 
-<p id="_08b05cec-9509-60b7-aa68-b6ab2bd603d1">An email message should only contain a single iCalendar attachment (an iMIP file).<div id="_abe31135-7e9e-94c4-24b6-f8b44fa45025" class="Note"><p><span class="note_label">NOTE  1</span>&#xA0; Current practice allows attaching multiple iCalendar attachments
+<p id="_08b05cec-9509-60b7-aa68-b6ab2bd603d1">An email message should only contain a single iCalendar attachment (an iMIP file).<div id="_abe31135-7e9e-94c4-24b6-f8b44fa45025" class="Note"><p><span class="note_label">NOTE  1</span>  Current practice allows attaching multiple iCalendar attachments
 to a single email.</p></div></p>
 
 
@@ -1813,7 +1837,7 @@ is provided as follows:</p>
 </ul>
 
 <p id="_22d9373b-7afb-6edb-3fd6-7095e6778c2f">This recommended structure was devised through interoperability testing with
-multiple existing implementations.<div id="_f4d2c458-c29c-3605-6767-defcb51bd02b" class="Note"><p><span class="note_label">NOTE  2</span>&#xA0; A calendar system that conforms to calendaring standards produces
+multiple existing implementations.<div id="_f4d2c458-c29c-3605-6767-defcb51bd02b" class="Note"><p><span class="note_label">NOTE  2</span>  A calendar system that conforms to calendaring standards produces
 an email structure similar to that above.</p></div></p>
 
 
@@ -1831,40 +1855,34 @@ an email structure similar to that above.</p></div></p>
 <li><p id="_4dcd8785-dea3-2227-e469-f3f350f041a4">Some calendar systems automatically insert links within the HTML part,
 which can be used by email clients that are not calendar-aware to accept
 or decline an invitation without having to process the calendar parts.
-In this case, the server simply updates the `ORGANIZER&#x2019;s copy of the
+In this case, the server simply updates the `ORGANIZER’s copy of the
 event based on the link clicked.</p>
 </li>
 <li><p id="_ea4f7f9f-c73d-69a9-64e8-d527e943d834">The <tt>text/plain</tt> and <tt>text/html</tt> part of the message in the body will
 include information of the event, such as its subject and description.</p>
 </li>
 <li><p id="_b79104a0-50f1-ec85-1c85-cddc78f37617">An email using the provide structure does not preclude spammers from
-inserting malicious content outside of the attached files&#x2009;&#x2014;&#x2009;all parts of the email should still be parsed to detect malicious content.</p>
+inserting malicious content outside of the attached files — all parts of the email should still be parsed to detect malicious content.</p>
 </li>
 </ul>
-</div>
-      </div>
-      <br />
-      <div><h1 class="Section3" id="toc27">Bibliography</h1>
-<p id="ISO27000" class="Biblio">[1]&#xA0; ISO/IEC 27000:2018, International Organization for Standardization and International Electrotechnical Commission. <i>Information technology&#x2009;&#x2014;&#x2009;Security techniques&#x2009;&#x2014;&#x2009;Information security management systems&#x2009;&#x2014;&#x2009;Overview and vocabulary</i>. 5th edition. February 2018. Geneva. <a href="https://www.iso.org/standard/73906.html">https://www.iso.org/standard/73906.html</a>.</p><p id="SMTP" class="Biblio">[2]&#xA0; IETF RFC 2821, J. KLENSIN (ed.). <i>Simple Mail Transfer Protocol</i>. In: RFC. April 2001. <a href="https://www.rfc-editor.org/info/rfc2821">https://www.rfc-editor.org/info/rfc2821</a>.</p>
+</div></div><br /><div><h1 class="Section3" id="_bc35728c-bb37-455a-b3be-f080b97c33e8">Bibliography</h1>
+<p id="ISO27000" class="Biblio">[1]  ISO/IEC 27000:2018, International Organization for Standardization and International Electrotechnical Commission. <i>Information technology</i>. 5th edition. 2018. Geneva. <a href="https://www.iso.org/standard/73906.html">https://www.iso.org/standard/73906.html</a>.</p><p id="SMTP" class="Biblio">[2]  IETF RFC 2821, J. KLENSIN (ed.). <i>Simple Mail Transfer Protocol</i>. In: RFC. 2001. RFC Publisher. <a href="https://www.rfc-editor.org/info/rfc2821">https://www.rfc-editor.org/info/rfc2821</a>.</p>
 
 
-</div>
-    </main>
-    <div class="colophon"><p>As with all M<sup>3</sup>AAWG documents that we publish,
+</div><div class="colophon"><p>As with all M<sup>3</sup>AAWG documents that we publish,
 please check the M<sup>3</sup>AAWG website
 (<a href="http://www.m3aawg.org">www.m3aawg.org</a>) for updates to
 this paper.</p>
-<p>&#xA9; 2018 copyright by the Messaging, Malware
+<p>© 2018 copyright by the Messaging, Malware
 and Mobile Anti-Abuse Working Group (M<sup>3</sup>AAWG)</p>
-</div>
-  <script type="text/x-mathjax-config">
+</div></main><script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     "HTML-CSS": { preferredFont: "STIX" },
     asciimath2jax: { delimiters: [['(#(', ')#)']] }
  });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>  <script>
+  <script>
     $("#toc").on('click', 'li', function(e) {
     $(this).parent().find('li.toc-active').removeClass('toc-active');
     $(this).addClass('toc-active');
@@ -1934,5 +1952,4 @@ $('#toggle').on('click', function(){
 anchors.add('h1, h2, h3, h4');
 </script>
 
-</body>
-</html>
+</body></html>

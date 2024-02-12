@@ -1,4 +1,4 @@
-/__w/mn-samples-m3aawg/mn-samples-m3aawg/site/documents/best-practice/document.err errors
+/__w/mn-samples-m3aawg/mn-samples-m3aawg/_site/documents/best-practice/document.err errors
 
 
 == Document Attributes
@@ -9,13 +9,13 @@
 
 == Metanorma XML Style Warning
 
-(XML Line 000516): Hanging paragraph in clause
+(XML Line 000528): Hanging paragraph in clause
 	<clause id="_interactions_between_the_calendar_system_and_the_mail_system" obligation="normative">
 	<title>Interactions between the calendar system and the mail system</title>
 	<p id="_1c8e90a8-5cf9-b98d-7007-2e412fb42ae7">Interaction between the electronic mail and calendar systems
 	should follow these principles:</p>
 	
-(XML Line 000584): Hanging paragraph in clause
+(XML Line 000596): Hanging paragraph in clause
 	<clause id="_subscription_to_shared_calendars" obligation="normative">
 	<title>Subscription to shared calendars</title>
 	<p id="_30539bdb-2abd-65b6-63e4-ee1506a9eb51">Malicious events can end up in user calendars through shared calendars.</p>
@@ -28,4 +28,4 @@
 (XML Line 000005:132): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
 (XML Line 000013:145): character content of element "revision-date" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
 (XML Line 000015:128): element "committee" missing required attribute "type"
-(XML Line 000049:79): attribute "class" not allowed here; expected attribute "align", "id", "keep-lines-together", "keep-with-next", "multilingual-rendering", "tag" or "type"
+(XML Line 000049:79): attribute "class" not allowed here; expected attribute "align", "columns", "id", "keep-lines-together", "keep-with-next", "multilingual-rendering", "tag" or "type"
