@@ -722,7 +722,7 @@ inserting malicious content outside of the attached files — all parts of t
 </clause>
 </annex><bibliography><references id="_normative_references" normative="true" obligation="informative">
 <title>Normative references</title><p id="_4aa53cae-828c-1df3-1dfd-b7fa18599427">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
- <bibitem id="iMIP" type="standard" schema-version="v1.2.1">  <fetched>2024-02-12</fetched>  
+ <bibitem id="iMIP" type="standard" schema-version="v1.2.1">  <fetched>2025-01-13</fetched>  
 <title type="main" format="text/plain">iCalendar Message-Based Interoperability Protocol (iMIP)</title>
   <uri type="src">https://www.rfc-editor.org/info/rfc6047</uri>  <docidentifier type="IETF" primary="true">RFC 6047</docidentifier>  <docidentifier type="DOI">10.17487/RFC6047</docidentifier>  <docnumber>RFC6047</docnumber>  <date type="published">    <on>2010-12</on>  </date>  <contributor>    <role type="editor"/>    <person>      
 <name>        <completename language="en" script="Latn">A. Melnikov</completename>      </name>
@@ -736,7 +736,7 @@ inserting malicious content outside of the attached files — all parts of t
     <number>6047</number>  </series>  <series type="stream">    
 <title format="text/plain">IETF</title>
   </series>  <keyword>IMIP]</keyword>  <keyword>electronic mail</keyword>  <keyword>transport</keyword>  <keyword>itip</keyword>  <keyword>iCalendar Transport-independent Interoperability Protocol</keyword>  <keyword>iCalendar Object Model</keyword></bibitem>
- <bibitem id="iTIP" type="standard" schema-version="v1.2.1">  <fetched>2024-02-12</fetched>  
+ <bibitem id="iTIP" type="standard" schema-version="v1.2.1">  <fetched>2025-01-13</fetched>  
 <title type="main" format="text/plain">iCalendar Transport-Independent Interoperability Protocol (iTIP)</title>
   <uri type="src">https://www.rfc-editor.org/info/rfc5546</uri>  <docidentifier type="IETF" primary="true">RFC 5546</docidentifier>  <docidentifier type="DOI">10.17487/RFC5546</docidentifier>  <docnumber>RFC5546</docnumber>  <date type="published">    <on>2009-12</on>  </date>  <contributor>    <role type="editor"/>    <person>      
 <name>        <completename language="en" script="Latn">C. Daboo</completename>      </name>
@@ -753,19 +753,13 @@ inserting malicious content outside of the attached files — all parts of t
 <title format="text/plain">IETF</title>
   </series>  <keyword>calendar</keyword>  <keyword>scheduling</keyword></bibitem>
 </references><references id="_bibliography" normative="false" obligation="informative">
-<title>Bibliography</title><bibitem id="ISO27000" type="standard" schema-version="v1.2.1">  <fetched>2024-02-12</fetched>  
-<title type="title-main" format="text/plain" language="en" script="Latn">Information technology</title>
-  
-<title type="main" format="text/plain" language="en" script="Latn">Information technology</title>
-  <uri type="src">https://www.iso.org/standard/73906.html</uri>  <uri type="rss">https://www.iso.org/contents/data/standard/07/39/73906.detail.rss</uri>  <docidentifier type="ISO" primary="true">ISO/IEC 27000:2018</docidentifier>  <docidentifier type="URN">urn:iso:std:iso-iec:27000:stage-90.92:ed-5</docidentifier>  <docnumber>27000</docnumber>  <date type="published">    <on>2018-02</on>  </date>  <contributor>    <role type="publisher"/>    <organization>      
-<name>International Organization for Standardization</name>
-      <abbreviation>ISO</abbreviation>      <uri>www.iso.org</uri>    </organization>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      
-<name>International Electrotechnical Commission</name>
-      <abbreviation>IEC</abbreviation>      <uri>www.iec.ch</uri>    </organization>  </contributor>  <edition>5</edition>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">ISO/IEC 27000:2018 provides the overview of information security management systems (ISMS). It also provides terms and definitions commonly used in the ISMS family of standards. This document is applicable to all types and sizes of organization (e.g. commercial enterprises, government agencies, not-for-profit organizations). The terms and definitions provided in this document —      cover commonly used terms and definitions in the ISMS family of standards; —      do not cover all terms and definitions applied within the ISMS family of standards; and —      do not limit the ISMS family of standards in defining new terms for use.</abstract>  <status>    <stage>90</stage>    <substage>92</substage>  </status>  <copyright>    <from>2018</from>    <owner>      <organization>        
-<name>ISO/IEC</name>
-      </organization>    </owner>  </copyright>  <relation type="obsoletes">    <bibitem type="standard">      <formattedref format="text/plain">ISO/IEC 27000:2016</formattedref>      <docidentifier type="ISO" primary="true">ISO/IEC 27000:2016</docidentifier>    </bibitem>
-  </relation>  <relation type="obsoletes">    <bibitem type="standard">      <formattedref format="text/plain">ISO/IEC WD 27000</formattedref>      <docidentifier type="ISO" primary="true">ISO/IEC WD 27000</docidentifier>    </bibitem>
-  </relation>  <place>Geneva</place></bibitem><bibitem id="SMTP" type="standard" schema-version="v1.2.1">  <fetched>2024-02-12</fetched>  
+<title>Bibliography</title><bibitem id="ISO27000" type="standard">
+<title format="text/plain">Information technology — Security techniques — Information security management systems — Overview and vocabulary</title>
+<docidentifier type="ISO">ISO/IEC 27000:2018</docidentifier><docnumber>27000</docnumber><date type="published"><on>2018</on></date><contributor><role type="publisher"/><organization>
+<name>ISO</name>
+</organization></contributor><contributor><role type="publisher"/><organization>
+<name>IEC</name>
+</organization></contributor></bibitem><bibitem id="SMTP" type="standard" schema-version="v1.2.1">  <fetched>2025-01-13</fetched>  
 <title type="main" format="text/plain">Simple Mail Transfer Protocol</title>
   <uri type="src">https://www.rfc-editor.org/info/rfc2821</uri>  <docidentifier type="IETF" primary="true">RFC 2821</docidentifier>  <docidentifier type="DOI">10.17487/RFC2821</docidentifier>  <docnumber>RFC2821</docnumber>  <date type="published">    <on>2001-04</on>  </date>  <contributor>    <role type="editor"/>    <person>      
 <name>        <completename language="en" script="Latn">J. Klensin</completename>      </name>
@@ -780,7 +774,7 @@ inserting malicious content outside of the attached files — all parts of t
     <number>2821</number>  </series>  <series type="stream">    
 <title format="text/plain">IETF</title>
   </series>  <keyword>SMTP</keyword>  <keyword>Simple Mail Transfer Protocol</keyword></bibitem>
- 
- 
+
+
 </references></bibliography>
 </m3d-standard>
