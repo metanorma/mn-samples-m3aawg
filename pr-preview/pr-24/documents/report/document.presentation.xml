@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<m3d-standard xmlns="https://www.metanorma.org/ns/m3d" type="presentation" version="2.2.5">
+<bibdata type="standard">
+<title language="en" format="text/plain">M<sup>3</sup>AAWG Bot Metrics Report — Report #1 — 2012 and 2013</title>
+<docidentifier type="M3AAWG">:2014</docidentifier><date type="published"><on>2014-09-01</on></date><contributor><role type="author"/><organization>
+<name>Messaging Malware and Mobile Anti-Abuse Working Group</name>
+<abbreviation>M3AAWG</abbreviation></organization></contributor><contributor><role type="publisher"/><organization>
+<name>Messaging Malware and Mobile Anti-Abuse Working Group</name>
+<abbreviation>M3AAWG</abbreviation></organization></contributor><edition language="">1</edition><edition language="en">first edition</edition><version><revision-date>2014-09-01</revision-date></version><language current="true">en</language><script current="true">Latn</script><status><stage>published</stage></status><copyright><from>2014</from><owner><organization>
+<name>Messaging Malware and Mobile Anti-Abuse Working Group</name>
+<abbreviation>M3AAWG</abbreviation></organization></owner></copyright><ext><doctype>report</doctype></ext></bibdata><localized-strings><localized-string key="scope" language="en">Scope</localized-string><localized-string key="symbolsabbrev" language="en">Symbols and abbreviated terms</localized-string><localized-string key="abbrev" language="en">Abbreviated terms</localized-string><localized-string key="symbols" language="en">Symbols</localized-string><localized-string key="table_of_contents" language="en">Table of contents</localized-string><localized-string key="introduction" language="en">Introduction</localized-string><localized-string key="foreword" language="en">Foreword</localized-string><localized-string key="abstract" language="en">Abstract</localized-string><localized-string key="acknowledgements" language="en">Acknowledgements</localized-string><localized-string key="termsdef" language="en">Terms and definitions</localized-string><localized-string key="termsdefsymbolsabbrev" language="en">Terms, definitions, symbols and abbreviated terms</localized-string><localized-string key="termsdefsymbols" language="en">Terms, definitions and symbols</localized-string><localized-string key="termsdefabbrev" language="en">Terms, definitions and abbreviated terms</localized-string><localized-string key="normref" language="en">Normative references</localized-string><localized-string key="bibliography" language="en">Bibliography</localized-string><localized-string key="preface" language="en">Preface</localized-string><localized-string key="clause" language="en">Clause</localized-string><localized-string key="annex" language="en">Appendix</localized-string><localized-string key="appendix" language="en">Appendix</localized-string><localized-string key="no_terms_boilerplate" language="en"><p>No terms and definitions are listed in this document.</p>
+</localized-string><localized-string key="internal_terms_boilerplate" language="en"><p>For the purposes of this document, 
+    the following terms and definitions apply.</p>
+</localized-string><localized-string key="norm_with_refs_pref" language="en">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</localized-string><localized-string key="norm_empty_pref" language="en">There are no normative references in this document.</localized-string><localized-string key="external_terms_boilerplate" language="en"><p>For the purposes of this document, 
+  the terms and definitions given in % apply.</p>
+</localized-string><localized-string key="internal_external_terms_boilerplate" language="en"><p>For the purposes of this document, the terms and definitions 
+  given in % and the following apply.</p>
+</localized-string><localized-string key="term_defined_in" language="en">[term defined in %]</localized-string><localized-string key="binary_and" language="en">%1 and %2</localized-string><localized-string key="multiple_and" language="en">%1, and %2</localized-string><localized-string key="binary_or" language="en">%1 or %2</localized-string><localized-string key="multiple_or" language="en">%1, or %2</localized-string><localized-string key="chain_and" language="en">%1 and %2</localized-string><localized-string key="chain_or" language="en">%1 or %2</localized-string><localized-string key="chain_from" language="en">%1 from %2</localized-string><localized-string key="chain_to" language="en">%1 to %2</localized-string><localized-string key="SpelloutRules" language="en">spellout-ordinal</localized-string><localized-string key="note" language="en">NOTE</localized-string><localized-string key="note_xref" language="en">Note</localized-string><localized-string key="termnote" language="en">Note % to entry</localized-string><localized-string key="list" language="en">List</localized-string><localized-string key="deflist" language="en">Definition List</localized-string><localized-string key="figure" language="en">Figure</localized-string><localized-string key="diagram" language="en">Diagram</localized-string><localized-string key="formula" language="en">Formula</localized-string><localized-string key="inequality" language="en">Formula</localized-string><localized-string key="table" language="en">Table</localized-string><localized-string key="requirement" language="en">Requirement</localized-string><localized-string key="recommendation" language="en">Recommendation</localized-string><localized-string key="permission" language="en">Permission</localized-string><localized-string key="box" language="en">Box</localized-string><localized-string key="recommendationtest" language="en">Recommendation test</localized-string><localized-string key="requirementtest" language="en">Requirement test</localized-string><localized-string key="permissiontest" language="en">Permission test</localized-string><localized-string key="recommendationclass" language="en">Recommendations class</localized-string><localized-string key="requirementclass" language="en">Requirements class</localized-string><localized-string key="permissionclass" language="en">Permissions class</localized-string><localized-string key="abstracttest" language="en">Abstract test</localized-string><localized-string key="conformanceclass" language="en">Conformance class</localized-string><localized-string key="key" language="en">Key</localized-string><localized-string key="example" language="en">EXAMPLE</localized-string><localized-string key="example_xref" language="en">Example</localized-string><localized-string key="where" language="en">where</localized-string><localized-string key="where_one" language="en">where</localized-string><localized-string key="wholeoftext" language="en">Whole of text</localized-string><localized-string key="draft_label" language="en">draft</localized-string><localized-string key="inform_annex" language="en">informative</localized-string><localized-string key="norm_annex" language="en">normative</localized-string><localized-string key="modified" language="en">modified</localized-string><localized-string key="deprecated" language="en">DEPRECATED</localized-string><localized-string key="source" language="en">SOURCE</localized-string><localized-string key="and" language="en">and</localized-string><localized-string key="all_parts" language="en">All Parts</localized-string><localized-string key="edition_ordinal" language="en">%Spellout edition</localized-string><localized-string key="edition" language="en">edition</localized-string><localized-string key="version" language="en">version</localized-string><localized-string key="toc_figures" language="en">List of figures</localized-string><localized-string key="toc_tables" language="en">List of tables</localized-string><localized-string key="toc_recommendations" language="en">List of recommendations</localized-string><localized-string key="month_january" language="en">January</localized-string><localized-string key="month_february" language="en">February</localized-string><localized-string key="month_march" language="en">March</localized-string><localized-string key="month_april" language="en">April</localized-string><localized-string key="month_may" language="en">May</localized-string><localized-string key="month_june" language="en">June</localized-string><localized-string key="month_july" language="en">July</localized-string><localized-string key="month_august" language="en">August</localized-string><localized-string key="month_september" language="en">September</localized-string><localized-string key="month_october" language="en">October</localized-string><localized-string key="month_november" language="en">November</localized-string><localized-string key="month_december" language="en">December</localized-string><localized-string key="obligation" language="en">Obligation</localized-string><localized-string key="admonition.danger" language="en">Danger</localized-string><localized-string key="admonition.warning" language="en">Warning</localized-string><localized-string key="admonition.caution" language="en">Caution</localized-string><localized-string key="admonition.important" language="en">Important</localized-string><localized-string key="admonition.safety_precautions" language="en">Safety Precautions</localized-string><localized-string key="admonition.editorial" language="en">Editorial Note</localized-string><localized-string key="locality.section" language="en">Section</localized-string><localized-string key="locality.clause" language="en">Clause</localized-string><localized-string key="locality.part" language="en">Part</localized-string><localized-string key="locality.paragraph" language="en">Paragraph</localized-string><localized-string key="locality.chapter" language="en">Chapter</localized-string><localized-string key="locality.page" language="en">Page</localized-string><localized-string key="locality.table" language="en">Table</localized-string><localized-string key="locality.annex" language="en">Annex</localized-string><localized-string key="locality.figure" language="en">Figure</localized-string><localized-string key="locality.example" language="en">Example</localized-string><localized-string key="locality.note" language="en">Note</localized-string><localized-string key="locality.formula" language="en">Formula</localized-string><localized-string key="grammar_abbrevs.masculine" language="en">m</localized-string><localized-string key="grammar_abbrevs.feminine" language="en">f</localized-string><localized-string key="grammar_abbrevs.neuter" language="en">n</localized-string><localized-string key="grammar_abbrevs.common" language="en">common</localized-string><localized-string key="grammar_abbrevs.singular" language="en">sg</localized-string><localized-string key="grammar_abbrevs.dual" language="en">dual</localized-string><localized-string key="grammar_abbrevs.pl" language="en">pl</localized-string><localized-string key="grammar_abbrevs.isPreposition" language="en">prep</localized-string><localized-string key="grammar_abbrevs.isParticiple" language="en">part</localized-string><localized-string key="grammar_abbrevs.isAdjective" language="en">adj</localized-string><localized-string key="grammar_abbrevs.isAdverb" language="en">adv</localized-string><localized-string key="grammar_abbrevs.isNoun" language="en">noun</localized-string><localized-string key="grammar_abbrevs.isVerb" language="en">verb</localized-string><localized-string key="relatedterms.deprecates" language="en">deprecates</localized-string><localized-string key="relatedterms.supersedes" language="en">supersedes</localized-string><localized-string key="relatedterms.narrower" language="en">narrower</localized-string><localized-string key="relatedterms.broader" language="en">broader</localized-string><localized-string key="relatedterms.equivalent" language="en">equivalent</localized-string><localized-string key="relatedterms.compare" language="en">compare</localized-string><localized-string key="relatedterms.contrast" language="en">contrast</localized-string><localized-string key="relatedterms.see" language="en">see</localized-string><localized-string key="relatedterms.seealso" language="en">see also</localized-string><localized-string key="Clause.sg" language="en">Clause</localized-string><localized-string key="Clause.pl" language="en">Clauses</localized-string><localized-string key="Annex.sg" language="en">Annex</localized-string><localized-string key="Annex.pl" language="en">Annexes</localized-string><localized-string key="Appendix.sg" language="en">Appendix</localized-string><localized-string key="Appendix.pl" language="en">Appendixes</localized-string><localized-string key="Note.sg" language="en">Note</localized-string><localized-string key="Note.pl" language="en">Notes</localized-string><localized-string key="Note_%_to_entry.sg" language="en">Note % to entry</localized-string><localized-string key="Note_%_to_entry.pl" language="en">Notes % to entry</localized-string><localized-string key="List.sg" language="en">List</localized-string><localized-string key="List.pl" language="en">Lists</localized-string><localized-string key="Figure.sg" language="en">Figure</localized-string><localized-string key="Figure.pl" language="en">Figures</localized-string><localized-string key="Formula.sg" language="en">Formula</localized-string><localized-string key="Formula.pl" language="en">Formulas</localized-string><localized-string key="Table.sg" language="en">Table</localized-string><localized-string key="Table.pl" language="en">Tables</localized-string><localized-string key="Requirement.sg" language="en">Requirement</localized-string><localized-string key="Requirement.pl" language="en">Requirements</localized-string><localized-string key="Recommendation.sg" language="en">Recommendation</localized-string><localized-string key="Recommendation.pl" language="en">Recommendations</localized-string><localized-string key="Permission.sg" language="en">Permission</localized-string><localized-string key="Permission.pl" language="en">Permissions</localized-string><localized-string key="Example.sg" language="en">Example</localized-string><localized-string key="Example.pl" language="en">Examples</localized-string><localized-string key="Part.sg" language="en">Part</localized-string><localized-string key="Part.pl" language="en">Parts</localized-string><localized-string key="Section.sg" language="en">Section</localized-string><localized-string key="Section.pl" language="en">Sections</localized-string><localized-string key="Paragraph.sg" language="en">Paragraph</localized-string><localized-string key="Paragraph.pl" language="en">Paragraphs</localized-string><localized-string key="Chapter.sg" language="en">Chapter</localized-string><localized-string key="Chapter.pl" language="en">Chapters</localized-string><localized-string key="Page.sg" language="en">Page</localized-string><localized-string key="Page.pl" language="en">Pages</localized-string><localized-string key="language" language="en">en</localized-string><localized-string key="script" language="en">Latn</localized-string></localized-strings><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><metanorma><source><semantic__m3d-standard type="semantic" version="2.2.5">
+<semantic__bibdata type="standard">
+<semantic__title language="en" format="text/plain">M<semantic__sup>3</semantic__sup>AAWG Bot Metrics Report — Report #1 — 2012 and 2013</semantic__title>
+<semantic__docidentifier type="M3AAWG">:2014</semantic__docidentifier><semantic__date type="published"><semantic__on>2014-09-01</semantic__on></semantic__date><semantic__contributor><semantic__role type="author"/><semantic__organization>
+<semantic__name>Messaging Malware and Mobile Anti-Abuse Working Group</semantic__name>
+<semantic__abbreviation>M3AAWG</semantic__abbreviation></semantic__organization></semantic__contributor><semantic__contributor><semantic__role type="publisher"/><semantic__organization>
+<semantic__name>Messaging Malware and Mobile Anti-Abuse Working Group</semantic__name>
+<semantic__abbreviation>M3AAWG</semantic__abbreviation></semantic__organization></semantic__contributor><semantic__edition>1</semantic__edition><semantic__version><semantic__revision-date>2014-09-01</semantic__revision-date></semantic__version><semantic__language>en</semantic__language><semantic__script>Latn</semantic__script><semantic__status><semantic__stage>published</semantic__stage></semantic__status><semantic__copyright><semantic__from>2014</semantic__from><semantic__owner><semantic__organization>
+<semantic__name>Messaging Malware and Mobile Anti-Abuse Working Group</semantic__name>
+<semantic__abbreviation>M3AAWG</semantic__abbreviation></semantic__organization></semantic__owner></semantic__copyright><semantic__ext><semantic__doctype>report</semantic__doctype></semantic__ext></semantic__bibdata><semantic__metanorma-extension><semantic__presentation-metadata><semantic__name>TOC Heading Levels</semantic__name><semantic__value>2</semantic__value></semantic__presentation-metadata><semantic__presentation-metadata><semantic__name>HTML TOC Heading Levels</semantic__name><semantic__value>2</semantic__value></semantic__presentation-metadata><semantic__presentation-metadata><semantic__name>DOC TOC Heading Levels</semantic__name><semantic__value>2</semantic__value></semantic__presentation-metadata></semantic__metanorma-extension>
+<semantic__boilerplate>
+  <semantic__copyright-statement>
+    <semantic__clause>
+      <semantic__p id="semantic___ddcc6034-c76f-1d43-229d-644d774a89f2">© 2014 Messaging, Malware and Mobile Anti-Abuse Working Group</semantic__p>
+    </semantic__clause>
+  </semantic__copyright-statement>
+
+  
+
+  <semantic__legal-statement>
+    <semantic__clause>
+      <semantic__p id="semantic___299dcfba-ef93-7095-8c28-7f8ffc95374f">All rights reserved. Unless otherwise specified, no part of this
+        publication may be reproduced or utilized otherwise in any form or by any
+        means, electronic or mechanical, including photocopying, or posting on the
+        internet or an intranet, without prior written permission. Permission can
+        be requested from the address below.</semantic__p>
+    </semantic__clause>
+  </semantic__legal-statement>
+
+  <semantic__feedback-statement>
+
+    <semantic__p id="semantic__boilerplate-name">Messaging, Malware and Mobile Anti-Abuse Working Group</semantic__p>
+    <semantic__p class="boilerplate-address" id="semantic___964db264-9358-0046-6625-b137f10b4c9e">
+      781 Beach Street, Suite 302<semantic__br/>
+      San Francisco<semantic__br/>
+      California 94109<semantic__br/>
+      United States of America<semantic__br/>
+      <semantic__br/>
+      <semantic__link target="https://www.m3aawg.org">www.m3aawg.org</semantic__link>
+    </semantic__p>
+  </semantic__feedback-statement>
+</semantic__boilerplate>
+
+<semantic__sections><semantic__clause id="semantic___executive_summary" obligation="normative">
+<semantic__title>Executive Summary</semantic__title>
+<semantic__p id="semantic___00da7265-5608-75b3-007b-aaab37721e11">This is the first industry report with data provided directly by service operators and ISPs detailing
+the number of subscribers identified as having a system infected by malware, also known a “bot,”
+and the percentage of those subscribers notified of the problem. It is the first cooperative effort by
+network service providers to quantify the extent of malicious bots infecting their subscribers. The
+Messaging, Malware and Mobile Anti-Abuse Working Group will periodically issue updated reports.</semantic__p>
+
+<semantic__p id="semantic___881c3499-08eb-341a-51d9-245358d31d43">Based on the data provided to M<semantic__sup>3</semantic__sup>AAWG, in 2012 participating network operators reported the
+number of infected subscribers ranged from .84 % to 1.18 % with 99.13 % to 99.21 % of those
+subscribers being notified they had a bot. In 2013, the number of infected subscribers varied from
+1.04 % to .80 % with 99.82 % to 93.99 % of consumers being notified.</semantic__p>
+</semantic__clause>
+
+<semantic__clause id="semantic___about_the_m3aawg_bot_metrics_program" obligation="normative">
+<semantic__title>About the M<semantic__sup>3</semantic__sup>AAWG Bot Metrics Program</semantic__title>
+<semantic__p id="semantic___46b328f4-b5e9-6ef3-d87f-53e51c0586e0">These metrics are the first cooperative effort by the network companies that directly provide end-users Internet access, and thus see the data first hand, to quantify the extent of malicious bots
+afflicting their subscribers. The metrics cover only end-user connections and do not include
+enterprise business networks.</semantic__p>
+
+<semantic__p id="semantic___d1b5565c-fae5-a13b-abf5-4b9154782dcc">This is a voluntary program with data provided confidentially by ISPs and service providers. The
+data is shared at the discretion of each company and is reported here as aggregated monthly metrics
+summarized by quarters. While the report represents the contributions of ISPs and network
+operators working within M<semantic__sup>3</semantic__sup>AAWG to address malware and bots, M<semantic__sup>3</semantic__sup>AAWG members are under
+no obligation to supply this information or to participate in this program.</semantic__p>
+
+<semantic__p id="semantic___4d5daef3-65f0-f92f-fde8-37cb84a9d632">The M<semantic__sup>3</semantic__sup>AAWG Bot Metrics Program is an objective tool for tracking industry and government
+efforts at controlling the spread of bots and we are committed to continuing this important work.
+Similar to the <semantic__link target="https://www.m3aawg.org/m3aawg-reports">M<semantic__sup>3</semantic__sup>AAWG Email Metrics Report</semantic__link> on abusive messaging, we expect these reports will
+become an important resource for understanding the extent of bot infections and to measuring the
+effectiveness of the industry’s efforts to protect end-users.</semantic__p>
+</semantic__clause>
+
+<semantic__clause id="semantic___observations" obligation="normative">
+<semantic__title>Observations</semantic__title>
+<semantic__p id="semantic___5fc36d80-d247-ecba-dde0-aa11f606ce57">While definitions of bots can differ from country to country, the metrics below report on malware,
+or malicious code, discovered by a network operator while processing a subscriber’s email or other
+Internet activities. Bots are installed directly on end-users’ systems, often without their knowledge.
+Once deployed, the “botted” machine can be controlled by commands from a “bot master,” a
+person who uses infected machines as a network to send spam or carry out fraudulent activities. The
+malicious code is often designed to run in background mode, so subscribers are usually unaware
+their systems are infected.</semantic__p>
+
+<semantic__p id="semantic___e6ed8ff6-3af1-e9c6-3637-5c356dc8ebbc">While Internet service providers and network operators are able to identify infected users on their
+networks, subscribers must remove the malware from their systems. Based on the data in this
+report, network operators are notifying about 98.7 % of end-users when they are infected. This
+points out the importance of the entire Internet ecosystem working together to address this
+problem, including security software vendors and end users.</semantic__p>
+</semantic__clause>
+
+<semantic__clause id="semantic___report_12012_and_2013_results_summarized_by_quarter" obligation="normative">
+<semantic__title>Report #1 — 2012 and 2013 Results Summarized by Quarter</semantic__title>
+<semantic__p id="semantic___20d7728a-65d6-ebf5-9986-774ff2bffc2f">The statistics reported below are compiled from confidential monthly data provided by participating
+M<semantic__sup>3</semantic__sup>AAWG member ISPs and network operators summarized here by quarter from 2012 through
+2013. Our reporting basis covers a quarterly average of up to 43.5 million subscribers.</semantic__p>
+
+<semantic__table id="semantic___975bb381-25da-2c53-936d-cef3d622729f" unnumbered="true"><semantic__thead><semantic__tr><semantic__th valign="top" align="left">2012</semantic__th>
+<semantic__th valign="top" align="left">Q1 2012</semantic__th>
+<semantic__th valign="top" align="left">Q2 2012</semantic__th>
+<semantic__th valign="top" align="left">Q3 2012</semantic__th>
+<semantic__th valign="top" align="left">Q4 2012</semantic__th>
+</semantic__tr></semantic__thead>
+<semantic__tbody><semantic__tr><semantic__td valign="top" align="left">Subscribers Represented</semantic__td>
+<semantic__td valign="top" align="left">37,707,435</semantic__td>
+<semantic__td valign="top" align="left">37,358,206</semantic__td>
+<semantic__td valign="top" align="left">36,991,516</semantic__td>
+<semantic__td valign="top" align="left">37,383,662</semantic__td>
+</semantic__tr><semantic__tr><semantic__td valign="top" align="left">Subscribers Deemed Infected</semantic__td>
+<semantic__td valign="top" align="left">317,064</semantic__td>
+<semantic__td valign="top" align="left">402,585</semantic__td>
+<semantic__td valign="top" align="left">249,492</semantic__td>
+<semantic__td valign="top" align="left">440,746</semantic__td>
+</semantic__tr><semantic__tr><semantic__td valign="top" align="left">% Infected</semantic__td>
+<semantic__td valign="top" align="left">0.84 %</semantic__td>
+<semantic__td valign="top" align="left">1.08 %</semantic__td>
+<semantic__td valign="top" align="left">0.67 %</semantic__td>
+<semantic__td valign="top" align="left">1.18 %</semantic__td>
+</semantic__tr><semantic__tr><semantic__td valign="top" align="left">Infected Subscribers Notified</semantic__td>
+<semantic__td valign="top" align="left">314,295</semantic__td>
+<semantic__td valign="top" align="left">400,439</semantic__td>
+<semantic__td valign="top" align="left">245,522</semantic__td>
+<semantic__td valign="top" align="left">437,253</semantic__td>
+</semantic__tr><semantic__tr><semantic__td valign="top" align="left">% Notified</semantic__td>
+<semantic__td valign="top" align="left">99.13 %</semantic__td>
+<semantic__td valign="top" align="left">99.47 %</semantic__td>
+<semantic__td valign="top" align="left">98.41 %</semantic__td>
+<semantic__td valign="top" align="left">99.21 %</semantic__td>
+</semantic__tr></semantic__tbody>
+</semantic__table>
+
+<semantic__table id="semantic___3555b2af-43e4-bfaf-55c5-2e9ffdc22835" unnumbered="true"><semantic__thead><semantic__tr><semantic__th valign="top" align="left">2013</semantic__th>
+<semantic__th valign="top" align="left">Q1 2013</semantic__th>
+<semantic__th valign="top" align="left">Q2 2013</semantic__th>
+<semantic__th valign="top" align="left">Q3 2013</semantic__th>
+<semantic__th valign="top" align="left">Q4 2013</semantic__th>
+</semantic__tr></semantic__thead>
+<semantic__tbody><semantic__tr><semantic__td valign="top" align="left">Subscribers Represented</semantic__td>
+<semantic__td valign="top" align="left">37,270,265</semantic__td>
+<semantic__td valign="top" align="left">37,735,195</semantic__td>
+<semantic__td valign="top" align="left">37,639,022</semantic__td>
+<semantic__td valign="top" align="left">43,550,674</semantic__td>
+</semantic__tr><semantic__tr><semantic__td valign="top" align="left">Subscribers Deemed Infected</semantic__td>
+<semantic__td valign="top" align="left">388,152</semantic__td>
+<semantic__td valign="top" align="left">435,921</semantic__td>
+<semantic__td valign="top" align="left">493,572</semantic__td>
+<semantic__td valign="top" align="left">346,615</semantic__td>
+</semantic__tr><semantic__tr><semantic__td valign="top" align="left">% Infected</semantic__td>
+<semantic__td valign="top" align="left">1.04 %</semantic__td>
+<semantic__td valign="top" align="left">1.16 %</semantic__td>
+<semantic__td valign="top" align="left">1.31 %</semantic__td>
+<semantic__td valign="top" align="left">0.80 %</semantic__td>
+</semantic__tr><semantic__tr><semantic__td valign="top" align="left">Infected Subscribers Notified</semantic__td>
+<semantic__td valign="top" align="left">387,221</semantic__td>
+<semantic__td valign="top" align="left">435,149</semantic__td>
+<semantic__td valign="top" align="left">492,382</semantic__td>
+<semantic__td valign="top" align="left">325,787</semantic__td>
+</semantic__tr><semantic__tr><semantic__td valign="top" align="left">% Notified</semantic__td>
+<semantic__td valign="top" align="left">99.76 %</semantic__td>
+<semantic__td valign="top" align="left">99.82 %</semantic__td>
+<semantic__td valign="top" align="left">99.76 %</semantic__td>
+<semantic__td valign="top" align="left">93.99 %</semantic__td>
+</semantic__tr></semantic__tbody>
+</semantic__table>
+</semantic__clause>
+
+<semantic__clause id="semantic___what_is_measured" obligation="normative">
+<semantic__title>What is Measured?</semantic__title>
+<semantic__ul id="semantic___6fa67e68-96cb-7ff5-2ea4-f9e6f7fa9a61"><semantic__li><semantic__p id="semantic___4c8fe7c3-1688-6e73-07a8-332b9e2e9402"><semantic__strong>Number of Subscribers</semantic__strong><semantic__br/>
+The number of specific subscribers on a network. Each subscriber may represent more than
+one end-user or include multiple devices.</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___eb333063-a08d-c0f6-6a21-3171cedb0907"><semantic__strong>Infected Subscribers</semantic__strong><semantic__br/>
+This is the count of unique subscribers identified to be infected in each reporting period.</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___4ae7782b-e4ac-409e-58c9-e7319e29e6d4"><semantic__strong>Percent of Base Infected</semantic__strong><semantic__br/>
+Calculated from above: Infected Subscribers divided by Number of Subscribers</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___114bc3d2-0799-1e6f-c6d0-9db9ce40d7c3"><semantic__strong>Total Number of Infected Subscribers Notified</semantic__strong><semantic__br/>
+The number of unique subscribers notified of a bot by any method, including text message,
+phone call, email, Web redirection or browser notification, and postal mail. Multiple notices
+sent to the same subscriber are counted as one. This does not imply that the subscriber
+received or read the notice.</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___b3346e56-ab4f-3961-9e75-01b88f74ccb9"><semantic__strong>Percent Notified</semantic__strong><semantic__br/>
+Calculated from above: Infected Subscribers Notified / Infected Subscribers</semantic__p>
+</semantic__li>
+</semantic__ul>
+</semantic__clause>
+</semantic__sections>
+</semantic__m3d-standard></source></metanorma><source-highlighter-css>sourcecode table td { padding: 5px; }
+sourcecode table pre { margin: 0; }
+sourcecode, sourcecode .w {
+  color: #444444;
+}
+sourcecode .cp {
+  color: #CC00A3;
+}
+sourcecode .cs {
+  color: #CC00A3;
+}
+sourcecode .c, sourcecode .ch, sourcecode .cd, sourcecode .cm, sourcecode .cpf, sourcecode .c1 {
+  color: #FF0000;
+}
+sourcecode .kc {
+  color: #C34E00;
+}
+sourcecode .kd {
+  color: #0000FF;
+}
+sourcecode .kr {
+  color: #007575;
+}
+sourcecode .k, sourcecode .kn, sourcecode .kp, sourcecode .kt, sourcecode .kv {
+  color: #0000FF;
+}
+sourcecode .s, sourcecode .sb, sourcecode .sc, sourcecode .ld, sourcecode .sd, sourcecode .s2, sourcecode .se, sourcecode .sh, sourcecode .si, sourcecode .sx, sourcecode .sr, sourcecode .s1, sourcecode .ss {
+  color: #009C00;
+}
+sourcecode .sa {
+  color: #0000FF;
+}
+sourcecode .nb, sourcecode .bp {
+  color: #C34E00;
+}
+sourcecode .nt {
+  color: #0000FF;
+}
+
+</source-highlighter-css></metanorma-extension>
+<boilerplate>
+  <copyright-statement>
+    <clause>
+      <p id="_ddcc6034-c76f-1d43-229d-644d774a89f2">© 2014 Messaging, Malware and Mobile Anti-Abuse Working Group</p>
+    </clause>
+  </copyright-statement>
+
+  
+
+  <legal-statement>
+    <clause>
+      <p id="_299dcfba-ef93-7095-8c28-7f8ffc95374f">All rights reserved. Unless otherwise specified, no part of this
+        publication may be reproduced or utilized otherwise in any form or by any
+        means, electronic or mechanical, including photocopying, or posting on the
+        internet or an intranet, without prior written permission. Permission can
+        be requested from the address below.</p>
+    </clause>
+  </legal-statement>
+
+  <feedback-statement>
+
+    <p id="boilerplate-name">Messaging, Malware and Mobile Anti-Abuse Working Group</p>
+    <p class="boilerplate-address" id="_964db264-9358-0046-6625-b137f10b4c9e">
+      781 Beach Street, Suite 302<br/>
+      San Francisco<br/>
+      California 94109<br/>
+      United States of America<br/>
+      <br/>
+      <link target="https://www.m3aawg.org">www.m3aawg.org</link>
+    </p>
+  </feedback-statement>
+</boilerplate>
+
+<sections><clause id="_executive_summary" obligation="normative" displayorder="1">
+<title depth="1">1.<tab/>Executive Summary</title>
+<p id="_00da7265-5608-75b3-007b-aaab37721e11">This is the first industry report with data provided directly by service operators and ISPs detailing
+the number of subscribers identified as having a system infected by malware, also known a “bot,”
+and the percentage of those subscribers notified of the problem. It is the first cooperative effort by
+network service providers to quantify the extent of malicious bots infecting their subscribers. The
+Messaging, Malware and Mobile Anti-Abuse Working Group will periodically issue updated reports.</p>
+
+<p id="_881c3499-08eb-341a-51d9-245358d31d43">Based on the data provided to M<sup>3</sup>AAWG, in 2012 participating network operators reported the
+number of infected subscribers ranged from .84 % to 1.18 % with 99.13 % to 99.21 % of those
+subscribers being notified they had a bot. In 2013, the number of infected subscribers varied from
+1.04 % to .80 % with 99.82 % to 93.99 % of consumers being notified.</p>
+</clause>
+
+<clause id="_about_the_m3aawg_bot_metrics_program" obligation="normative" displayorder="2">
+<title depth="1">2.<tab/>About the M<sup>3</sup>AAWG Bot Metrics Program</title>
+<p id="_46b328f4-b5e9-6ef3-d87f-53e51c0586e0">These metrics are the first cooperative effort by the network companies that directly provide end-users Internet access, and thus see the data first hand, to quantify the extent of malicious bots
+afflicting their subscribers. The metrics cover only end-user connections and do not include
+enterprise business networks.</p>
+
+<p id="_d1b5565c-fae5-a13b-abf5-4b9154782dcc">This is a voluntary program with data provided confidentially by ISPs and service providers. The
+data is shared at the discretion of each company and is reported here as aggregated monthly metrics
+summarized by quarters. While the report represents the contributions of ISPs and network
+operators working within M<sup>3</sup>AAWG to address malware and bots, M<sup>3</sup>AAWG members are under
+no obligation to supply this information or to participate in this program.</p>
+
+<p id="_4d5daef3-65f0-f92f-fde8-37cb84a9d632">The M<sup>3</sup>AAWG Bot Metrics Program is an objective tool for tracking industry and government
+efforts at controlling the spread of bots and we are committed to continuing this important work.
+Similar to the <link target="https://www.m3aawg.org/m3aawg-reports">M<sup>3</sup>AAWG Email Metrics Report</link> on abusive messaging, we expect these reports will
+become an important resource for understanding the extent of bot infections and to measuring the
+effectiveness of the industry’s efforts to protect end-users.</p>
+</clause>
+
+<clause id="_observations" obligation="normative" displayorder="3">
+<title depth="1">3.<tab/>Observations</title>
+<p id="_5fc36d80-d247-ecba-dde0-aa11f606ce57">While definitions of bots can differ from country to country, the metrics below report on malware,
+or malicious code, discovered by a network operator while processing a subscriber’s email or other
+Internet activities. Bots are installed directly on end-users’ systems, often without their knowledge.
+Once deployed, the “botted” machine can be controlled by commands from a “bot master,” a
+person who uses infected machines as a network to send spam or carry out fraudulent activities. The
+malicious code is often designed to run in background mode, so subscribers are usually unaware
+their systems are infected.</p>
+
+<p id="_e6ed8ff6-3af1-e9c6-3637-5c356dc8ebbc">While Internet service providers and network operators are able to identify infected users on their
+networks, subscribers must remove the malware from their systems. Based on the data in this
+report, network operators are notifying about 98.7 % of end-users when they are infected. This
+points out the importance of the entire Internet ecosystem working together to address this
+problem, including security software vendors and end users.</p>
+</clause>
+
+<clause id="_report_12012_and_2013_results_summarized_by_quarter" obligation="normative" displayorder="4">
+<title depth="1">4.<tab/>Report #1 — 2012 and 2013 Results Summarized by Quarter</title>
+<p id="_20d7728a-65d6-ebf5-9986-774ff2bffc2f">The statistics reported below are compiled from confidential monthly data provided by participating
+M<sup>3</sup>AAWG member ISPs and network operators summarized here by quarter from 2012 through
+2013. Our reporting basis covers a quarterly average of up to 43.5 million subscribers.</p>
+
+<table id="_975bb381-25da-2c53-936d-cef3d622729f" unnumbered="true"><thead><tr><th valign="top" align="left">2012</th>
+<th valign="top" align="left">Q1 2012</th>
+<th valign="top" align="left">Q2 2012</th>
+<th valign="top" align="left">Q3 2012</th>
+<th valign="top" align="left">Q4 2012</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Subscribers Represented</td>
+<td valign="top" align="left">37,707,435</td>
+<td valign="top" align="left">37,358,206</td>
+<td valign="top" align="left">36,991,516</td>
+<td valign="top" align="left">37,383,662</td>
+</tr><tr><td valign="top" align="left">Subscribers Deemed Infected</td>
+<td valign="top" align="left">317,064</td>
+<td valign="top" align="left">402,585</td>
+<td valign="top" align="left">249,492</td>
+<td valign="top" align="left">440,746</td>
+</tr><tr><td valign="top" align="left">% Infected</td>
+<td valign="top" align="left">0.84 %</td>
+<td valign="top" align="left">1.08 %</td>
+<td valign="top" align="left">0.67 %</td>
+<td valign="top" align="left">1.18 %</td>
+</tr><tr><td valign="top" align="left">Infected Subscribers Notified</td>
+<td valign="top" align="left">314,295</td>
+<td valign="top" align="left">400,439</td>
+<td valign="top" align="left">245,522</td>
+<td valign="top" align="left">437,253</td>
+</tr><tr><td valign="top" align="left">% Notified</td>
+<td valign="top" align="left">99.13 %</td>
+<td valign="top" align="left">99.47 %</td>
+<td valign="top" align="left">98.41 %</td>
+<td valign="top" align="left">99.21 %</td>
+</tr></tbody>
+</table>
+
+<table id="_3555b2af-43e4-bfaf-55c5-2e9ffdc22835" unnumbered="true"><thead><tr><th valign="top" align="left">2013</th>
+<th valign="top" align="left">Q1 2013</th>
+<th valign="top" align="left">Q2 2013</th>
+<th valign="top" align="left">Q3 2013</th>
+<th valign="top" align="left">Q4 2013</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Subscribers Represented</td>
+<td valign="top" align="left">37,270,265</td>
+<td valign="top" align="left">37,735,195</td>
+<td valign="top" align="left">37,639,022</td>
+<td valign="top" align="left">43,550,674</td>
+</tr><tr><td valign="top" align="left">Subscribers Deemed Infected</td>
+<td valign="top" align="left">388,152</td>
+<td valign="top" align="left">435,921</td>
+<td valign="top" align="left">493,572</td>
+<td valign="top" align="left">346,615</td>
+</tr><tr><td valign="top" align="left">% Infected</td>
+<td valign="top" align="left">1.04 %</td>
+<td valign="top" align="left">1.16 %</td>
+<td valign="top" align="left">1.31 %</td>
+<td valign="top" align="left">0.80 %</td>
+</tr><tr><td valign="top" align="left">Infected Subscribers Notified</td>
+<td valign="top" align="left">387,221</td>
+<td valign="top" align="left">435,149</td>
+<td valign="top" align="left">492,382</td>
+<td valign="top" align="left">325,787</td>
+</tr><tr><td valign="top" align="left">% Notified</td>
+<td valign="top" align="left">99.76 %</td>
+<td valign="top" align="left">99.82 %</td>
+<td valign="top" align="left">99.76 %</td>
+<td valign="top" align="left">93.99 %</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_what_is_measured" obligation="normative" displayorder="5">
+<title depth="1">5.<tab/>What is Measured?</title>
+<ul id="_6fa67e68-96cb-7ff5-2ea4-f9e6f7fa9a61"><li><p id="_4c8fe7c3-1688-6e73-07a8-332b9e2e9402"><strong>Number of Subscribers</strong><br/>
+The number of specific subscribers on a network. Each subscriber may represent more than
+one end-user or include multiple devices.</p>
+</li>
+<li><p id="_eb333063-a08d-c0f6-6a21-3171cedb0907"><strong>Infected Subscribers</strong><br/>
+This is the count of unique subscribers identified to be infected in each reporting period.</p>
+</li>
+<li><p id="_4ae7782b-e4ac-409e-58c9-e7319e29e6d4"><strong>Percent of Base Infected</strong><br/>
+Calculated from above: Infected Subscribers divided by Number of Subscribers</p>
+</li>
+<li><p id="_114bc3d2-0799-1e6f-c6d0-9db9ce40d7c3"><strong>Total Number of Infected Subscribers Notified</strong><br/>
+The number of unique subscribers notified of a bot by any method, including text message,
+phone call, email, Web redirection or browser notification, and postal mail. Multiple notices
+sent to the same subscriber are counted as one. This does not imply that the subscriber
+received or read the notice.</p>
+</li>
+<li><p id="_b3346e56-ab4f-3961-9e75-01b88f74ccb9"><strong>Percent Notified</strong><br/>
+Calculated from above: Infected Subscribers Notified / Infected Subscribers</p>
+</li>
+</ul>
+</clause>
+</sections>
+</m3d-standard>

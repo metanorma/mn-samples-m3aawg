@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<m3d-standard xmlns="https://www.metanorma.org/ns/m3d" type="semantic" version="2.2.5">
+<bibdata type="standard">
+<title language="en" format="text/plain">M<sup>3</sup>AAWG Bot Metrics Report — Report #1 — 2012 and 2013</title>
+<docidentifier type="M3AAWG">:2014</docidentifier><date type="published"><on>2014-09-01</on></date><contributor><role type="author"/><organization>
+<name>Messaging Malware and Mobile Anti-Abuse Working Group</name>
+<abbreviation>M3AAWG</abbreviation></organization></contributor><contributor><role type="publisher"/><organization>
+<name>Messaging Malware and Mobile Anti-Abuse Working Group</name>
+<abbreviation>M3AAWG</abbreviation></organization></contributor><edition>1</edition><version><revision-date>2014-09-01</revision-date></version><language>en</language><script>Latn</script><status><stage>published</stage></status><copyright><from>2014</from><owner><organization>
+<name>Messaging Malware and Mobile Anti-Abuse Working Group</name>
+<abbreviation>M3AAWG</abbreviation></organization></owner></copyright><ext><doctype>report</doctype></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate>
+  <copyright-statement>
+    <clause>
+      <p id="_ddcc6034-c76f-1d43-229d-644d774a89f2">© 2014 Messaging, Malware and Mobile Anti-Abuse Working Group</p>
+    </clause>
+  </copyright-statement>
+
+  
+
+  <legal-statement>
+    <clause>
+      <p id="_299dcfba-ef93-7095-8c28-7f8ffc95374f">All rights reserved. Unless otherwise specified, no part of this
+        publication may be reproduced or utilized otherwise in any form or by any
+        means, electronic or mechanical, including photocopying, or posting on the
+        internet or an intranet, without prior written permission. Permission can
+        be requested from the address below.</p>
+    </clause>
+  </legal-statement>
+
+  <feedback-statement>
+
+    <p id="boilerplate-name">Messaging, Malware and Mobile Anti-Abuse Working Group</p>
+    <p class="boilerplate-address" id="_964db264-9358-0046-6625-b137f10b4c9e">
+      781 Beach Street, Suite 302<br/>
+      San Francisco<br/>
+      California 94109<br/>
+      United States of America<br/>
+      <br/>
+      <link target="https://www.m3aawg.org">www.m3aawg.org</link>
+    </p>
+  </feedback-statement>
+</boilerplate>
+
+<sections><clause id="_executive_summary" obligation="normative">
+<title>Executive Summary</title>
+<p id="_00da7265-5608-75b3-007b-aaab37721e11">This is the first industry report with data provided directly by service operators and ISPs detailing
+the number of subscribers identified as having a system infected by malware, also known a “bot,”
+and the percentage of those subscribers notified of the problem. It is the first cooperative effort by
+network service providers to quantify the extent of malicious bots infecting their subscribers. The
+Messaging, Malware and Mobile Anti-Abuse Working Group will periodically issue updated reports.</p>
+
+<p id="_881c3499-08eb-341a-51d9-245358d31d43">Based on the data provided to M<sup>3</sup>AAWG, in 2012 participating network operators reported the
+number of infected subscribers ranged from .84 % to 1.18 % with 99.13 % to 99.21 % of those
+subscribers being notified they had a bot. In 2013, the number of infected subscribers varied from
+1.04 % to .80 % with 99.82 % to 93.99 % of consumers being notified.</p>
+</clause>
+
+<clause id="_about_the_m3aawg_bot_metrics_program" obligation="normative">
+<title>About the M<sup>3</sup>AAWG Bot Metrics Program</title>
+<p id="_46b328f4-b5e9-6ef3-d87f-53e51c0586e0">These metrics are the first cooperative effort by the network companies that directly provide end-users Internet access, and thus see the data first hand, to quantify the extent of malicious bots
+afflicting their subscribers. The metrics cover only end-user connections and do not include
+enterprise business networks.</p>
+
+<p id="_d1b5565c-fae5-a13b-abf5-4b9154782dcc">This is a voluntary program with data provided confidentially by ISPs and service providers. The
+data is shared at the discretion of each company and is reported here as aggregated monthly metrics
+summarized by quarters. While the report represents the contributions of ISPs and network
+operators working within M<sup>3</sup>AAWG to address malware and bots, M<sup>3</sup>AAWG members are under
+no obligation to supply this information or to participate in this program.</p>
+
+<p id="_4d5daef3-65f0-f92f-fde8-37cb84a9d632">The M<sup>3</sup>AAWG Bot Metrics Program is an objective tool for tracking industry and government
+efforts at controlling the spread of bots and we are committed to continuing this important work.
+Similar to the <link target="https://www.m3aawg.org/m3aawg-reports">M<sup>3</sup>AAWG Email Metrics Report</link> on abusive messaging, we expect these reports will
+become an important resource for understanding the extent of bot infections and to measuring the
+effectiveness of the industry’s efforts to protect end-users.</p>
+</clause>
+
+<clause id="_observations" obligation="normative">
+<title>Observations</title>
+<p id="_5fc36d80-d247-ecba-dde0-aa11f606ce57">While definitions of bots can differ from country to country, the metrics below report on malware,
+or malicious code, discovered by a network operator while processing a subscriber’s email or other
+Internet activities. Bots are installed directly on end-users’ systems, often without their knowledge.
+Once deployed, the “botted” machine can be controlled by commands from a “bot master,” a
+person who uses infected machines as a network to send spam or carry out fraudulent activities. The
+malicious code is often designed to run in background mode, so subscribers are usually unaware
+their systems are infected.</p>
+
+<p id="_e6ed8ff6-3af1-e9c6-3637-5c356dc8ebbc">While Internet service providers and network operators are able to identify infected users on their
+networks, subscribers must remove the malware from their systems. Based on the data in this
+report, network operators are notifying about 98.7 % of end-users when they are infected. This
+points out the importance of the entire Internet ecosystem working together to address this
+problem, including security software vendors and end users.</p>
+</clause>
+
+<clause id="_report_12012_and_2013_results_summarized_by_quarter" obligation="normative">
+<title>Report #1 — 2012 and 2013 Results Summarized by Quarter</title>
+<p id="_20d7728a-65d6-ebf5-9986-774ff2bffc2f">The statistics reported below are compiled from confidential monthly data provided by participating
+M<sup>3</sup>AAWG member ISPs and network operators summarized here by quarter from 2012 through
+2013. Our reporting basis covers a quarterly average of up to 43.5 million subscribers.</p>
+
+<table id="_975bb381-25da-2c53-936d-cef3d622729f" unnumbered="true"><thead><tr><th valign="top" align="left">2012</th>
+<th valign="top" align="left">Q1 2012</th>
+<th valign="top" align="left">Q2 2012</th>
+<th valign="top" align="left">Q3 2012</th>
+<th valign="top" align="left">Q4 2012</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Subscribers Represented</td>
+<td valign="top" align="left">37,707,435</td>
+<td valign="top" align="left">37,358,206</td>
+<td valign="top" align="left">36,991,516</td>
+<td valign="top" align="left">37,383,662</td>
+</tr><tr><td valign="top" align="left">Subscribers Deemed Infected</td>
+<td valign="top" align="left">317,064</td>
+<td valign="top" align="left">402,585</td>
+<td valign="top" align="left">249,492</td>
+<td valign="top" align="left">440,746</td>
+</tr><tr><td valign="top" align="left">% Infected</td>
+<td valign="top" align="left">0.84 %</td>
+<td valign="top" align="left">1.08 %</td>
+<td valign="top" align="left">0.67 %</td>
+<td valign="top" align="left">1.18 %</td>
+</tr><tr><td valign="top" align="left">Infected Subscribers Notified</td>
+<td valign="top" align="left">314,295</td>
+<td valign="top" align="left">400,439</td>
+<td valign="top" align="left">245,522</td>
+<td valign="top" align="left">437,253</td>
+</tr><tr><td valign="top" align="left">% Notified</td>
+<td valign="top" align="left">99.13 %</td>
+<td valign="top" align="left">99.47 %</td>
+<td valign="top" align="left">98.41 %</td>
+<td valign="top" align="left">99.21 %</td>
+</tr></tbody>
+</table>
+
+<table id="_3555b2af-43e4-bfaf-55c5-2e9ffdc22835" unnumbered="true"><thead><tr><th valign="top" align="left">2013</th>
+<th valign="top" align="left">Q1 2013</th>
+<th valign="top" align="left">Q2 2013</th>
+<th valign="top" align="left">Q3 2013</th>
+<th valign="top" align="left">Q4 2013</th>
+</tr></thead>
+<tbody><tr><td valign="top" align="left">Subscribers Represented</td>
+<td valign="top" align="left">37,270,265</td>
+<td valign="top" align="left">37,735,195</td>
+<td valign="top" align="left">37,639,022</td>
+<td valign="top" align="left">43,550,674</td>
+</tr><tr><td valign="top" align="left">Subscribers Deemed Infected</td>
+<td valign="top" align="left">388,152</td>
+<td valign="top" align="left">435,921</td>
+<td valign="top" align="left">493,572</td>
+<td valign="top" align="left">346,615</td>
+</tr><tr><td valign="top" align="left">% Infected</td>
+<td valign="top" align="left">1.04 %</td>
+<td valign="top" align="left">1.16 %</td>
+<td valign="top" align="left">1.31 %</td>
+<td valign="top" align="left">0.80 %</td>
+</tr><tr><td valign="top" align="left">Infected Subscribers Notified</td>
+<td valign="top" align="left">387,221</td>
+<td valign="top" align="left">435,149</td>
+<td valign="top" align="left">492,382</td>
+<td valign="top" align="left">325,787</td>
+</tr><tr><td valign="top" align="left">% Notified</td>
+<td valign="top" align="left">99.76 %</td>
+<td valign="top" align="left">99.82 %</td>
+<td valign="top" align="left">99.76 %</td>
+<td valign="top" align="left">93.99 %</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_what_is_measured" obligation="normative">
+<title>What is Measured?</title>
+<ul id="_6fa67e68-96cb-7ff5-2ea4-f9e6f7fa9a61"><li><p id="_4c8fe7c3-1688-6e73-07a8-332b9e2e9402"><strong>Number of Subscribers</strong><br/>
+The number of specific subscribers on a network. Each subscriber may represent more than
+one end-user or include multiple devices.</p>
+</li>
+<li><p id="_eb333063-a08d-c0f6-6a21-3171cedb0907"><strong>Infected Subscribers</strong><br/>
+This is the count of unique subscribers identified to be infected in each reporting period.</p>
+</li>
+<li><p id="_4ae7782b-e4ac-409e-58c9-e7319e29e6d4"><strong>Percent of Base Infected</strong><br/>
+Calculated from above: Infected Subscribers divided by Number of Subscribers</p>
+</li>
+<li><p id="_114bc3d2-0799-1e6f-c6d0-9db9ce40d7c3"><strong>Total Number of Infected Subscribers Notified</strong><br/>
+The number of unique subscribers notified of a bot by any method, including text message,
+phone call, email, Web redirection or browser notification, and postal mail. Multiple notices
+sent to the same subscriber are counted as one. This does not imply that the subscriber
+received or read the notice.</p>
+</li>
+<li><p id="_b3346e56-ab4f-3961-9e75-01b88f74ccb9"><strong>Percent Notified</strong><br/>
+Calculated from above: Infected Subscribers Notified / Infected Subscribers</p>
+</li>
+</ul>
+</clause>
+</sections>
+</m3d-standard>
