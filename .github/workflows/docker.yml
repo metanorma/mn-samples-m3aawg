@@ -31,7 +31,7 @@ jobs:
         uses: actions-mn/setup-flavors@v1
         with:
           extra-flavors: m3aawg
-          github-pakages-token: ${{ secrets.METANORMA_CI_PAT_TOKEN }}
+          github-packages-token: ${{ secrets.METANORMA_CI_PAT_TOKEN }}
           use-bundler: true
 
       - name: Metanorma generate site
