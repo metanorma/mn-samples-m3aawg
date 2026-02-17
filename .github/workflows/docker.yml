@@ -20,19 +20,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: metanorma/metanorma:1.6.15
+      image: metanorma/metanorma:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: true
 
-      - name: Setup Flavor
-        uses: actions-mn/setup-flavors@v1
+      - name: Setup Metanorma with M3AAWG flavor
+        uses: actions-mn/setup@v3
         with:
+          installation-method: gem
           extra-flavors: m3aawg
-          github-packages-token: ${{ secrets.METANORMA_CI_PAT_TOKEN }}
-          use-bundler: true
 
       - name: Metanorma generate site
         id: build-and-publish
