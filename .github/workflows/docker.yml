@@ -20,18 +20,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: metanorma/metanorma:latest
+      image: metanorma/metanorma:1.6.15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: true
 
-      - name: Setup Metanorma with M3AAWG flavor
-        uses: actions-mn/setup@v3
-        with:
-          installation-method: gem
-          extra-flavors: m3aawg
+      # M3AAWG flavor is included in metanorma:1.6.15 image
 
       - name: Metanorma generate site
         id: build-and-publish
