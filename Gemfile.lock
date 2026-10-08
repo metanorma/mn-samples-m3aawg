@@ -1,4 +1,20 @@
 GIT
+  remote: https://github.com/lutaml/lutaml-model.git
+  revision: 107f33da52d83436edde6a22538224f29505c0a3
+  branch: main
+  specs:
+    lutaml-model (0.8.96)
+      base64
+      bigdecimal
+      canon
+      concurrent-ruby
+      liquid (>= 4.0, < 6.0)
+      moxml (~> 0.5.84)
+      ostruct
+      rubyzip (~> 3.7)
+      thor
+
+GIT
   remote: https://github.com/lutaml/moxml.git
   revision: e1436d10e115092dceb5af5cdecda9b91293e05d
   branch: main
@@ -296,16 +312,6 @@ GEM
       lutaml-model
       lutaml-store (~> 0.3)
       rainbow (~> 3.0)
-    lutaml-model (0.8.96)
-      base64
-      bigdecimal
-      canon
-      concurrent-ruby
-      liquid (>= 4.0, < 6.0)
-      moxml (~> 0.5.84)
-      ostruct
-      rubyzip (~> 3.7)
-      thor
     lutaml-store (0.3.2)
       lutaml-model (~> 0.8.15)
       rubyzip (>= 2.3, < 4)
@@ -600,6 +606,7 @@ PLATFORMS
 DEPENDENCIES
   fontist (~> 3.0)
   leptris (= 1.9.317)
+  lutaml-model!
   metanorma-cli
   moxml!
   pubid!
