@@ -19,23 +19,20 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: metanorma/metanorma:1.6.15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: true
 
-      # M3AAWG flavor is included in metanorma:1.6.15 image
-
-      - name: Metanorma generate site
-        id: build-and-publish
-        uses: actions-mn/build-and-publish@v1
+      - name: Set up Ruby (the repo bundle)
+        uses: ruby/setup-ruby@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          agree-to-terms: true
-          destination: artifact
+          ruby-version: '4.0'
+          bundler-cache: true
+
+      - name: Metanorma generate site (bundle)
+        run: bundle exec metanorma site generate . -c metanorma.yml
 
   deploy:
     runs-on: ubuntu-latest
