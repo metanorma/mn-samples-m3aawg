@@ -599,7 +599,6 @@ PLATFORMS
 
 DEPENDENCIES
   fontist (~> 3.0)
-  leptris (= 1.9.331.0)
   lutaml-model (= 0.8.97)
   metanorma-cli
   moxml!
