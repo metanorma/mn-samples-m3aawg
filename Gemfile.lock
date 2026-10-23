@@ -67,6 +67,15 @@ GIT
       relaton-cli (>= 3.0.0.pre.alpha)
 
 GIT
+  remote: https://github.com/metanorma/metanorma-bipm.git
+  revision: 9ce68fa536637e2e9ad7bbd0cc11dae7c7fa7de7
+  branch: main
+  specs:
+    metanorma-bipm (2.9.1.pre.alpha.1)
+      metanorma-generic (~> 3.5.0)
+      metanorma-iso (>= 3.4.2)
+
+GIT
   remote: https://github.com/metanorma/metanorma-cli
   revision: f97e23669cdb093fe0522691eefae292479adc4d
   branch: main
@@ -126,6 +135,16 @@ GIT
       relaton (~> 3.0.0.pre.alpha)
 
 GIT
+  remote: https://github.com/metanorma/metanorma-ieee.git
+  revision: 022ca817696e192dceaf1e261294d03925c89b2a
+  branch: main
+  specs:
+    metanorma-ieee (1.7.1.pre.alpha.1)
+      metanorma-standoc (>= 3.4.2)
+      mnconvert (~> 1.20)
+      pubid (~> 2.0.0.pre.alpha)
+
+GIT
   remote: https://github.com/metanorma/metanorma-ietf.git
   revision: 9d4dccfdba4d087904659c8987590e158f330770
   branch: main
@@ -139,6 +158,26 @@ GIT
       relaton-render (~> 3.0.0.pre.alpha)
 
 GIT
+  remote: https://github.com/metanorma/metanorma-iho.git
+  revision: f2cd99ea2097955f81552ac0eb5b2f5091928755
+  branch: main
+  specs:
+    metanorma-iho (1.4.1.pre.alpha.1)
+      metanorma-generic (~> 3.5.0)
+
+GIT
+  remote: https://github.com/metanorma/metanorma-itu.git
+  revision: cc522db4eb79aae03a2e796cb3dbade35a0bb06e
+  branch: main
+  specs:
+    metanorma-itu (2.9.3.pre.alpha.1)
+      metanorma-iso (>= 3.4.2)
+      metanorma-standoc (>= 3.4.2)
+      pubid (~> 2.0.0.pre.alpha)
+      twitter_cldr (>= 3.0.0)
+      tzinfo-data
+
+GIT
   remote: https://github.com/metanorma/metanorma-m3aawg.git
   revision: cafa4f953a996797a0f93cb577a61121e63eb75a
   branch: main
@@ -147,6 +186,16 @@ GIT
       htmlentities (~> 4.3.4)
       metanorma-generic (~> 3.5)
       thread_safe
+
+GIT
+  remote: https://github.com/metanorma/metanorma-ogc.git
+  revision: 5b2fc0c6d8ec895e60e731612ffa46ca934c316f
+  branch: main
+  specs:
+    metanorma-ogc (2.10.1.pre.alpha.1)
+      iso-639
+      metanorma-iso (>= 3.4.2)
+      metanorma-standoc (>= 3.4.2)
 
 GIT
   remote: https://github.com/metanorma/metanorma-standoc
@@ -700,9 +749,6 @@ GEM
       webrick (~> 1.7)
       webrobots (~> 0.1.2)
     memo_wise (1.13.0)
-    metanorma-bipm (2.9.0)
-      metanorma-generic (~> 3.5.0)
-      metanorma-iso (~> 3.5.0)
     metanorma-cc (2.9.0)
       metanorma-generic (~> 3.5.0)
     metanorma-generic (3.5.0)
@@ -710,13 +756,7 @@ GEM
     metanorma-iec (2.9.0)
       metanorma-iso (~> 3.5.0)
       pubid
-    metanorma-ieee (1.7.0)
-      metanorma-standoc (~> 3.5.0)
-      mnconvert (~> 1.20)
-      pubid
     metanorma-ietf-data (0.2.0)
-    metanorma-iho (1.4.0)
-      metanorma-generic (~> 3.5.0)
     metanorma-iso (3.5.1.pre.alpha.1)
       metanorma-document (~> 0.5.0)
       metanorma-standoc (>= 3.4.2)
@@ -725,11 +765,6 @@ GEM
       sts (>= 0.5.6)
       tokenizer (~> 0.3.0)
       uniword (~> 1.0)
-    metanorma-itu (2.9.2)
-      metanorma-standoc (~> 3.5.0)
-      pubid
-      twitter_cldr (>= 3.0.0)
-      tzinfo-data
     metanorma-jis (1.2.0)
       japanese_calendar (~> 0)
       metanorma-iso (~> 3.5.0)
@@ -740,9 +775,6 @@ GEM
       lutaml-model (~> 0.8, >= 0.8.22)
       rubyzip
       unitsml (~> 0.6)
-    metanorma-ogc (2.10.0)
-      iso-639
-      metanorma-standoc (~> 3.5.0)
     metanorma-plateau (1.3.1)
       metanorma-jis (~> 1.2.0)
       pubid
@@ -1242,11 +1274,16 @@ DEPENDENCIES
   isodoc!
   isodoc-i18n!
   metanorma!
+  metanorma-bipm!
   metanorma-cli!
   metanorma-core!
   metanorma-document!
+  metanorma-ieee!
   metanorma-ietf!
+  metanorma-iho!
+  metanorma-itu!
   metanorma-m3aawg!
+  metanorma-ogc!
   metanorma-standoc!
   metanorma-utils!
   moxml (= 0.5.153)
