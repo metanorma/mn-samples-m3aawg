@@ -12,6 +12,7 @@ gem "metanorma-standoc", git: "https://github.com/metanorma/metanorma-standoc", 
 gem "metanorma-document", git: "https://github.com/metanorma/metanorma-document", branch: "main"
 gem "metanorma", git: "https://github.com/metanorma/metanorma", branch: "main"
 gem "metanorma-utils", git: "https://github.com/metanorma/metanorma-utils", branch: "main"
+gem "metanorma-ietf", github: "metanorma/metanorma-ietf", branch: "main"
 gem "relaton", "= 3.0.0.pre.alpha.11"
 gem "relaton-render", "= 3.0.0.pre.alpha.19"
 gem "relaton-bib", "2.2.0.pre.alpha.1"

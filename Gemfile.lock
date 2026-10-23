@@ -126,6 +126,16 @@ GIT
       relaton (~> 3.0.0.pre.alpha)
 
 GIT
+  remote: https://github.com/metanorma/metanorma-ietf.git
+  revision: 9d4dccfdba4d087904659c8987590e158f330770
+  branch: main
+  specs:
+    metanorma-ietf (3.7.11)
+      metanorma-ietf-data
+      metanorma-standoc (~> 3.5.0)
+      relaton-render
+
+GIT
   remote: https://github.com/metanorma/metanorma-m3aawg.git
   revision: cafa4f953a996797a0f93cb577a61121e63eb75a
   branch: main
@@ -708,10 +718,6 @@ GEM
       metanorma-standoc (~> 3.5.0)
       mnconvert (~> 1.20)
       pubid
-    metanorma-ietf (3.7.11)
-      metanorma-ietf-data
-      metanorma-standoc (~> 3.5.0)
-      relaton-render
     metanorma-ietf-data (0.2.0)
     metanorma-iho (1.4.0)
       metanorma-generic (~> 3.5.0)
@@ -1243,6 +1249,7 @@ DEPENDENCIES
   metanorma-cli!
   metanorma-core!
   metanorma-document!
+  metanorma-ietf!
   metanorma-m3aawg!
   metanorma-standoc!
   metanorma-utils!
