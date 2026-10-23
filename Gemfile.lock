@@ -1,20 +1,3 @@
-GIT
-  remote: https://github.com/lutaml/moxml.git
-  revision: e1436d10e115092dceb5af5cdecda9b91293e05d
-  branch: main
-  specs:
-    moxml (0.5.117)
-
-GIT
-  remote: https://github.com/pubid/pubid.git
-  revision: 1e11aae65086b00c8d98661d7dafc0863b17b168
-  branch: main
-  specs:
-    pubid (2.0.0.pre.alpha.27)
-      lutaml-model
-      parsanol (>= 1.3.62)
-      parslet
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -738,6 +721,7 @@ GEM
       relaton-render (~> 3.0.0.pre.alpha)
     mn2pdf (2.72)
     mnconvert (1.89.0)
+    moxml (0.5.153)
     multi_json (1.21.2)
     net-http-digest_auth (1.4.1)
     net-http-persistent (4.0.8)
@@ -846,6 +830,10 @@ GEM
     psych (5.2.6)
       date
       stringio
+    pubid (2.0.0.pre.alpha.27)
+      lutaml-model
+      parsanol (>= 1.3.62)
+      parslet
     public_suffix (7.0.5)
     racc (1.8.1)
     rack (3.2.7)
@@ -1160,7 +1148,6 @@ DEPENDENCIES
   fontist (~> 3.0)
   isodoc (= 3.7.4.pre.alpha.1)
   isodoc-i18n (= 1.5.4.pre.alpha.1)
-  lutaml-model (= 0.8.97)
   metanorma (= 2.5.6.pre.alpha.1)
   metanorma-bipm (= 2.9.1.pre.alpha.1)
   metanorma-cc (= 2.9.1.pre.alpha.1)
@@ -1187,8 +1174,8 @@ DEPENDENCIES
   metanorma-taste (= 1.1.3.pre.alpha.1)
   metanorma-un (= 0.12.20.pre.alpha.1)
   mn-requirements (= 0.5.14.pre.alpha.1)
-  moxml!
-  pubid!
+  moxml (= 0.5.153)
+  pubid (= 2.0.0.pre.alpha.27)
   relaton (= 3.0.0.pre.alpha.11)
   relaton-bib (= 2.2.0.pre.alpha.1)
   relaton-render (= 3.0.0.pre.alpha.19)
