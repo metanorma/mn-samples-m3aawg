@@ -21,7 +21,7 @@ gem "metanorma-bipm", "2.9.1.pre.alpha.1" # wave candidate
 gem "metanorma-cc", "2.9.1.pre.alpha.1" # wave candidate
 gem "metanorma-ribose", "2.9.1.pre.alpha.1" # wave candidate
 gem "metanorma-csa", "2.7.4.pre.alpha.1" # wave candidate
-gem "metanorma-m3aawg", "2.2.6.pre.alpha.1" # wave candidate
+gem "metanorma-m3aawg", "2.2.6.pre.alpha.2" # wave candidate
 gem "metanorma-un", "0.12.20.pre.alpha.1" # wave candidate
 gem "metanorma-generic", "3.5.1.pre.alpha.1" # wave candidate
 gem "metanorma-taste", "1.1.3.pre.alpha.1" # wave candidate
@@ -36,4 +36,3 @@ gem "relaton-bib", "2.2.0.pre.alpha.1"
 gem "pubid", "2.0.0.pre.alpha.27"
 gem "moxml", "0.5.153"
 gem "fontist", "~> 3.0"
-gem "sassc-embedded"
