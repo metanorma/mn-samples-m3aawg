@@ -540,7 +540,7 @@ GEM
       net-http-persistent (>= 4.0.4, < 5)
     faraday-retry (2.4.0)
       faraday (~> 2.0)
-    ferrum (0.19.1)
+    ferrum (0.20.0)
       addressable (~> 2.5)
       base64 (~> 0.2)
       concurrent-ruby (~> 1.1)
@@ -711,7 +711,7 @@ GEM
       rubyzip (~> 3.7)
     marcel (1.0.4)
     matrix (0.4.3)
-    mechanize (2.14.1)
+    mechanize (2.14.2)
       addressable (~> 2.8)
       base64
       domain_name (~> 0.5, >= 0.5.20190701)
@@ -910,8 +910,8 @@ GEM
     psych (5.2.6)
       date
       stringio
-    pubid (2.0.0.pre.alpha.27)
-      lutaml-model
+    pubid (2.0.0)
+      lutaml-model (~> 0.8)
       parsanol (>= 1.3.62)
       parslet
     public_suffix (7.0.5)
@@ -935,7 +935,7 @@ GEM
       rexml (~> 3.2)
     readline (0.0.4)
       reline
-    relaton (3.0.0.pre.alpha.11)
+    relaton (3.0.0)
       addressable (~> 2.8)
       algolia (~> 2.3.0)
       base64
@@ -957,7 +957,7 @@ GEM
       loc_mods (~> 0.3.0)
       logger (~> 1.6)
       lutaml-hal (~> 0.2, >= 0.2.5)
-      lutaml-model (~> 0.8.76)
+      lutaml-model (~> 0.8.113)
       lutaml-store (~> 0.3.2)
       mechanize (~> 2.10)
       mini_portile2 (~> 2.8.0)
@@ -965,11 +965,11 @@ GEM
       niso-jats (~> 0.3.4)
       parallel (~> 1.26)
       parslet (~> 2.0.0)
-      pubid (~> 2.0.0.pre.alpha.21)
+      pubid (~> 2.0.0.pre.alpha.62)
       relaton-render (>= 3.0.0.pre.alpha.1, < 4)
       rfcxml (~> 0.4.3)
       rubyzip (~> 3.7)
-      sqlite3 (~> 1.7)
+      sqlite3 (>= 1.7)
       w3c_api (~> 0.3.3)
       yeptris (>= 0.4)
     relaton-bib (2.2.0.pre.alpha.1)
@@ -982,10 +982,11 @@ GEM
       relaton-core (~> 2.2.0.pre.alpha.1)
       relaton-logger (~> 2.2.0.pre.alpha.1)
       rfcxml (~> 0.4.3)
-    relaton-cli (3.0.0.pre.alpha.11)
+    relaton-cli (3.0.0)
       liquid (~> 5)
-      pubid (~> 2.0.0.pre.alpha.13)
-      relaton (= 3.0.0.pre.alpha.11)
+      pubid (~> 2.0.0.pre.alpha.28)
+      relaton (= 3.0.0)
+      relaton-render (>= 3.0.0.pre.alpha.1, < 4)
       thor
       thor-hollaback
     relaton-core (2.2.0.pre.alpha.1)
@@ -999,10 +1000,10 @@ GEM
       uuidtools
     relaton-logger (2.2.0.pre.alpha.1)
       logger (~> 1.6)
-    relaton-render (3.0.0.pre.alpha.19)
+    relaton-render (3.0.0)
       htmlentities
       liquid (~> 5)
-      lutaml-model
+      lutaml-model (~> 0.8)
       nokogiri
       twitter_cldr
     reline (0.7.0)
@@ -1239,10 +1240,10 @@ DEPENDENCIES
   metanorma-standoc!
   metanorma-utils!
   moxml (= 0.5.153)
-  pubid (= 2.0.0.pre.alpha.27)
-  relaton (= 3.0.0.pre.alpha.11)
+  pubid (= 2.0.0)
+  relaton (= 3.0.0)
   relaton-bib (= 2.2.0.pre.alpha.1)
-  relaton-render (= 3.0.0.pre.alpha.19)
+  relaton-render (= 3.0.0)
 
 BUNDLED WITH
-  4.0.16
+   2.5.22
