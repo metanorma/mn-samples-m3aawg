@@ -17,26 +17,27 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/isodoc
-  revision: 499f2d1d663d8daf98dd73283b8f0bb57d56cfb8
+  revision: 10c92244848e766132347d7655ad4c070acce951
   branch: main
   specs:
-    isodoc (3.7.4.pre.alpha.1)
+    isodoc (3.7.8)
       base64 (>= 0.1.0)
       bigdecimal
       html2doc (~> 1.12)
       mn-requirements (~> 0.5.0)
       mn2pdf (>= 2.13)
-      relaton-cli (>= 3.0.0.pre.alpha, < 3.1.0)
-      relaton-render (~> 3.0.0.pre.alpha, < 5)
+      pubid (~> 2.0.3)
+      relaton-cli (~> 3.0)
       roman-numerals
       rouge (~> 4.0)
+      sassc-embedded
       thread_safe
       twitter_cldr (>= 6.6.0)
       uuidtools
 
 GIT
   remote: https://github.com/metanorma/isodoc-i18n
-  revision: 14a68cd9b3b78cab213bbed0f7edcb81cf88039f
+  revision: afdd9213067c2038f0cf1837b11e3d3eb563f79f
   branch: main
   specs:
     isodoc-i18n (1.5.4.pre.alpha.1)
@@ -109,10 +110,10 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-core
-  revision: 0763250cc331272c262689a0080333b3d8ad01e8
+  revision: 63ad0a9d07e1793926962359317a5614ade6c66c
   branch: main
   specs:
-    metanorma-core (0.2.5.pre.alpha.1)
+    metanorma-core (0.2.7)
       asciidoctor
       metanorma-taste (~> 1.1.0)
       metanorma-utils
@@ -120,19 +121,18 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-document
-  revision: 11ce2eb13ebe1dd43d46d144195d8061f0477560
+  revision: 92eadba7096ef9f572ca048131d97152be103c16
   branch: main
   specs:
-    metanorma-document (0.5.2.pre.alpha.1)
+    metanorma-document (0.5.3)
       glossarist (~> 2.13)
       lutaml-model (~> 0.8.0)
       metanorma-core
-      metanorma-mko (>= 1.0.0)
       mml (~> 2.4)
       mn-requirements (>= 0.2.1)
-      plurimath (~> 0.11)
-      pubid (~> 2.0.0.pre.alpha)
-      relaton (~> 3.0.0.pre.alpha)
+      plurimath (~> 0.11.14)
+      pubid (~> 2.0.3)
+      relaton-cli (~> 3.0)
 
 GIT
   remote: https://github.com/metanorma/metanorma-ieee.git
@@ -199,10 +199,10 @@ GIT
 
 GIT
   remote: https://github.com/metanorma/metanorma-standoc
-  revision: c46544f863c20d899601d18bd3d6284023885bb3
+  revision: a8b3d83fc5a7ff5db760e2a87da6c1fa346df79c
   branch: main
   specs:
-    metanorma-standoc (3.5.1.pre.alpha.1)
+    metanorma-standoc (3.5.6)
       addressable (~> 2.8)
       asciidoctor (~> 2.0.0)
       concurrent-ruby
@@ -210,26 +210,26 @@ GIT
       isodoc (~> 3.7.2)
       leptris (~> 1.9)
       metanorma-core (~> 0.2.3)
-      metanorma-document
+      metanorma-document (>= 0.5.2.pre.alpha.1)
       metanorma-mirror
       metanorma-plugin-asciichem (~> 0.1.0)
       metanorma-plugin-glossarist (~> 0.5)
-      metanorma-plugin-lutaml (~> 0.7.40)
+      metanorma-plugin-lutaml (~> 0.7.55)
       metanorma-plugin-plantuml (~> 1.0.0)
-      metanorma-utils (~> 2.0.1)
-      moxml (~> 0.5.84)
+      metanorma-utils (~> 2.0.10)
+      moxml (~> 0.6.1)
       png_conform (~> 0.1.0)
-      relaton-cli (>= 3.0.0.pre.alpha, < 3.1.0)
+      relaton-cli (~> 3.0)
       relaton-iev (~> 2.0)
       svg_conform (~> 0.2)
       vectory (~> 0.13, >= 0.13.2)
 
 GIT
   remote: https://github.com/metanorma/metanorma-utils
-  revision: 2808689766e50663ca359b3b7967131c22ef00d0
+  revision: bc8beb1d13231061cef5a05cc39e2d4e5a197a24
   branch: main
   specs:
-    metanorma-utils (2.0.8)
+    metanorma-utils (2.0.10)
       asciidoctor (>= 2)
       concurrent-ruby
       csv
@@ -255,14 +255,15 @@ GEM
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
       uri (>= 0.13.1)
-    addressable (2.9.0)
+    addressable (2.9.2)
       public_suffix (>= 2.0.2, < 8.0)
     algolia (2.3.4)
       faraday (>= 0.15, < 3)
       faraday-net_http_persistent (>= 0.15, < 3)
       multi_json (~> 1.0)
       net-http-persistent
-    ansi (1.6.0)
+    amath (0.1.0)
+      parsanol (~> 1.3, >= 1.3.107)
     asciichem (0.31.8)
       chemicalml (~> 0.4)
       elkrb (~> 2.0)
@@ -274,7 +275,8 @@ GEM
       relaton-bib (~> 2.1)
       thor (~> 1.3)
     asciidoctor (2.0.26)
-    ast (2.4.3)
+    asciiunits (0.1.6)
+      parsanol (>= 1.3.113)
     base64 (0.3.0)
     bcp47_spec (0.2.1)
     benchmark (0.5.0)
@@ -285,27 +287,27 @@ GEM
       racc (~> 1.7)
     bigdecimal (4.1.3)
     bindata (2.5.1)
-    brotli (0.8.0)
+    brotli (0.9.2)
     builder (3.3.0)
     cabriolet (0.2.4)
       bindata (~> 2.5)
       fractor (~> 0.1)
       thor (~> 1.3)
     camertron-eprun (2.0.0)
-    canon (0.3.117)
+    canon (0.3.120)
       diff-lcs
       json
-      leptris (~> 1.9.376)
-      moxml (~> 0.5.149)
+      leptris (~> 1.9.401)
+      moxml (~> 0.6.0)
       paint
       rainbow
       table_tennis
       thor (~> 1.4)
       unicode-name
-      yeptris (~> 0.6.32)
-    chemicalml (0.4.1)
+      yeptris (~> 0.6.55)
+    chemicalml (0.4.2)
       logger (~> 1.6)
-      lutaml-model (~> 0.8.114)
+      lutaml-model (~> 0.8.156)
     cldr-plurals-runtime-rb (1.2.0)
     cliver (0.3.2)
     cnccs (0.1.6)
@@ -322,7 +324,7 @@ GEM
       unitsml
       word-to-markdown
     crass (1.0.8)
-    css_parser (3.3.0)
+    css_parser (3.4.0)
       addressable
       base64
       ssrf_filter (~> 1.5)
@@ -334,10 +336,10 @@ GEM
       addressable (~> 2.8)
       base64 (~> 0.3)
     drb (2.2.3)
-    ea (0.6.142)
+    ea (0.6.144)
       benchmark
       liquid (~> 5)
-      lutaml-model (~> 0.8.114)
+      lutaml-model (~> 0.8.156)
       lutaml-path
       nokogiri (~> 1.18)
       rubyzip (~> 3.7)
@@ -351,31 +353,51 @@ GEM
       scanf (~> 1.0)
       sxp (~> 2.0)
       unicode-types (~> 1.8)
-    elkrb (2.0.0)
+    elkrb (2.0.1)
       lutaml-model (>= 0.8, < 0.9)
       thor (~> 1.4)
-    emf (0.1.2)
+    emf (0.2.0)
       bindata (~> 2.4)
-    emfsvg (0.1.3)
+    emf (0.2.0-aarch64-linux-gnu)
+      bindata (~> 2.4)
+      fiddle (~> 1.1)
+    emf (0.2.0-aarch64-linux-musl)
+      bindata (~> 2.4)
+      fiddle (~> 1.1)
+    emf (0.2.0-arm64-darwin)
+      bindata (~> 2.4)
+      fiddle (~> 1.1)
+    emf (0.2.0-x64-mingw-ucrt)
+      bindata (~> 2.4)
+      fiddle (~> 1.1)
+    emf (0.2.0-x86_64-darwin)
+      bindata (~> 2.4)
+      fiddle (~> 1.1)
+    emf (0.2.0-x86_64-linux-gnu)
+      bindata (~> 2.4)
+      fiddle (~> 1.1)
+    emf (0.2.0-x86_64-linux-musl)
+      bindata (~> 2.4)
+      fiddle (~> 1.1)
+    emfsvg (0.1.4)
       base64
       bigdecimal
-      emf (~> 0.1)
+      emf (~> 0.2, >= 0.2.0)
       fontisan
-      leptris (~> 1.9.362)
+      leptris (~> 1.9.399)
       libpng (~> 1.6)
     excavate (1.1.1)
       cabriolet (~> 0.2.4)
       omnizip (~> 0.3.11)
       thor (~> 1.0)
-    expressir (2.4.40)
+    expressir (2.4.47)
       base64 (>= 0.1.0)
       benchmark
       benchmark-ips
       csv
       liquid (~> 5)
-      lutaml-model (~> 0.8.114)
-      moxml
-      nokogiri (~> 1.19)
+      lutaml-model (~> 0.8.156)
+      moxml (~> 0.6.0)
       paint
       parsanol (~> 1.3.9, >= 1.3.89)
       rb_sys (~> 0.9.130)
@@ -384,15 +406,14 @@ GEM
       table_tennis
       thor (~> 1.0)
       yeptris (~> 0.6.1)
-    expressir (2.4.40-aarch64-linux)
+    expressir (2.4.47-aarch64-linux)
       base64 (>= 0.1.0)
       benchmark
       benchmark-ips
       csv
       liquid (~> 5)
-      lutaml-model (~> 0.8.114)
-      moxml
-      nokogiri (~> 1.19)
+      lutaml-model (~> 0.8.156)
+      moxml (~> 0.6.0)
       paint
       parsanol (~> 1.3.9, >= 1.3.89)
       ruby-progressbar (~> 1.11)
@@ -400,15 +421,14 @@ GEM
       table_tennis
       thor (~> 1.0)
       yeptris (~> 0.6.1)
-    expressir (2.4.40-aarch64-linux-musl)
+    expressir (2.4.47-aarch64-linux-musl)
       base64 (>= 0.1.0)
       benchmark
       benchmark-ips
       csv
       liquid (~> 5)
-      lutaml-model (~> 0.8.114)
-      moxml
-      nokogiri (~> 1.19)
+      lutaml-model (~> 0.8.156)
+      moxml (~> 0.6.0)
       paint
       parsanol (~> 1.3.9, >= 1.3.89)
       ruby-progressbar (~> 1.11)
@@ -416,15 +436,14 @@ GEM
       table_tennis
       thor (~> 1.0)
       yeptris (~> 0.6.1)
-    expressir (2.4.40-arm-linux)
+    expressir (2.4.47-arm-linux)
       base64 (>= 0.1.0)
       benchmark
       benchmark-ips
       csv
       liquid (~> 5)
-      lutaml-model (~> 0.8.114)
-      moxml
-      nokogiri (~> 1.19)
+      lutaml-model (~> 0.8.156)
+      moxml (~> 0.6.0)
       paint
       parsanol (~> 1.3.9, >= 1.3.89)
       ruby-progressbar (~> 1.11)
@@ -432,15 +451,14 @@ GEM
       table_tennis
       thor (~> 1.0)
       yeptris (~> 0.6.1)
-    expressir (2.4.40-arm-linux-musl)
+    expressir (2.4.47-arm-linux-musl)
       base64 (>= 0.1.0)
       benchmark
       benchmark-ips
       csv
       liquid (~> 5)
-      lutaml-model (~> 0.8.114)
-      moxml
-      nokogiri (~> 1.19)
+      lutaml-model (~> 0.8.156)
+      moxml (~> 0.6.0)
       paint
       parsanol (~> 1.3.9, >= 1.3.89)
       ruby-progressbar (~> 1.11)
@@ -448,15 +466,14 @@ GEM
       table_tennis
       thor (~> 1.0)
       yeptris (~> 0.6.1)
-    expressir (2.4.40-arm64-darwin)
+    expressir (2.4.47-arm64-darwin)
       base64 (>= 0.1.0)
       benchmark
       benchmark-ips
       csv
       liquid (~> 5)
-      lutaml-model (~> 0.8.114)
-      moxml
-      nokogiri (~> 1.19)
+      lutaml-model (~> 0.8.156)
+      moxml (~> 0.6.0)
       paint
       parsanol (~> 1.3.9, >= 1.3.89)
       ruby-progressbar (~> 1.11)
@@ -464,15 +481,14 @@ GEM
       table_tennis
       thor (~> 1.0)
       yeptris (~> 0.6.1)
-    expressir (2.4.40-x64-mingw-ucrt)
+    expressir (2.4.47-x64-mingw-ucrt)
       base64 (>= 0.1.0)
       benchmark
       benchmark-ips
       csv
       liquid (~> 5)
-      lutaml-model (~> 0.8.114)
-      moxml
-      nokogiri (~> 1.19)
+      lutaml-model (~> 0.8.156)
+      moxml (~> 0.6.0)
       paint
       parsanol (~> 1.3.9, >= 1.3.89)
       ruby-progressbar (~> 1.11)
@@ -480,15 +496,14 @@ GEM
       table_tennis
       thor (~> 1.0)
       yeptris (~> 0.6.1)
-    expressir (2.4.40-x86_64-darwin)
+    expressir (2.4.47-x86_64-darwin)
       base64 (>= 0.1.0)
       benchmark
       benchmark-ips
       csv
       liquid (~> 5)
-      lutaml-model (~> 0.8.114)
-      moxml
-      nokogiri (~> 1.19)
+      lutaml-model (~> 0.8.156)
+      moxml (~> 0.6.0)
       paint
       parsanol (~> 1.3.9, >= 1.3.89)
       ruby-progressbar (~> 1.11)
@@ -496,15 +511,14 @@ GEM
       table_tennis
       thor (~> 1.0)
       yeptris (~> 0.6.1)
-    expressir (2.4.40-x86_64-linux)
+    expressir (2.4.47-x86_64-linux)
       base64 (>= 0.1.0)
       benchmark
       benchmark-ips
       csv
       liquid (~> 5)
-      lutaml-model (~> 0.8.114)
-      moxml
-      nokogiri (~> 1.19)
+      lutaml-model (~> 0.8.156)
+      moxml (~> 0.6.0)
       paint
       parsanol (~> 1.3.9, >= 1.3.89)
       ruby-progressbar (~> 1.11)
@@ -512,15 +526,14 @@ GEM
       table_tennis
       thor (~> 1.0)
       yeptris (~> 0.6.1)
-    expressir (2.4.40-x86_64-linux-musl)
+    expressir (2.4.47-x86_64-linux-musl)
       base64 (>= 0.1.0)
       benchmark
       benchmark-ips
       csv
       liquid (~> 5)
-      lutaml-model (~> 0.8.114)
-      moxml
-      nokogiri (~> 1.19)
+      lutaml-model (~> 0.8.156)
+      moxml (~> 0.6.0)
       paint
       parsanol (~> 1.3.9, >= 1.3.89)
       ruby-progressbar (~> 1.11)
@@ -528,25 +541,27 @@ GEM
       table_tennis
       thor (~> 1.0)
       yeptris (~> 0.6.1)
-    faraday (2.7.12)
-      base64
-      faraday-net_http (>= 2.0, < 3.1)
-      ruby2_keywords (>= 0.0.4)
+    faraday (2.15.1)
+      faraday-net_http (>= 2.0, < 3.6)
+      json
+      logger
     faraday-follow_redirects (0.5.0)
       faraday (>= 1, < 3)
-    faraday-net_http (3.0.2)
+    faraday-net_http (3.5.0)
+      net-http (~> 0.5)
     faraday-net_http_persistent (2.3.1)
       faraday (~> 2.5)
       net-http-persistent (>= 4.0.4, < 5)
     faraday-retry (2.4.0)
       faraday (~> 2.0)
-    ferrum (0.20.0)
+    ferrum (0.20.1)
       addressable (~> 2.5)
       base64 (~> 0.2)
       concurrent-ruby (~> 1.1)
       websocket-driver (~> 0.7)
     ffi (1.17.4)
     fiber-storage (1.0.1)
+    fiddle (1.1.8)
     fontisan (0.4.46)
       base64
       bindata (~> 2.5)
@@ -582,7 +597,7 @@ GEM
       addressable (~> 2.8)
       process_executer (~> 4.1)
       rchardet (~> 1.9)
-    glossarist (2.14.6)
+    glossarist (2.14.8)
       lutaml-model (~> 0.8.15)
       lutaml-store (~> 0.3)
       paint (~> 2.3)
@@ -594,7 +609,31 @@ GEM
       table_tennis (~> 0.0)
       tbx (~> 0.1)
       thor
-    graphql (2.6.13)
+    google-protobuf (4.36.2)
+      bigdecimal
+      rake (~> 13.3)
+    google-protobuf (4.36.2-aarch64-linux-gnu)
+      bigdecimal
+      rake (~> 13.3)
+    google-protobuf (4.36.2-aarch64-linux-musl)
+      bigdecimal
+      rake (~> 13.3)
+    google-protobuf (4.36.2-arm64-darwin)
+      bigdecimal
+      rake (~> 13.3)
+    google-protobuf (4.36.2-x64-mingw-ucrt)
+      bigdecimal
+      rake (~> 13.3)
+    google-protobuf (4.36.2-x86_64-darwin)
+      bigdecimal
+      rake (~> 13.3)
+    google-protobuf (4.36.2-x86_64-linux-gnu)
+      bigdecimal
+      rake (~> 13.3)
+    google-protobuf (4.36.2-x86_64-linux-musl)
+      bigdecimal
+      rake (~> 13.3)
+    graphql (2.6.14)
       base64
       fiber-storage
       logger
@@ -612,7 +651,7 @@ GEM
       nokogiri
       thor
     image_size (3.6.0)
-    io-console (0.9.4)
+    io-console (0.9.5)
     iso-639 (0.3.8)
       csv
     iso639 (1.4.0)
@@ -629,27 +668,28 @@ GEM
       rdf (~> 3.3)
       rexml (~> 3.2)
     latex-decode (0.4.2)
-    leptris (1.9.386.0)
+    lens_core (0.1.0)
+    leptris (1.9.402.0)
       ffi (~> 1.15)
-    leptris (1.9.386.0-aarch64-linux)
+    leptris (1.9.402.0-aarch64-linux)
       ffi (~> 1.15)
-    leptris (1.9.386.0-aarch64-linux-musl)
+    leptris (1.9.402.0-aarch64-linux-musl)
       ffi (~> 1.15)
-    leptris (1.9.386.0-arm-linux)
+    leptris (1.9.402.0-arm-linux)
       ffi (~> 1.15)
-    leptris (1.9.386.0-arm-linux-musl)
+    leptris (1.9.402.0-arm-linux-musl)
       ffi (~> 1.15)
-    leptris (1.9.386.0-arm64-darwin)
+    leptris (1.9.402.0-arm64-darwin)
       ffi (~> 1.15)
-    leptris (1.9.386.0-x64-mingw-ucrt)
+    leptris (1.9.402.0-x64-mingw-ucrt)
       ffi (~> 1.15)
-    leptris (1.9.386.0-x64-mingw32)
+    leptris (1.9.402.0-x64-mingw32)
       ffi (~> 1.15)
-    leptris (1.9.386.0-x86_64-darwin)
+    leptris (1.9.402.0-x86_64-darwin)
       ffi (~> 1.15)
-    leptris (1.9.386.0-x86_64-linux)
+    leptris (1.9.402.0-x86_64-linux)
       ffi (~> 1.15)
-    leptris (1.9.386.0-x86_64-linux-musl)
+    leptris (1.9.402.0-x86_64-linux-musl)
       ffi (~> 1.15)
     libpng (1.6.58.6)
       ffi (~> 1.0)
@@ -679,32 +719,33 @@ GEM
       nokogiri
       thor
     logger (1.7.0)
-    lutaml-hal (0.2.7)
-      faraday (~> 2.0)
-      faraday-follow_redirects (~> 0.3)
-      lutaml-model (~> 0.8.114)
-      lutaml-store (~> 0.3)
-      rainbow (~> 3.0)
-    lutaml-lml (0.3.4)
-      lutaml-model (~> 0.8.114)
+    lutaml-hal (0.2.9)
+      faraday (~> 2.7)
+      faraday-follow_redirects (~> 0.5)
+      lutaml-model (~> 0.8.148)
+      lutaml-store (~> 0.3.2)
+      rainbow (~> 3.1)
+      yeptris (~> 0.6.51)
+    lutaml-lml (0.3.5)
+      lutaml-model (~> 0.8.156)
       moxml (>= 0.1.24)
       parsanol (~> 1.3.68)
       ruby-graphviz
-    lutaml-model (0.8.145)
+    lutaml-model (0.8.157)
       base64 (>= 0.1.1)
       bigdecimal
       canon
       concurrent-ruby
       liquid (>= 4.0, < 6.0)
-      moxml (~> 0.5.139)
+      moxml (~> 0.6.1)
       ostruct
       rubyzip (~> 3.7)
       thor (~> 1.4)
-    lutaml-path (0.2.1)
-      lutaml-model (~> 0.8.114)
+    lutaml-path (0.2.3)
+      lutaml-model (~> 0.8.156)
       parsanol (~> 1.3)
-    lutaml-store (0.3.2)
-      lutaml-model (~> 0.8.15)
+    lutaml-store (0.3.3)
+      lutaml-model (~> 0.8.156)
       rubyzip (>= 2.3, < 4)
     lutaml-uml (1.0.3)
       lutaml-model (~> 0.8.114)
@@ -747,109 +788,104 @@ GEM
       pubid
     metanorma-mirror (1.0.0)
       lutaml-model (~> 0.8)
-    metanorma-mko (1.1.1)
-      lutaml-model (~> 0.8, >= 0.8.22)
-      rubyzip
-      unitsml (~> 0.6)
     metanorma-plateau (1.3.1)
       metanorma-jis (~> 1.2.0)
       pubid
-    metanorma-plugin-asciichem (0.1.4)
+    metanorma-plugin-asciichem (0.1.5)
       asciichem (~> 0.30, >= 0.30.1)
-      moxml (~> 0.5)
+      moxml (~> 0.6.0)
     metanorma-plugin-glossarist (0.5.2)
       asciidoctor
       glossarist (~> 2.8, >= 2.11.1)
       liquid
       metanorma-utils
-    metanorma-plugin-lutaml (0.7.54)
+    metanorma-plugin-lutaml (0.7.58)
       asciidoctor
       coradoc (~> 1.1.8)
       ea (>= 0.6.41)
       expressir (~> 2.3, >= 2.3.5)
-      isodoc
-      liquid
+      isodoc (>= 3.5.0)
+      liquid (~> 5)
       lutaml-lml
       lutaml-model (~> 0.8.4)
       lutaml-uml (>= 0.5, < 2)
       ogc-gml (~> 1.1)
-      relaton-cli
-    metanorma-plugin-plantuml (1.0.16)
+    metanorma-plugin-plantuml (1.0.17)
       asciidoctor
     metanorma-release (0.2.25)
       relaton-bib (~> 2.1)
       thor (~> 1.0)
     metanorma-ribose (2.9.0)
       metanorma-generic (~> 3.5.0)
-    metanorma-taste (1.1.2)
+    metanorma-taste (1.1.4)
       lutaml-model (>= 0.8)
     mime-types (3.7.0)
       logger
       mime-types-data (~> 3.2025, >= 3.2025.0507)
-    mime-types-data (3.2026.1020)
+    mime-types-data (3.2026.1027)
     mini_portile2 (2.8.9)
     minitest (6.0.6)
       drb (~> 2.0)
       prism (~> 1.5)
-    mml (2.4.3)
-      lutaml-model (~> 0.8.65)
-      moxml
-    mn-requirements (0.5.13)
+    mml (2.4.7)
+      lutaml-model (~> 0.8.155)
+      moxml (~> 0.6.1)
+    mn-requirements (0.5.14)
       isodoc-i18n (>= 1.2.0)
       metanorma-core (>= 0.1.0)
       metanorma-utils (>= 2.0.0)
-      relaton-render (>= 1.0.0)
-    mn2pdf (2.72)
+      relaton-render (~> 3.0.0.pre.alpha)
+    mn2pdf (2.73)
     mnconvert (1.89.0)
-    moxml (0.5.153)
+    moxml (0.6.2)
     multi_json (1.21.2)
+    net-http (0.10.0)
+      net-protocol (>= 0.3.0)
+      uri (>= 0.11.1)
     net-http-digest_auth (1.4.1)
     net-http-persistent (4.0.8)
       connection_pool (>= 2.2.4, < 4)
+    net-protocol (0.4.0)
+      timeout
     niso-jats (0.3.5)
       bigdecimal
       lutaml-model (~> 0.8.0)
       oasis-etm
     nkf (0.3.0)
-    nokogiri (1.19.4)
+    nokogiri (1.19.6)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.19.4-aarch64-linux-gnu)
+    nokogiri (1.19.6-aarch64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.19.4-aarch64-linux-musl)
+    nokogiri (1.19.6-aarch64-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.19.4-arm-linux-gnu)
+    nokogiri (1.19.6-arm-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.19.4-arm-linux-musl)
+    nokogiri (1.19.6-arm-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.19.4-arm64-darwin)
+    nokogiri (1.19.6-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.19.4-x64-mingw-ucrt)
+    nokogiri (1.19.6-x64-mingw-ucrt)
       racc (~> 1.4)
-    nokogiri (1.19.4-x86_64-darwin)
+    nokogiri (1.19.6-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.19.4-x86_64-linux-gnu)
+    nokogiri (1.19.6-x86_64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.19.4-x86_64-linux-musl)
+    nokogiri (1.19.6-x86_64-linux-musl)
       racc (~> 1.4)
     nokogiri-styles (0.1.2)
       nokogiri
-    oasis-etm (0.2.2)
-      lutaml-model (~> 0.8.114)
+    oasis-etm (0.2.3)
+      lutaml-model (~> 0.8.156)
     octokit (4.25.1)
       faraday (>= 1, < 3)
       sawyer (~> 0.9)
-    oga (3.5)
-      ast
-      ruby-ll (~> 2.2)
-    ogc-gml (1.2.1)
-      lutaml-model (~> 0.8.114)
+    ogc-gml (1.2.2)
+      lutaml-model (~> 0.8.156)
       nokogiri (~> 1.19)
-    omml (0.2.6)
-      lutaml-model (>= 0.8.0, < 1.0)
-      moxml (>= 0.1.18, < 0.6)
-      oga (~> 3.4)
-      ox (~> 2.14)
+    omml (0.2.11)
+      lutaml-model (~> 0.8.155)
+      moxml (~> 0.6.1)
     omnizip (0.3.58)
       base64 (~> 0.2)
       bindata (~> 2.4)
@@ -864,60 +900,65 @@ GEM
       bigdecimal (>= 3.0)
     paint (2.3.0)
     parallel (1.28.0)
-    parsanol (1.3.114)
+    parsanol (1.3.124)
       rb_sys (~> 0.9.39)
-    parsanol (1.3.114-aarch64-linux)
-    parsanol (1.3.114-aarch64-linux-musl)
-    parsanol (1.3.114-arm-linux)
-    parsanol (1.3.114-arm-linux-musl)
-    parsanol (1.3.114-arm64-darwin)
-    parsanol (1.3.114-x64-mingw-ucrt)
-    parsanol (1.3.114-x64-mingw32)
+    parsanol (1.3.124-aarch64-linux)
+    parsanol (1.3.124-aarch64-linux-musl)
+    parsanol (1.3.124-arm-linux)
+    parsanol (1.3.124-arm-linux-musl)
+    parsanol (1.3.124-arm64-darwin)
+    parsanol (1.3.124-x64-mingw-ucrt)
+    parsanol (1.3.124-x64-mingw32)
       rb_sys (~> 0.9.39)
-    parsanol (1.3.114-x86_64-darwin)
-    parsanol (1.3.114-x86_64-linux)
-    parsanol (1.3.114-x86_64-linux-musl)
+    parsanol (1.3.124-x86_64-darwin)
+    parsanol (1.3.124-x86_64-linux)
+    parsanol (1.3.124-x86_64-linux-musl)
     parslet (2.0.0)
     plane1converter (0.0.1)
     plist (3.7.2)
-    plurimath (0.11.12)
+    plurimath (0.11.15)
+      amath (~> 0.1)
       bigdecimal
       htmlentities
-      lutaml-model (~> 0.8.65)
+      lutaml-model (~> 0.8.155)
       mml (~> 2.4.2)
       omml (~> 0.2.5)
       ostruct
       ox
+      parsanol (~> 1.3, >= 1.3.116)
       parslet
       thor
       unitsml (~> 0.6.4)
-    png_conform (0.1.4)
+    png_conform (0.1.5)
       bindata (~> 2.5)
-      lutaml-model (~> 0.7)
+      lens_core
+      lutaml-model (~> 0.8.155)
       paint (~> 2.3)
       thor (~> 1.4)
-    postsvg (0.3.0)
-      nokogiri
-      parslet
+    postscript (0.2.1)
       thor
-    premailer (1.32.0)
+    postsvg (0.3.1)
+      leptris (>= 1.9.399.0)
+      parslet
+      postscript (~> 0.2)
+      thor
+    premailer (1.33.0)
       addressable
-      css_parser (>= 1.19.0)
-      htmlentities (>= 4.0.0)
+      css_parser (>= 3.1.0)
     prism (1.9.0)
     process_executer (4.1.1)
       track_open_instances (~> 0.1)
     psych (5.2.6)
       date
       stringio
-    pubid (2.0.0)
+    pubid (2.0.3)
       lutaml-model (~> 0.8)
-      parsanol (>= 1.3.62)
-      parslet
+      parsanol (>= 1.3.114, < 1.4)
     public_suffix (7.0.5)
     racc (1.8.1)
-    rack (3.2.7)
+    rack (3.2.8)
     rainbow (3.1.1)
+    rake (13.4.2)
     rake-compiler-dock (1.12.0)
     rb_sys (0.9.130)
       rake-compiler-dock (= 1.12.0)
@@ -935,44 +976,42 @@ GEM
       rexml (~> 3.2)
     readline (0.0.4)
       reline
-    relaton (3.0.1)
+    relaton (3.0.5)
       addressable (~> 2.8)
       algolia (~> 2.3.0)
-      base64
-      bibtex-ruby
+      base64 (~> 0.3)
+      bibtex-ruby (~> 6.2)
       cnccs (~> 0.1.1)
       concurrent-ruby (~> 1.0)
       csv (~> 3.3)
-      faraday (~> 2.7.0)
+      faraday (~> 2.7)
       faraday-net_http_persistent (~> 2.0)
       ferrum (~> 0.17)
       gb-agencies (~> 0.0.1)
       graphql (~> 2.3)
       graphql-client (~> 0.23)
       ieee-idams (~> 0.3.0)
-      iso639
+      iso639 (~> 1.4)
       isoics (~> 0.1.6)
-      json (< 3)
-      leptris (>= 1.9.80)
+      leptris (~> 1.9.391)
       loc_mods (~> 0.3.0)
       logger (~> 1.6)
-      lutaml-hal (~> 0.2, >= 0.2.5)
+      lutaml-hal (~> 0.2.8)
       lutaml-model (~> 0.8.113)
       lutaml-store (~> 0.3.2)
       mechanize (~> 2.10)
       mini_portile2 (~> 2.8.0)
-      moxml (>= 0.5)
+      moxml (~> 0.6.0)
       niso-jats (~> 0.3.4)
       parallel (~> 1.26)
-      parsanol (>= 1.3.112, < 1.4)
-      parslet (~> 2.0.0)
-      pubid (~> 2.0.0.pre.alpha.62)
-      relaton-render (>= 3.0.0.pre.alpha.1, < 4)
+      parsanol (~> 1.3.121)
+      pubid (~> 2.0.3)
+      relaton-render (~> 3.0)
       rfcxml (~> 0.4.3)
       rubyzip (~> 3.7)
-      sqlite3 (>= 1.7)
+      sqlite3 (~> 2.10)
       w3c_api (~> 0.3.3)
-      yeptris (>= 0.4)
+      yeptris (~> 0.6.51)
     relaton-bib (2.2.0.pre.alpha.1)
       bibtex-ruby
       iso639
@@ -983,10 +1022,10 @@ GEM
       relaton-core (~> 2.2.0.pre.alpha.1)
       relaton-logger (~> 2.2.0.pre.alpha.1)
       rfcxml (~> 0.4.3)
-    relaton-cli (3.0.1)
+    relaton-cli (3.0.5)
       liquid (~> 5)
-      pubid (~> 2.0.0.pre.alpha.28)
-      relaton (= 3.0.1)
+      pubid (>= 2.0.1, < 2.1)
+      relaton (= 3.0.5)
       relaton-render (>= 3.0.0.pre.alpha.1, < 4)
       thor
       thor-hollaback
@@ -1019,14 +1058,33 @@ GEM
     rouge (4.7.0)
     ruby-graphviz (1.2.5)
       rexml
-    ruby-ll (2.2.0)
-      ansi
-      ast
     ruby-progressbar (1.13.0)
-    ruby2_keywords (0.0.5)
     rubyntlm (0.6.8)
       base64
     rubyzip (3.7.0)
+    sass-embedded (1.107.1)
+      google-protobuf (~> 4.31)
+      rake (~> 13.3)
+    sass-embedded (1.107.1-aarch64-linux-gnu)
+      google-protobuf (~> 4.31)
+    sass-embedded (1.107.1-aarch64-linux-musl)
+      google-protobuf (~> 4.31)
+    sass-embedded (1.107.1-arm-linux-gnueabihf)
+      google-protobuf (~> 4.31)
+    sass-embedded (1.107.1-arm-linux-musleabihf)
+      google-protobuf (~> 4.31)
+    sass-embedded (1.107.1-arm64-darwin)
+      google-protobuf (~> 4.31)
+    sass-embedded (1.107.1-x64-mingw-ucrt)
+      google-protobuf (~> 4.31)
+    sass-embedded (1.107.1-x86_64-darwin)
+      google-protobuf (~> 4.31)
+    sass-embedded (1.107.1-x86_64-linux-gnu)
+      google-protobuf (~> 4.31)
+    sass-embedded (1.107.1-x86_64-linux-musl)
+      google-protobuf (~> 4.31)
+    sassc-embedded (1.80.10)
+      sass-embedded (~> 1.80)
     sawyer (0.9.3)
       addressable (>= 2.3.5)
       faraday (>= 0.17.3, < 3)
@@ -1082,9 +1140,10 @@ GEM
       svg_conform (>= 0.1.0)
       table_tennis
       thor (>= 0.20)
-    svg_conform (0.2.4)
-      lutaml-model (~> 0.8.0)
-      moxml (~> 0.5)
+    svg_conform (0.2.6)
+      lutaml-model (~> 0.8.155)
+      moxml (~> 0.6.0)
+      nokogiri (~> 1.16)
       rainbow
       table_tennis
       thor
@@ -1106,6 +1165,7 @@ GEM
       hollaback (~> 0.1)
       thor (>= 0.19.1)
     thread_safe (0.3.6)
+    timeout (0.6.1)
     tokenizer (0.3.0)
     track_open_instances (0.1.15)
     twitter_cldr (6.14.0)
@@ -1128,7 +1188,7 @@ GEM
     unicode-name (1.15.1)
       unicode-types (~> 1.12)
     unicode-types (1.12.0)
-    unitsdb (2.2.6)
+    unitsdb (2.2.13)
       fuzzy_match
       logger
       lutaml-model (~> 0.8.0)
@@ -1137,12 +1197,11 @@ GEM
       rubyzip (~> 3.4)
       table_tennis (~> 0.0.7)
       thor (~> 1.0)
-    unitsml (0.6.9)
+    unitsml (0.6.12)
+      asciiunits (~> 0.1)
       htmlentities
       lutaml-model (~> 0.8.0)
       mml (~> 2.4.0)
-      ox
-      parslet
       unitsdb (~> 2.2.5)
     uniword (1.7.1)
       leptris (~> 1.9.368)
@@ -1154,23 +1213,24 @@ GEM
       thor (~> 1.3)
     uri (1.1.2)
     uuidtools (3.0.0)
-    vectory (0.13.2)
+    vectory (0.13.3)
       base64
+      crass (~> 1.0, >= 1.0.7)
       emfsvg (~> 0.1, >= 0.1.2)
       image_size (>= 3.2.0)
-      leptris (>= 1.9.361.1)
+      leptris (~> 1.9.399)
       marcel (~> 1.0)
       postsvg (~> 0.3)
       thor (~> 1.0)
-    w3c_api (0.3.3)
-      faraday
-      faraday-follow_redirects
+    w3c_api (0.3.5)
+      faraday (~> 2.7)
+      faraday-follow_redirects (~> 0.5)
       faraday-retry (~> 2.0)
-      lutaml-hal (~> 0.2.1)
-      lutaml-model (~> 0.8.0)
-      nokogiri
-      rainbow
-      thor
+      lutaml-hal (~> 0.2.8)
+      lutaml-model (~> 0.8.148)
+      nokogiri (~> 1.19)
+      rainbow (~> 3.1)
+      thor (~> 1.5)
     webrick (1.9.2)
     webrobots (0.1.2)
     websocket-driver (0.8.2)
@@ -1188,27 +1248,27 @@ GEM
       lutaml-model (~> 0.8.114)
       nokogiri (~> 1.19)
     yaml (0.4.0)
-    yeptris (0.6.49.0)
+    yeptris (0.6.56.1)
       ffi (~> 1.15)
-    yeptris (0.6.49.0-aarch64-linux)
+    yeptris (0.6.56.1-aarch64-linux)
       ffi (~> 1.15)
-    yeptris (0.6.49.0-aarch64-linux-musl)
+    yeptris (0.6.56.1-aarch64-linux-musl)
       ffi (~> 1.15)
-    yeptris (0.6.49.0-arm-linux-eabihf)
+    yeptris (0.6.56.1-arm-linux-eabihf)
       ffi (~> 1.15)
-    yeptris (0.6.49.0-arm-linux-musleabihf)
+    yeptris (0.6.56.1-arm-linux-musleabihf)
       ffi (~> 1.15)
-    yeptris (0.6.49.0-arm64-darwin)
+    yeptris (0.6.56.1-arm64-darwin)
       ffi (~> 1.15)
-    yeptris (0.6.49.0-x64-mingw-ucrt)
+    yeptris (0.6.56.1-x64-mingw-ucrt)
       ffi (~> 1.15)
-    yeptris (0.6.49.0-x64-mingw32)
+    yeptris (0.6.56.1-x64-mingw32)
       ffi (~> 1.15)
-    yeptris (0.6.49.0-x86_64-darwin)
+    yeptris (0.6.56.1-x86_64-darwin)
       ffi (~> 1.15)
-    yeptris (0.6.49.0-x86_64-linux)
+    yeptris (0.6.56.1-x86_64-linux)
       ffi (~> 1.15)
-    yeptris (0.6.49.0-x86_64-linux-musl)
+    yeptris (0.6.56.1-x86_64-linux-musl)
       ffi (~> 1.15)
 
 PLATFORMS
@@ -1249,8 +1309,8 @@ DEPENDENCIES
   metanorma-ogc!
   metanorma-standoc!
   metanorma-utils!
-  moxml (= 0.5.153)
-  pubid (= 2.0.0)
+  moxml (= 0.6.2)
+  pubid (= 2.0.3)
   relaton (~> 3.0)
   relaton-bib (= 2.2.0.pre.alpha.1)
   relaton-render (= 3.0.0)
